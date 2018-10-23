@@ -1,0 +1,130 @@
+{
+  "source": "xwiki",
+  "domain": "https://wiki.yourdomain.eu/bin/view/articles/",
+  "language": "mixed",
+  "scenarios": [
+    {
+      "id": "3761bc2a125ccee07b61b7bc947e8113",
+      "xwiki_id": "xwiki:Scenarios.Application of Technologically Supported Learning Environment Incorporating Virtual Experimentation.WebHome",
+      "title": "Application of Technologically Supported Learning Environment and Virtual Experimentation",
+      "date": "2017-06-23",
+      "summary": "Students explore, with the help of the Go-Lab Virtual Lab, various experimental methods during their course in Physics.",
+      "version": "5.11",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Physical science"
+      ],
+      "devices": [
+        "Desktop computer",
+        "PClab"
+      ],
+      "patterns": [],
+      "teaching_approach": [
+        "experiential"
+      ],
+      "spatial_settings": [
+        "computers around the lab room"
+      ],
+      "information_functions": [],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "PhysicalScience",
+        "NaturalSciences"
+      ],
+      "affordances": [
+        "Experiment"
+      ],
+      "tool": [
+        "VirtualLab"
+      ]
+    },
+    {
+      "id": "98c5bf7371b65d947519f8ea0cc22dfb",
+      "xwiki_id": "xwiki:Scenarios.Create a Movie in English (Sweden).WebHome",
+      "title": "Create a Movie in English",
+      "date": "2016-10-06",
+      "summary": "Students will practice writing in English in the form of a script and they get to practice how to record and edit a movie using iMovie.",
+      "version": "5.17",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Languages and literature"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Pen and paper",
+        "Tablets"
+      ],
+      "patterns": [],
+      "teaching_approach": [],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "LanguagesLiterature"
+      ],
+      "affordances": [
+        "Provide",
+        "Write",
+        "Record_Video",
+        "Edit",
+        "Play_Video"
+      ],
+      "tool": [
+        "WordProcessor",
+        "LCMS",
+        "VideoRecordingService",
+        "VideoEditor",
+        "VideoPlayer"
+      ]
+    },
+    {
+      "id": "b4d8cbcda241fc4a8104c752db69d8d8",
+      "xwiki_id": "xwiki:Scenarios.Create interest and demonstrate basics in programming (Sweden).WebHome",
+      "title": "Programming for the very young",
+      "date": "2016-09-07",
+      "summary": "Create interest and demonstrate the basis of programming/coding.",
+      "version": "3.13",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Electrical electronic information engineering"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Laptop",
+        "Pen and paper",
+        "Robot"
+      ],
+      "patterns": [],
+      "teaching_approach": [
+        "projectbased learning"
+      ],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "EEIEngineering"
+      ],
+      "affordances": [
+        "Robotics_Programming",
+        "Provide"
+      ],
+      "tool": [
+        "RoboticsKit",
+        "LCMS"
+      ]
+    }
+  ]
+}
