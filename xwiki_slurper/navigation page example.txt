@@ -1,0 +1,96 @@
+This is a shortened example of the navigation tags page.
+Generate a page and update the constant "NAVIGATION_PAGE" with the url to the page.
+
+The following text is XWiki markup. Insert in the "Source" area (not the WYSIWYG)
+-------------------------------------------------------------------------------------------------
+
+{{velocity}}
+#set($tagCounts=$xwiki.getPlugin("tag").getTagCount())
+#macro(tc $tagName)#set($count=$tagCounts.get("bs_$tagName"))##
+{{html clean=false wiki=false}}<a href="/bin/view/Main/Tags?do=viewTag&tag=bs_$tagName">#if($count)$count#else##
+0#end</a>{{/html}}##
+#end
+
+== Subject ==
+* //bs_Domain_Mathematics// (#tc("Domain_Mathematics")) **Mathematics**
+* //bs_Domain_ComputerInformationScience// (#tc("Domain_ComputerInformationScience")) **Computer information science**
+* //bs_Domain_PhysicalScience// (#tc("Domain_PhysicalScience")) **Physical science**
+* //bs_Domain_ChemicalSciences// (#tc("Domain_ChemicalSciences")) **Chemical sciences**
+
+
+Affordances (don't matter the formatting. It makes it invisible for the slurper)
+
+bs_Affordances_Augment_Reality (#tc("Affordances_Augment_Reality")) Augment_Reality
+bs_Affordances_Animate (#tc("Affordances_Animate")) Animate
+bs_Affordances_Archive (#tc("Affordances_Archive")) Archive
+bs_Affordances_Assess (#tc("Affordances_Assess")) Assess
+bs_Affordances_Broadcast (#tc("Affordances_Broadcast")) Broadcast
+bs_Affordances_Calculate (#tc("Affordances_Calculate")) Calculate
+
+
+TOOLS (don't matter the formatting. It makes it invisible for the slurper)
+bs_Tool_AugmentedReality (#tc("Tool_AugmentedReality")) AugmentedReality
+bs_Tool_AnimationSoftware (#tc("Tool_AnimationSoftware")) AnimationSoftware
+bs_Tool_AudioPlatform (#tc("Tool_AudioPlatform")) AudioPlatform
+
+
+Digital Device (don't matter the formatting. It makes it invisible for the slurper)
+
+bs_DigitalDevice_Camera (#tc("DigitalDevice_Camera")) Camera
+bs_DigitalDevice_Clicker (#tc("DigitalDevice_Clicker")) Clicker
+bs_DigitalDevice_Digital_Camera (#tc("DigitalDevice_Digital_Camera")) Digital_Camera
+bs_DigitalDevice_Interactive_Whiteboard (#tc("DigitalDevice_Interactive_Whiteboard")) Interactive_Whiteboard
+
+
+Input Device (don't matter the formatting. It makes it invisible for the slurper)
+bs_InputDevice_Digital_Camera (#tc("InputDevice_Digital_Camera")) Digital_Camera
+bs_InputDevice_Digital_Pen (#tc("InputDevice_Digital_Pen")) Digital_Pen
+bs_InputDevice_Document_Camera (#tc("InputDevice_Document_Camera")) Document_Camera
+
+
+Domain (father domain classes are currently not used)
+bs_Domain_AgriculturalSciences (#tc("Domain_AgriculturalSciences")) Agricultural sciences
+bs_Domain_EngineeringAndTechnology (#tc("Domain_EngineeringAndTechnology")) Engineering and technology
+bs_Domain_Humanities (#tc("Domain_Humanities")) Humanities
+
+
+== Devices ==
+* //bs_Devices_3dPrinter// (#tc("Devices_3dPrinter")) **3D printer**
+* //bs_Devices_AudioRecorder// (#tc("Devices_AudioRecorder")) **Audio recorder**
+* //bs_Devices_Calculator// (#tc("Devices_Calculator")) **Calculator**
+
+Inactives:
+bs_Devices_ExternalMicrophone (#tc("Devices_ExternalMicrophone")) ExternalMicrophone
+bs_Devices_Printer (#tc("Devices_Printer")) Printer  (deprecated, use 2d or 3d printer instead)
+bs_Devices_2dPrinter (#tc("Devices_2dPrinter")) 2D printer
+bs_Devices_Projector (#tc("Devices_Projector")) Projector
+
+== Patterns == 
+* //bs_Patterns_FlippedClass// (#tc("Patterns_FlippedClass")) **flipped classroom**
+* //bs_Patterns_AnonymizeSolutions// (#tc("Patterns_AnonymizeSolutions")) **Anonymize solutions**
+* //bs_Patterns_BirdsEyeSummary// (#tc("Patterns_BirdsEyeSummary")) **Birds eye summary**
+
+
+== Teaching approach ==
+(loosely based on [[that of ODS>>url:http://portal.opendiscoveryspace.eu/tr-activity/22-macibam-pieeja-vardnica-669764]])
+* //bs_TeachAppro_Collaborative// (#tc("TeachAppro_Collaborative")) **collaborative learning**
+* //bs_TeachAppro_DrillAndPractice// (#tc("TeachAppro_DrillAndPractice")) **drill & practice**
+* //bs_TeachAppro_Experiential// (#tc("TeachAppro_Experiential")) **experiential**
+
+== Spatial settings ==
+* //bs_Spatial_AroundTheSchool// (#tc("Spatial_AroundTheSchool")) **around the school**
+* //bs_Spatial_Classroom// (#tc("Spatial_Classroom")) **in class**
+* //bs_Spatial_FieldTrip// (#tc("Spatial_FieldTrip")) **field trip**
+
+== Information functions ==
+* //bs_IFunctions_Book// (#tc("IFunctions_Book")) **browse a book**
+* //bs_IFunctions_Dictionary// (#tc("IFunctions_Dictionary")) **lookup in dictionary**
+* //bs_IFunctions_DynamGeo// (#tc("IFunctions_DynamGeo")) **dynamic geometry**
+
+
+== Language ==
+* //bs_Language_English// (#tc("Language_English")) **english**
+* //bs_Language_German// (#tc("Language_German")) **german**
+* //bs_Language_Greek// (#tc("Language_Greek")) **greek**
+
+{{/velocity}}
