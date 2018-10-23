@@ -1,0 +1,40 @@
+{
+  "source": "MnSTEP",
+  "domain": "http://serc.carleton.edu/sp/mnstep/index.html",
+  "language": "en",
+  "scenarios": [
+    {
+      "title": "Exploring Sugarloaf Cove: Investigating the Geology of Lake Superior's North Shore.",
+      "author": "Matt Winbigler, Cloquet Middle School, Cloquet, Minnesota",
+      "subject": "",
+      "subject_raw": "Environmental Science, Geoscience",
+      "grade_level": "Middle (6-8)",
+      "spatial_settings": "Activities:Classroom Activity, Field Activity",
+      "special_interest": "Field-Based Teaching and Learning",
+      "theme": "Teach the Earth:Enhancing your Teaching:Teaching in the Field, Teach the Earth:Course Topics:Environmental Science, Teach the Earth:Teaching Environments:K12",
+      "url": "https://serc.carleton.edu/sp/mnstep/activities/26985.html",
+      "date": "04.09.2008",
+      "date_modified": "07.05.2018",
+      "summary": "A short summary of the scenario",
+      "content_tags": [
+        "Geoscience",
+        "Environmental Science",
+        "and so on ..."
+      ],
+      "bs_tags": [
+        "bs_AutomatedScenarios_MnSTEP",
+        "bs_Language_English",
+        "bs_Domain_EarthEnvironmentalSciences",
+        "bs_Spatial_Classroom",
+        "bs_Spatial_AroundTheSchool"
+      ],
+      "learning_goals": "The learning goals of the scenario",
+      "context_for_use": "The context of the scenario",
+      "description_and_teaching_materials": "The description in detail",
+      "teaching_notes_and_tips": "Some notes",
+      "assessment": "Some words about assessment",
+      "references_and_resources": "",
+      "license": "The license of thescenario"
+    }
+  ]
+}

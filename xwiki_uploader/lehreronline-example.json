@@ -1,0 +1,66 @@
+{
+  "source": "LehrerOnline",
+  "domain": "www.lehrer-online.de",
+  "language": "de",
+  "scenarios": [
+    {
+      "id": "7990617a068b9e3d552284eb4032911b",
+      "title": "The title in english, translated by translate_scenario.rb",
+      "title_de": "The title in german",
+      "author": "First and last name of the author",
+      "subject_raw": [],
+      "subject": [],
+      "affordances": [],
+      "basic_function": [],
+      "digital_device": [
+        "bs_DigitalDevice_Interactive_Whiteboard"
+      ],
+      "input_device": [],
+      "devices": [],
+      "patterns": [],
+      "teaching_approach": [],
+      "spatial": [],
+      "information_functions": [],
+      "url": "https://www.lehrer-online.de/unterricht/sekundarstufen/faecheruebergreifend/unterrichtseinheit/ue/the-scenario-title/",
+      "date": "2013-05-15",
+      "summary": "The english summary translated by translate_scenario.rb",
+      "summary_de": "The summary in german",
+      "keywords": [
+        "Medienkompetenz",
+        "Internetrecherche",
+        "Fächer",
+        "Sekundarstufen",
+        "Fächerübergreifend"
+      ],
+      "bs_tags": [
+        "bs_AutomatedScenarios_LehrerOnline",
+        "bs_Language_German",
+        "bs_Affordances_Mindmapping",
+        "bs_Tool_MindmappingSoftware",
+        "bs_Affordances_Search_Information",
+        "bs_Tool_SearchEngine",
+        "bs_Devices_InteractiveWhiteboard",
+        "bs_IFunctions_Whiteboard",
+        "bs_Devices_DesktopComputer",
+        "bs_Spatial_LabAroundTheRoom"
+      ],
+      "description": "The description in german",
+      "breadcrumbs": [],
+      "unitplan": "",
+      "didactic": "The didactic description in german",
+      "learningtype": [
+        "Ablaufplan"
+      ],
+      "grade_level": [
+        "Sekundarstufe I",
+        "Sekundarstufe II"
+      ],
+      "subpages": [],
+      "competencies": "A collection of competencies the scenario will foster",
+      "material": "A collection of worksheets",
+      "short_info": "",
+      "additional_info": "",
+      "license": "The license of the scenario"
+    }
+  ]
+}
