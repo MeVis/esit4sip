@@ -20,7 +20,7 @@ The main language of the scenarios written in the eSIT4SIP project is English. T
 
 * Open shell and navigate to the project folder
 * Type: ```ruby translate_scenarios.rb``` and press Enter
-* You are asked to enter the source and target languages. (See [Supported languages](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
+* You are asked to enter the source and target languages (See [Supported languages](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/))
 * Choose a scenario .json file. Make sure the files are in the same directory as the translate_scenarios.rb
 
 ## Important
