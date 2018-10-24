@@ -1,0 +1,110 @@
+{		
+	"patterns": {
+		"bs_TechOD": "technology on demand",
+		"bs_RepOD": "representation on demand",
+		"bs_FlippedClass": "flipped classroom",
+		"bs_Patterns_AnonymizeSolutions": "Anonymize solutions",
+		"bs_Patterns_BirdsEyeSummary": "Birds eye summary",
+		"bs_Patterns_GeneralizedFeedback": "Generalized feedback",
+		"bs_Patterns_SolutionVariety": "Solution variety",
+		"bs_Patterns_StudentContributionEsteem": "Student contribution esteem",
+		"bs_Patterns_UseStudentSolution": "Use student solution"
+	},		
+
+	"subject": {
+
+		"bs_Domain_Mathematics": ["Mathematics"],
+		"bs_Domain_ComputerInformationScience": "",
+		"bs_Domain_PhysicalScience": ["Physics", "Astronomy", "Electricity", "Magnetism", "Fluid Mechanics", "General Physics", "Modern Physics", "Optics", "Oscillations", "Waves", "Quantum Physics"],
+		"bs_Domain_ChemicalSciences": ["Chemistry"],
+		"bs_Domain_EarthEnvironmentalSciences": ["Environmental Science", "Air Quality", "Ecosystems", "Energy", "Water Quality and Quantity", "Climate", "Mineral Resources", "Hazard", "Geoscience", "Atmospheric Science", "Geology", "Hydrology", "Lunar", "Planetary", "Oceanography", "Paleontology", "soil"],
+		"bs_Domain_BiologicalSciences": ["Biology", "Astrobiology", "Cell Biology", "Diversity", "Ecology", "Evolution", "Microbiology", "Molecular Biology", "Plant Biology", "Zoology"],
+		"bs_Domain_OtherNaturalSciences": "",
+		
+		"bs_Domain_CivilEngineering": "",
+		"bs_Domain_EEIEngineering": "",
+		"bs_Domain_MechanicalEngineering": ["Classical Mechanics", "Thermodynamics", "Statistical Mechanics"],
+		"bs_Domain_ChemicalEngineering": "",
+		"bs_Domain_MaterialsEngineering": "",
+		"bs_Domain_MedicalEngineering": "",
+		"bs_Domain_EnvironmentalEngineering": "",
+		"bs_Domain_EnvironmentalBiotechnology": "",
+		"bs_Domain_IndustrialBiotechnology": "",
+		"bs_Domain_NanoTechnology": "",
+		"bs_Domain_OtherEngineeringTechnologies": "",
+
+		"bs_Domain_BasicMedicine": ["Anatomy & Physiology"],
+		"bs_Domain_ClinicalMedicine": "",
+		"bs_Domain_HealthSciences": "",
+		"bs_Domain_MedicalBiotechnology": "",
+		"bs_Domain_OtherMedicalSciences": "",
+
+		"bs_Domain_AgricultureForestryFishery": ["Soil", " Agriculture"],
+		"bs_Domain_AnimalDairyScience": "",
+		"bs_Domain_VeterinaryScience": "",
+		"bs_Domain_AgriculturalBiotechnology": "",
+		"bs_Domain_OtherAgriculturalSciences": "",
+
+		"bs_Domain_Psychology": "",
+		"bs_Domain_EconomiesBusiness": "",
+		"bs_Domain_EducationalSciences": ["Education", "Assessment"],
+		"bs_Domain_Sociology": "",
+		"bs_Domain_Law": "",
+		"bs_Domain_PoliticalScience": "",
+		"bs_Domain_SocialEconomicGeography": ["Land Use and Planning"],
+		"bs_Domain_MediaCommunications": "",
+		"bs_Domain_OtherSocialSciences": "",
+
+		"bs_Domain_HistoryArchaeology": "",
+		"bs_Domain_LanguagesLiterature": "",
+		"bs_Domain_PhilosophyEthicsReligion": "",
+		"bs_Domain_Arts": ["Arts"],
+		"bs_Domain_OtherHumanities": "",
+		"bs_Domain_Interdisciplinary": ""
+	},
+
+	"devices": {
+		"bs_Devices_Laptop": "laptops",
+		"bs_Devices_Tablets": "tablets",
+		"bs_Devices_OwnMobiles": "own mobiles",
+		"bs_Devices_PClab": "PC-lab",
+		"bs_Devices_penPaper": "pen & paper",
+		"bs_Devices_chalkboard": "chalkboard"
+	},
+
+	"teaching_approach": {		
+		"bs_TeachAppro_FrontTeaching": ["front learning", "Lecture"],
+		"bs_TeachAppro_ProjectBased": "project-based learning",
+		"bs_TeachAppro_ProblemBased": "Problem Solving",
+		"bs_TeachAppro_Collaborative": "collaborative",
+		"bs_TeachAppro_DrillAndPractice": "drill & practice",
+		"bs_TeachAppro_Socratic": "socratic",
+		"bs_TeachAppro_Experiential": "experiential",
+		"bs_TeachAppro_Flipped": "flipped classroom"
+	},
+
+	"spatial_settings": {
+		"bs_Spatial_Classroom": "Classroom",
+		"bs_Spatial_Roundtable": "",
+		"bs_Spatial_LabAroundTheRoom": "",
+		"bs_Spatial_FieldTrip": "",
+		"bs_Spatial_AroundTheSchool": "Field Activity",
+		"bs_Spatial_LabActivity": "Lab Activity"
+	},
+
+	"information_functions": {
+		"bs_IFunctions_WordProcessor": "word-processor",
+		"bs_IFunctions_SlidesEditor": "slides editor",
+		"bs_IFunctions_Spreadsheet": "spreadsheet",
+		"bs_IFunctions_Dictionary": "lookup in dictionary",
+		"bs_IFunctions_Whiteboard": "whiteboard",
+		"bs_IFunctions_SharedDocument": "shared document",
+		"bs_IFunctions_Teleconference": "teleconference",
+		"bs_IFunctions_ScreenSharing": "screen sharing",
+		"bs_IFunctions_Forum": "web-based forum",
+		"bs_IFunctions_Wiki": "wiki",
+		"bs_IFunctions_Book": "browse a book",
+		"bs_IFunctions_DynamGeo": "dynamic geometry",
+		"bs_IFunctions_Photo": "Shooting photographs"
+	}
+}
