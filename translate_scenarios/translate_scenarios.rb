@@ -5,7 +5,7 @@
 # 'translate_scenarios' translates user-defined fields into a user-defined language
 # The program uses https://translate.yandex.net API to translate the content
 # Translation requests are made over HTTP Post with Typhoeus gem.
-# The program will output a .json file with suffix 'previousFilename-translated'.
+# Our program will output a .json file with suffix 'previousFilename-translated'.
 
 # IMPORTANT
 # If you use the yandex translation service you have to generate your own API key.

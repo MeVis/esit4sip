@@ -14,17 +14,17 @@ The main language of the scenarios written in the eSIT4SIP project is English. T
 * Download this repository and open translate_scenarios.rb
 * MAINPAGE_TRANSLATE_FIELDS: Define the .json fields you want to be translated and name their target field
 * SUBPAGE_TRANSLATE_FIELDS: Do the same steps for subpages. This is optional since subpages are experimental.
-* YANDEX_KEY: Add your Yandex Translator API key. (See: [Translate API Documentation]https://tech.yandex.com/translate/doc/dg/concepts/About-docpage/))
+* YANDEX_KEY: Add your Yandex Translator API key. (See: [Translate API Documentation](https://tech.yandex.com/translate/doc/dg/concepts/About-docpage/))
 
 ### How to run translate_scenarios
 
 * Open shell and navigate to the project folder
 * Type: ```ruby translate_scenarios.rb``` and press Enter
-* You are asked to enter the source and target languages. (See [Supported languages]https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
+* You are asked to enter the source and target languages. (See [Supported languages](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
 * Choose a scenario .json file. Make sure the files are in the same directory as the translate_scenarios.rb
 
 ## Important
-If you use the yandex translation service you have to generate your own API key. Furthermore you must comply with their license terms. For example you have to add the text "Powered by Yandex.Translate". This is not done by this program! In case of eSIT4SIP this is done by the 'xwiki_uploader'. See [Requirements for the use of translation results]https://tech.yandex.com/translate/doc/dg/concepts/design-requirements-docpage/) for more details.
+If you use the yandex translation service you have to generate your own API key. Furthermore you must comply with their license terms. For example you have to add the text "Powered by Yandex.Translate". This is not done by this program! In case of eSIT4SIP this is done by the 'xwiki_uploader'. See [Requirements for the use of translation results](https://tech.yandex.com/translate/doc/dg/concepts/design-requirements-docpage/) for more details.
 
 ## License
 Copyright 2017 eSIT4SIP Project
