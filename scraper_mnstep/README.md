@@ -17,7 +17,7 @@ The 'scraper_mnstep' program opens http://serc.carleton.edu/sp/mnstep/activities
 * Enter the KEYWORDS you want the scraper to search for
 * Optionally modify the String class extension by your markup
 
-### How to run sparql_uploader
+### How to run scraper_mnstep
 
 * Open shell and navigate to the project folder
 * Type: ```ruby scraper_mnstep.rb```
