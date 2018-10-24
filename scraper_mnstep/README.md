@@ -22,6 +22,9 @@ The 'scraper_mnstep' program opens http://serc.carleton.edu/sp/mnstep/activities
 * Open shell and navigate to the project folder
 * Type: ```ruby scraper_mnstep.rb```
 
+## Important
+This software only downloads activities with a free-license. In MnSTEP the activities are provided with this text: "Material on this page is offered under a Creative Commons license unless otherwise noted below." The scraper checks an activity for this text and does not download activities with another license. We guarantee that we maintain the license of the activities.
+
 ## License
 Copyright 2017 eSIT4SIP Project
 Licensed under the EUPL, Version 1.2 only (the "Licence");
