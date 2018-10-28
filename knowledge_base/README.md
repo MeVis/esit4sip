@@ -19,7 +19,7 @@ You can easily setup your own knowledge base and present your learning scenarios
 ### Scenario data from static articles.json file
 
 Per default, the scenario data used on www.eSIT4SIP.eu is loaded dynamically via SPARQL request. To load scenario data from the static data/articles.json, open assets/js/filter_kb.js. Search for "get articles by static .json" and umcomment this area of code. Make sure you disable the area "get articles by sparql" to prevent data-request twice. We provide you a shortened example ouf articles.json to get an understanding of the used data structure. 
-With this approach you will be not able to provide the functionality "Can id do this" which is described below. 
+With this approach you will be not able to provide the functionality "Can I do this?". 
 
 ### Scenario data by dynamic SPARQL request
 
