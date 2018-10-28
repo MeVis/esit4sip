@@ -1,0 +1,275 @@
+{
+  "source": "xwiki",
+  "domain": "https://wiki.esit4sip.eu/bin/view/Scenarios/",
+  "language": "mixed",
+  "scenarios": [
+    {
+      "id": "15214179ede0713f5937ae939b28c547",
+      "xwiki_id": "xwiki:Scenarios.Document-Camera and Whiteboards for digitized work (Germany).WebHome",
+      "title": "Creative writing with Whiteboard and MS Word (Germany)",
+      "date": "2016-09-09",
+      "summary": "The students work simultaneously with pen & paper and whiteboard to work with texts and do creative writing.",
+      "version": "9.10",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Languages and literature"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Interactive whiteboard"
+      ],
+      "patterns": [
+        "Student contribution esteem"
+      ],
+      "teaching_approach": [
+        "collaborative learning",
+        "front learning",
+        "problembased learning"
+      ],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [
+        "whiteboard",
+        "wordprocessor"
+      ],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "LanguagesLiterature"
+      ],
+      "affordances": [
+        "Present",
+        "Write"
+      ],
+      "tool": [
+        "PresentationSoftware",
+        "WordProcessor"
+      ]
+    },
+    {
+      "id": "393c5a533c77239887f1a3cf79206484",
+      "xwiki_id": "xwiki:Scenarios.Drawing with logo to exercise geometric vocabulary (Germany).WebHome",
+      "title": "Drawing with Logo to exercise geometric vocabulary (Germany)",
+      "date": "2016-10-15",
+      "summary": "Students learn geometric vocabulary by drawing geometric figures with Microwords  Logo",
+      "version": "11.5",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Mathematics"
+      ],
+      "devices": [
+        "Laptop",
+        "PClab",
+        "Pen and paper"
+      ],
+      "patterns": [
+        "Generalized feedback"
+      ],
+      "teaching_approach": [
+        "drill  practice",
+        "experiential",
+        "problembased learning"
+      ],
+      "spatial_settings": [
+        "in class",
+        "computers around the lab room"
+      ],
+      "information_functions": [
+        "dynamic geometry"
+      ],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "Mathematics"
+      ],
+      "affordances": [
+        "Mathematical_Visualization"
+      ],
+      "tool": [
+        "InteractiveGeometrySoftware"
+      ]
+    },
+    {
+      "id": "7b9b91fe9bf087af6de4a9453d05cd41",
+      "xwiki_id": "xwiki:Scenarios.First idea of gender (Sweden).WebHome",
+      "title": "First idea of gender",
+      "date": "2016-09-07",
+      "summary": "Trigger reflections about the attitudes that affect our sexual identity",
+      "version": "5.18",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Sociology"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Projector",
+        "Laptop",
+        "Pen and paper",
+        "Video Camera"
+      ],
+      "patterns": [],
+      "teaching_approach": [
+        "socratic instruction"
+      ],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "Sociology"
+      ],
+      "affordances": [
+        "Record_Video",
+        "Broadcast",
+        "Play_Video"
+      ],
+      "tool": [
+        "VideoRecordingService",
+        "VideoPlayer",
+        "VideoHostingService"
+      ]
+    },
+    {
+      "id": "78788ad10cf8aba2951813b87b09f18d",
+      "xwiki_id": "xwiki:Scenarios.First spreadsheet statistics with football (Germany).WebHome",
+      "title": "Spreadsheet statistics with football",
+      "date": "2016-10-15",
+      "summary": "Students learn the use of spreadsheets with the help of football statistics",
+      "version": "13.5",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Mathematics"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Laptop",
+        "own mobiles",
+        "PClab",
+        "Tablets"
+      ],
+      "patterns": [],
+      "teaching_approach": [
+        "problembased learning"
+      ],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [
+        "spreadsheet"
+      ],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "Mathematics"
+      ],
+      "affordances": [
+        "Provide",
+        "Spreadsheet_Processing"
+      ],
+      "tool": [
+        "LCMS",
+        "SpreadsheetEditor"
+      ]
+    },
+    {
+      "id": "aaaf035a70c07e0766a58781863086b6",
+      "xwiki_id": "xwiki:Scenarios.Five paragraphs Essay with online instructions (Sweden).WebHome",
+      "title": "Five paragraphs Essay with online instructions",
+      "date": "2016-09-07",
+      "summary": "Combine textbook lesson and video lesson to explain and allow the creation of a five paragraphs essay.",
+      "version": "5.11",
+      "translations": [],
+      "handwritten": true,
+      "subject": [
+        "Languages and literature"
+      ],
+      "devices": [
+        "Projector",
+        "Laptop",
+        "Tablets"
+      ],
+      "patterns": [],
+      "teaching_approach": [],
+      "spatial_settings": [
+        "in class"
+      ],
+      "information_functions": [],
+      "language": [
+        "english"
+      ],
+      "domain": [
+        "LanguagesLiterature"
+      ],
+      "affordances": [
+        "Provide",
+        "Play_Audio",
+        "Write",
+        "Play_Video"
+      ],
+      "tool": [
+        "LCMS",
+        "VideoPlayer",
+        "AudioPlayer",
+        "WordProcessor"
+      ]
+    },
+    {
+      "id": "132910cb81855747b891f2385efb20aa",
+      "xwiki_id": "xwiki:AsLehrerOnline.Akteure der internationalen Klimapolitik.WebHome",
+      "title": "Akteure der internationalen Klimapolitik",
+      "date": "2018-10-01",
+      "summary": "In dieser Unterrichtseinheit lernen die Schülerinnen und Schüler die entscheidenden Akteure der internationalen Klimapolitik und ihre oft gegensätzlichen Interessen kennen. Zudem gewinnen sie Einblicke in die grundlegenden Interessenskonflikte.",
+      "version": "9.1",
+      "translations": [
+        {
+          "title": "Akteure der internationalen Klimapolitik",
+          "language": "de",
+          "summary": "In dieser Unterrichtseinheit lernen die Schülerinnen und Schüler die entscheidenden Akteure der internationalen Klimapolitik und ihre oft gegensätzlichen Interessen kennen. Zudem gewinnen sie Einblicke in die grundlegenden...",
+          "version": "2.1"
+        },
+        {
+          "title": "Actors in the international climate policy",
+          "language": "en",
+          "summary": "In this lesson, students will learn the key players in the international climate policy and their often conflicting interests. In addition, you gain insight into the fundamental conflict of interests. This article is currently only available in...",
+          "version": "2.1"
+        }
+      ],
+      "handwritten": false,
+      "subject": [
+        "Sociology",
+        "Political science"
+      ],
+      "devices": [
+        "Desktop computer",
+        "Smartphone",
+        "Tablets"
+      ],
+      "patterns": [],
+      "teaching_approach": [],
+      "spatial_settings": [],
+      "information_functions": [],
+      "language": [
+        "german"
+      ],
+      "domain": [
+        "Sociology",
+        "PoliticalScience"
+      ],
+      "affordances": [
+        "Play_Game"
+      ],
+      "tool": []
+    }
+  ]
+}

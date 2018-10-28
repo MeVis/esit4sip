@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>eSIT4SIP - Empowering School IT-Infrastructure</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="assets/js/URI.min.js" type="text/javascript"></script>
+	<script src="assets/js/URI.jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/filter.js" type="text/javascript"></script>
+	<script src="assets/js/filter_kb.js" type="text/javascript"></script>
+	<script src="assets/js/popover.min.js" type="text/javascript"></script>
+	<script src="assets/js/table.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+	<link rel='stylesheet' href="assets/css/style.css" media="screen" type="text/css">
+	<link rel='stylesheet' href="assets/css/popover.min.css" media="screen" type="text/css">
+
+	<!-- Piwik -->
+	<script type="text/javascript">
+		var _paq = _paq || [];
+			// tracker methods like "setCustomDimension" should be called before "trackPageView"
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackAllContentImpressions']);
+			(function() {
+				var u="//piwik.esit4sip.eu/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', '1']);
+				 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+	</script>	
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" class="img-responsive"> </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar" data-track-content>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#knowledgebase" data-content-name="Knowledge-base-link">SEARCH</a></li>
+                <li><a href="#browse">BROWSE</a></li>
+                <li><a href="#project">PROJECT</a></li>
+                <!--
+                <li><a href="#objectives">OBJECTIVES</a></li>
+                <li><a href="#people">PEOPLE</a></li>
+                <li><a href="#activities">ACTIVITIES</a></li>
+                -->
+                <li><a href="#publications">PUBLICATIONS</a></li>
+                <!--<li><a href="#contact">CONTACT</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="home" class="container-fluid padding_top" data-track-content></div>
+
+<!-- AREA PATTERNS / KNOWLEDGEBASE -->
+<div id="knowledgebase" class="container-fluid" data-track-content>
+	<div class="row">
+		<div class="col-sm-12 ">
+			<img src="images/banner/patterns_banner.png" class="banner img-responsive text-center center" alt="patterns">
+		</div>		
+	</div>
+	<div id="infrastructure" class="row inner">
+		
+		<!--
+		<div class="col-sm-4 col-md-3">
+			<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-infrastructure">Search by infrastructure</button>
+		</div>
+		-->
+
+		<!-- infrastructure modal -->
+		<div id="modal-infrastructure" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Infrastructure modal">
+			<div class="modal-dialog modal-lg" role="document">
+				<div id="infrastructure-modal-content" class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Predefined infrastructures</h4>
+					</div>					
+					<br>
+
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<h4>Always available</h4>
+										<p class="small">This infrastructure allows teacher to be sure to have access to the same equipment at all time in a specific location.</p class="small">
+										<button id="always_available" class="btn btn-default load-infrastructure" type="button">Search by infrastructure</button>
+										<!--<p class="infrastructure-warning red display-none small">Could not load infrastructure. Please try again later.</p>-->
+									</div>
+								</div>
+							</div>												
+							<div class="col-sm-4">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<h4>Mobility above all</h4>
+										<p class="small">This infrastructure allows teachers and students to use equipment in different locations and adapt to different activities. </p class="small">
+										<button id="mobility" class="btn btn-default load-infrastructure" type="button">Search by infrastructure</button>
+										<!--<p class="infrastructure-warning red display-none small">Could not load infrastructure. Please try again later.</p>-->
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<h4>paedML - pedagogical model</h4>
+										<p class="small">The Baden-Wuerttemberg State Media Center (LMZ) offers a pedagogical solution for school computer networks (paedML). 
+										It offers numerous functions for working with digital media at small, medium and large schools or even city-wide school networks.</p class="small">
+										<button id="infra-paed-ml" class="btn btn-default load-infrastructure" type="button">Search by infrastructure</button>
+										<!--<p class="infrastructure-warning red display-none small">Could not load infrastructure. Please try again later.</p>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>					
+
+					<div class="panel-group" id="infrastructure-accordion" role="tablist" aria-multiselectable="true">
+						<!--
+						<div class="panel panel-default kb-panel">
+							<div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-infra-video-audio">Video and audio production </div>
+							<div id="collapse-infra-video-audio" class="panel-collapse collapse">
+								<div class="panel-body" id="infrastructure-device">
+
+
+									<div class="checkbox">
+										<label>
+											<input id="infra-AudioRecorder" value="Audio Recorder" type="checkbox"><span>Audio Recorder</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input id="infra-DigitalCamera" value="Digital Camera" type="checkbox"><span>Digital Camera</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input id="infra-VideoCamera" value="Video Camera" type="checkbox"><span>Video Camera</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input id="infra-ExternalMicrophone" value="External Microphone" type="checkbox"><span>External Microphone</span>
+										</label>
+									</div>				
+
+
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">				    
+							<div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-infra-subject" aria-expanded="false">Subject</div>
+							<div id="collapse-infra-subject" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-infra-subject">
+								<div class="panel-body">
+									Text
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">				    
+							<div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-infra-device" aria-expanded="false">device</div>
+							<div id="collapse-infra-device" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-infra-device">
+								<div class="panel-body">
+									Text
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">				    
+							<div class="panel-heading collapsed" data-toggle="collapse" data-target="#collapse-infra-video-audio">Video and audio production </div>
+							<div id="collapse-infra-video-audio" class="panel-collapse collapse">
+								<div class="panel-body" id="infrastructure-device">
+									Text
+								</div>
+							</div>
+						</div>										
+						-->
+					</div>
+
+				</div>
+
+			</div>
+		</div>	
+		
+	</div>
+
+
+
+	<div class="row inner" data-track-content>
+		<div class="sidebar col-sm-4 col-md-3">
+			<button id="open-infrastructure" type="button" class="btn btn-default btn-block no-border-radius" data-toggle="modal" data-target="#modal-infrastructure">Search by infrastructure</button>
+			<div id="search">
+				<label class="sr-only" for="searchbox">Search</label>
+				<input type="text" class="form-control" id="searchbox" placeholder="Search by Title..." autocomplete="off">
+			</div>
+			<div id="facets" class="panel-group"><!-- Facets --></div>
+		</div>
+
+		<div class="col-sm-8 col-md-9">
+			<div id="loading">
+				<div id="loading-modal"></div>
+				<div>Please wait while data is loading.</div>
+			</div>
+			<!-- Results header -->
+			<div id="articles-header">
+				<div class="row">
+					<div class="col-xs-8 col-md-3">
+						<div class="results_found"><span id="total_articles">0</span> Result(s)</div>
+					</div>
+					<div class="col-xs-12 col-md-9 filter-options">
+						
+						<span class="hidden-xs">View<span id="per_page"></span></span>
+						<span id="sort-by" class="dropdown">Sort
+							<button class="btn btn-default dropdown-toggle" type="button" id="sort-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<span id="sort-text" class="hidden-xs">Title ascending</span>
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu sort-ul" aria-labelledby="sort-menu">
+								<li id="newest">Newest first</li>
+								<li id="oldest">Oldest first</li>
+								<li id="title_asc" class="active">Title ascending</li>
+								<li id="title_desc">Title descending</li>
+							</ul>
+						</span>
+
+						<span id="page-group">Page
+							<div class="btn-group" role="group" aria-label="...">
+								<button id="page_prev" type="button" class="btn btn-default">
+									 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								</button>
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							 			<span id="page-text">1</span>
+							  			<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu page-ul" aria-labelledby="page-menu"></ul>
+								</div>
+								<button id="page_next" type="button" class="btn btn-default">
+									 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								</button>
+							</div>
+						</span>
+
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="filter-container">
+							<span id="active-filters" class="active-filters">Filters: </span>
+							<a id="clear_all">Reset all</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="articles" class="articles row"><!-- Result list --></div>
+			
+			<div id="article-container">
+				<div class="row">
+					<div class="col-xs-4">
+						<button id="back" type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							Back to overview
+						</button>
+					</div>
+					<div class="col-xs-8 text-right">
+						<div class="btn-group" role="group">
+							<button id="language-dropdown" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Language: 
+								<span class="caret"></span>
+							</button>
+							<ul id="language-list" class="dropdown-menu"></ul>
+						</div>
+						<button id="can-i-do-this-btn" type="button" class="btn btn-default" data-toggle="modal" data-target="#alternative-tools">
+							Can I do this? Show alternatives!
+						</button>									
+						<a id="share-popover" class="show-pop btn btn-default"
+							data-content="<p></p>"> share &nbsp;
+							<i class="glyphicon glyphicon-link"></i>
+						</a>
+						<div id="share-text">
+							<div id="share-url"></div>
+							<button id="copy" type="button" class="btn btn-default btn-sm pull-right" data-clipboard-target="#share-url">copy</button>
+						</div>						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><div id="article"><!--Single Article--></div></div>
+				</div>
+
+				<!-- CAN I DO THIS? Modal -->
+				<div class="modal fade" id="alternative-tools" tabindex="-1" role="dialog" aria-labelledby="alternative-tools-Label">
+					<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="alternative-toolsLabel">Used tools in this scenario</h4>
+							</div>
+							<div id="alternative-tools-body" class="modal-body">
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div id="result-warning">
+				<strong>Sorry – we couldn’t find what you are looking for.</strong>
+				<ul>
+					<li>Make sure that all words are spelled correctly</li>
+					<li>Try different keywords</li>
+					<li>Try more general keywords</li>
+					<li>Remove some/all of your search filters above</li>
+				</ul>						
+			</div>				
+
+			<!-- Pagination -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pagination"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- AREA BROWSE ONTOLOGY -->
+<div id="browse" class="container-fluid padding_top2 ">
+	<div class="row">
+		<div class="col-sm-12 ">
+			<img src="images/banner/ontology_banner.png" class="banner img-responsive text-center center" alt="ONTOLOGY">
+		</div>
+	</div>
+	<div class="row inner">
+		<div class="col-sm-6 text-justify">
+			<img src="images/banner/ontology.png" class="img-responsive" alt="Ontology">
+		</div>
+		<div class="col-sm-6 text-justify">
+			<a class="btn btn-xs btn-orange" target="_blank" href="http://www.esit4sip.eu/webvowl/#iri=http://www.esit4sip.eu/fuseki/esit4sip/get" role="button">Browse the Knowledge Base</a>
+			<br><br>
+			The eSIT4SIP approach is based on a learning and infrastructure ontology. The ontology serves as a standardized vocabulary to tag learning scenarios and design patterns in the eSIT4SIP knowledge base. Furthermore, it serves as the semantic backbone to express relations between scenarios and to link them to learning and infrastructure concepts.
+			<br><br>
+			You may explore the knowledge base and ontology with an interactive visualization that can be accessed with the button above.
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- AREA PROJECT -->
+<div id="project" class="container-fluid padding_top2">
+	<div class="row">
+		<div class="col-sm-12">
+			<img src="images/banner/project.png" alt="eSIT4SIP project description" class="banner img-responsive text-center center">
+		</div>
+	</div>
+</div>
+
+<!-- AREA KNOWLEDGE BASE ++  -->
+<div id="activities" class="container-fluid padding_top2 ">
+
+    <div class="row inner">
+        <div class="col-sm-6 justify">
+        	<img src="images/banner/knowledge_base.png" class="img-responsive">
+        </div>
+
+		<div class="col-sm-6 text-justify">
+			<p>The eSIT4SIP Knowledge Base targets to support teachers in planning for the technical realisation of learning scenarios within their premises. To this end, knowledge of the feasibility of the scenarios is needed. It is based on the knowledge of the ICT facilities of the schools, that is, the infrastructure required to achieve the functions described in each of the scenarios.</p>
+			<p>Teachers may use the knowledge base</p>
+			<ul class="ul_icons">
+				<li>To search for scenarios matching a targeted learning context and objectives, as well as their infrastructure and technology at hand, to identify candidates for implementation</li>
+				<li>To search for scenarios matching a targeted learning context and objectives, being presented with the required infrastructure and technology for implementation, but also alternative infrastructure and technology settings providing required affordances for running those scenarios</li>
+				<li>To browse the knowledge base for interesting learning scenarios and instructional design patterns, with the possibility to identify relations between certain scenarios and design patterns</li>
+			</ul>
+			<br>
+		</div>
+    </div>
+	<br><br><br>
+	<div class="row inner padding_top2">
+		<div class="col-sm-6 text-justify">
+			<img src="images/banner/banner_project.png" class="img-responsive"><br><br>
+				<p>The eSIT4SIP knowledge base of technology-based learning scenarios and learning design patterns is a result of the ERASMUS+ Strategic Partnership Project „ Empowering the School IT infrastructures for the implementation of Sustainable Instructional Patterns“ (eSIT4SIP,  2015-2018).</p>
+				<p>The eST4SIP project targeted to promote practices that will help schools reach an e-mature level (as explained by the NCTE). More specifically, the project will be focusing on the wise use of ICT in schools and to ensure that teachers, students and other stakeholders are able to: </p>
+			<ul class="ul_icons">
+				<li>Gather and document successful ideas on how to apply innovative uses of ICT infrastructures at schools and support the exchange of such practices;</li>
+				<li>Reflect and/or promote the adoption of novel educational models, ideas and experiences that link digital artefacts and learning;</li>
+				<li>Better exploit the benefits of the investments made in ICT infrastructure.</li>
+			</ul>
+
+		</div>
+		<div class="col-sm-6 text-justify">
+			<img src="images/banner/methodology_small.png" class="img-responsive"><br><br>
+			<p>For this, eSIT4SIP applied the following methodology:</p>
+			<ul class="ul_icons">
+				<li>Development of ontologies for the unified representation of concepts of learning, infrastructure and instructional affordances,</li>
+				<li>Collection of best practices for the integration of media and technology in the classroom in terms of learning scenarios and instructional design patterns, both, from best practices identified at eSIT4SIP partner schools, and from open educational resources found at selected hubs in the web;</li>
+				<li>Tagging of learning scenarios and instructional design patterns based on the eSIT4SIP ontologies;</li>
+				<li>Development of a methodology for proposing alternative infrastructure and technology configurations for the implementation of learning scenarios;</li>
+				<li>Integration of all above listed elements in the eSIT4SIP Knowledge Base.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- AREA PEOPLE -->
+<div id="people" class="container-fluid padding_top2 ">
+	<div class="row">
+		<div class="col-sm-12 ">
+			<img src="images/banner/people.png" class="banner img-responsive text-center center">
+		</div>
+	</div>
+
+	<div class="row inner people_padding_top" id="people_container">
+
+		<!-- Wolfgang Mueller -->
+		<div class="col-sm-3 box">
+			<a href="http://www.md-phw.de/2013/index.php?id=17">
+				<img src="images/people/wolfgang_mueller.png" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Wolfgang Müller, Prof. Dr.</b><br>
+					Media Education<br>
+					University of Education Weingarten<br>
+					Coordinator, Tech design
+				</p>
+			</a>
+		</div>
+
+		<!-- Paul Libbrecht -->
+		<div class="col-sm-3 box">
+			<a href="http://www.hoplahup.net/paul">
+				<img src="images/people/paul_libbrecht.png" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Paul Libbrecht</b><br>
+					German institute for international<br> 
+					educational research (DIPF)<br>
+					Advisor
+				</p>
+			</a>
+		</div>
+
+		<!-- Karl Barth -->
+		<div class="col-sm-3 box">
+			<a href="http://www.md-phw.de/2013/index.php?id=17">
+			<img src="images/people/karl_barth.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Karl Barth</b><br>
+				Media Education<br>
+				University of Education Weingarten<br>
+				School visits, Scenario Writing, Tech development</p>
+			</a>
+		</div>
+
+		<!-- Romain Herault -->
+		<div class="col-sm-3 box"><a href="https://lnu.se/en/staff/romain.herault/">
+			<img src="images/people/romain_herault.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Romain Herault</b><br>
+				Department of Media Technology,<br>
+				Linnaeus University Växjö,<br> 
+				Technical Development, Scenario Writing
+			</p>
+		</a></div>
+	</div>
+
+
+	<div class="row inner people_padding_top">
+
+		<!-- Anna Mavroudi -->
+		<div class="col-sm-3 box">
+			<a href="https://www.ntnu.edu/employees/anna.mavroudi">
+				<img src="images/people/anna_mavroudi.png" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Anna Mavroudi</b><br>
+					Open University of Cyprus<br>
+					Newsletter and Design
+				</p>
+			</a>
+		</div>
+		<!-- Katrin Lindwall -->
+		<div class="col-sm-3 box">
+			<a href="https://lnu.se/en/staff/katrin.lindwall/">
+				<img src="images/people/katrin_lindwall.png" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Katrin Lindwall</b><br>
+					Department of Media Technology,<br>
+				 	Linnaeus University Växjö <br> school coordinator (Sweden)
+				</p>
+			</a>
+		</div>
+		<!-- Miltos Miltiadou -->
+		<div class="col-sm-3 box">
+			<img src="images/people/miltos_miltiadous.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Miltos Miltiadou</b><br>
+				 Open University of Cyprus<br>
+				Tech design and development
+			</p>
+		</div>
+		<!-- Nuno Otero -->
+		<div class="col-sm-3 box">
+			<a href="https://lnu.se/en/staff/nuno.otero/">
+				<img src="images/people/nuno_otero.png" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Nuno Otero</b><br>
+					Department of Media Technology, <br>
+					Linnaeus University Växjö <br> Researcher & Local coordinator
+				</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="row inner people_padding_top">
+		<!-- Koula Georgiou -->
+		<div class="col-sm-3 box">
+			<img src="images/people/koula_georgiou.jpg" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Koula Georgiou</b><br>
+				Open University of Cyprus     <br>
+				School visits, Scenario writing</p>
+		</div>
+		<!-- Thanasis Hadzilacos -->
+		<div class="col-sm-3 box">
+			<a href="http://www.ouc.ac.cy/web/guest/s2/personell?p_p_id=PA_CONTACTS&p_p_state=pop_up&_PA_CONTACTS_struts_action=%2Fext%2Fparties%2Fcontacts%2Fload&_PA_CONTACTS_mainid=403&_PA_CONTACTS_loadaction=view">
+				<img src="images/people/thanasis_hadzilacos.jpg" class="center img-responsive"><br>
+				<p class="text-center">
+					<b>Thanasis Hadzilacos</b><br>
+					Open University of Cyprus <br>
+					Design, local coordination
+				</p>
+			</a>
+		</div>
+		<!-- Nikoleta Yiannoutsou -->
+		<div class="col-sm-3 box">
+			<img src="images/people/nikoleta_yiannoutsou.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Nikoleta Yiannoutsou</b><br>
+				Open University of Cyprus<br>
+				Design, Scenario analysis
+			</p>
+		</div>
+
+		<!-- Sandra Rebholz -->
+		<div class="col-sm-3 box" >
+			<a href="http://informatik.ph-weingarten.de/das-fach/lehrende/">
+			<img src="images/people/sandra_rebholz.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Sandra Rebholz</b><br>
+				Informatics<br>
+				University of Education Weingarten
+			</p>
+			</a>
+		</div> 
+	</div>
+
+	<div class="row inner people_padding_top">
+		
+		<!-- Chrystalla Neofytou -->
+		<div class="col-sm-3 box">
+			<img src="images/people/chrystalla_neofytou.jpg" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Chrystalla Neofytou</b><br>
+				Open University of Cyprus<br>
+				Researcher - Scenario Analysis
+			</p>
+		</div>
+
+		<!-- Alexander Gantikow -->
+		<div class="col-sm-3 box">
+			<img src="images/people/alexander_gantikow.png" class="center img-responsive"><br>
+			<p class="text-center">
+				<b>Alexander Gantikow</b><br>
+				University of Education Weingarten<br>
+				Web scraping, Technical development
+			</p>			
+		</div>
+
+	</div>
+</div>
+<br><br>
+
+
+<!-- AREA PARTNER + CONTACT  -->
+<div id="activities" class="container-fluid padding_top2 ">
+
+	<div class="row padding_top2">
+		<div class="col-sm-6">
+			<img src="images/banner/partners.png" class="img-responsive"><br><br>
+
+			<!-- PH Weingarten -->
+			<div class="row inner align-middle">
+				<div class="col-sm-3">
+					<img src="images/partner/ph_weingarten.png" class="img-responsive">
+				</div>
+				<div class="col-sm-9">
+					University of Education Weingarten (Coordinator)<br>
+					Media Education and Visualization Group (MEVIS)<br>
+					Contact: Wolfgang Müller, mueller@md-phw.de<br>					
+				</div>
+			</div><br>
+			<!-- University Cyprus -->
+			<div class="row inner align-middle">
+				<div class="col-sm-3">
+					<img src="images/partner/linnaeus_university.png" class="img-responsive">
+				</div>
+				<div class="col-sm-9">
+					Linnäus University<br>
+					Dept. of Computer Science and Media Technology<br>
+					Contact: Nuno Otero, nuno.otero@lnu.se<br>					
+				</div>
+			</div><br>
+			<!-- Linnaeus University -->
+			<div class="row inner align-middle">
+				<div class="col-sm-3">
+					<img src="images/partner/university_cyprus.png" class="img-responsive">
+				</div>
+				<div class="col-sm-9">
+					Open University Cyprus<br>
+					Information Systems Department<br>
+					Contact: Thanasis Hadzilacos, Thanasis.Hadzilacos@ouc.ac.cy<br>				
+				</div>
+			</div>				
+
+
+		</div>
+		<div class="col-sm-6 text-justify">
+			<img src="images/banner/contactus.png" class="img-responsive"><br><br>
+			<p>For further information on the project please contact:</p>
+			<p>
+				Wolfgang Müller<br>
+				University of Education Weingarten<br>
+				Media Education and Visualization Group (MEVIS)<br>
+				mueller@md-phw.de<br>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- AREA PUBLICATIONS -->
+<div id="publications" class="container-fluid padding_top2">
+	<div class="row">
+		<div class="col-sm-12 ">
+			<img src="images/banner/publications.png" class="banner img-responsive text-center center">
+		</div>
+	</div>
+	<div class="row inner">        
+
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>Can I do that? Scenario Feasibility as an Enabler of ICT Usage</b>
+			<a class="btn btn-xs btn-orange pull-right" href="papers/2015-ISSEP-esit4sip-ideas.pdf" role="button">Download</a>
+			<br><br>
+			<div>Müller, W. & Libbrecht, P. (2015)</div>
+			<div>In Proc. 8th International Conference on Informatics in Schools: Situation, Evolution, and Perspective, Ljubljana, Slovenia, 2015</div><br>
+			<i><p>
+				In this poster, we describe a vision of supporting the teachers towards the choice and adoption of ICT-based learning scenarios by means of mappings to the school infrastructure. The vision proposes the selection and curation of didactical design patterns, as repeatable solutions to problems found in such works as learning scenarios, and their mapping to each school’s infrastructure. This collection of patterns, linked to experience reports and scenarios, will offer the regular teachers a way to plan for their applications with a trust of realizability.
+			</p></i><br>
+		</div>
+
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>Let me do it:Towards the implementation of instructional patterns of ICT usage in schools.</b>
+			<a class="btn btn-xs btn-orange pull-right" href="papers/2016-DeLFI-LetMeDoIt.pdf" role="button">Download</a>
+			<br><br>
+			<span>Barth, K., Georgiou, K., Hadzilacos, T., Libbrecht, P., Müller, W., & Otero, N. (2016)</span><br>
+			<span>In Lecture Notes in Informatics (LNI) - Proceedings DeLFI, Bonn, 2016 (pp. 305-307).</span><br><br>
+			<i><p>
+				Facilitating the use of ICT at school has been often done by the creation and distribution of learning scenarios or by systematic training. However, these two approaches have systematic drawbacks. Learning scenarios, generally widely made available on the web, are presented as simple reproducible stories. It should be possible for non-technical persons to embrace technology scenarios and guidance from resources, in a confident way for her particular case. This paper discusses the approach of a collaboration project with schools and academic partners from three European countries called eSIT4SIP (Empowering the School IT infrastructures for the implementation of Sustainable Instructional Patterns, Erasmus+ project). We map scenarios, infrastructure and design patterns [Be00] which provide general solutions for recurring problems with respect to the relevant aspects of the school ICT infrastructure when implementing learning scenarios. The developed tools shall allow users to search for relevant teaching materials and inspiration at different levels of abstraction. The constituent components of our approach are a) the description of educational activities, b) the Knowledge Base that captures and disseminates domain knowledge, and c) the matching algorithm that maps patterns to school infrastructure.
+			</p></i><br>
+		</div>		
+			
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>Let me do it: towards the implementation of sustainable instructional patterns</b>
+			<a class="btn btn-xs btn-orange pull-right" href="papers/2016-ICALT-LetMeDoIt.pdf" role="button">Download</a>
+			<br><br>
+			<span>Mavroudi, A., Miltiadous, M., Libbrecht, P., Müller, W., Hadzilacos, T., Otero, N., Barth, K., & Georgiou, K. (2016)</span><br>
+			<span>In Proc. 16th IEEE International Conference on Advanced Learning Technologies (ICALT 2016) (pp. 414-415).</span><br><br>
+			<i><p>We present the design of an online environment providing mechanisms for the exploitation of school ICT infrastructure by empowering teachers to discover and comment on educational activities (patterns, scenarios, experience reports) that can be implemented in their schools. To this end, our design approach will make explicit the linking between the patterns, the learning scenarios and other contextual information. The online environment will not only serve as a repository of educational activities but will help schools to analyze their infrastructure, to select proper scenarios that effectively exploit it and, potentially, to enrich these scenarios by commenting on them.
+			</p></i><br>
+		</div>
+
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>On the Creation of Sustainable Design Patterns of ICT Integration in the Classroom</b>
+			<!--<a class="btn btn-xs btn-orange pull-right" href="papers/no-file-yet.pdf" role="button">Download</a>-->
+			<br><br>
+			<span>Hadzilacos, T., Georgiou, K., Otero, N., Mavroudi, A., & Mueller, W. (2016)</span><br>
+			<span>In Proc. 10th Mediterranean Conference on Information Systems, Paphos, Cyprus, 2016.</span><br><br>
+			<i><p>
+				<!--Text + Download?-->
+			</p></i><br>
+		</div>
+
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>Hanging Pictures or Searching the Web: Informing the design of a decision making system that empowers teachers to appropriate educational resources to their school’s infrastructure</b>
+			<a class="btn btn-xs btn-orange pull-right" href="papers/OCCE_interim.pdf" role="button">Download</a>
+			<br><br>
+			<div>Yiannoutsou, N., Otero, N., Müller, W., Neofytou, C., Miltiadous, M., & Hadzilacos, T. (2018)</div>
+			<span>Accepted for presentation at the Open Conference on Computers in Education (OCCE <a href="http://occe.2018.ocg.at">http://occe.2018.ocg.at</a>) 25-28 June, 2018 Linz Austria</span><br><br>
+			<i><p>In this paper we report work in progress describing how we address the problem of infrastructure by creating a decision-making system that will help teachers to adapt existing ICT scenaria to their practice and to their school’s infrastructure by proposing alternative technological solutions with the same or similar functionalities.
+			The eSIT4SIP methodology (http://www.esit4sip.eu), based on an ontology capturing concepts of learning and media technology, results in the analysis of a scenario into its constituting elementary activities (micro-activities); the explicit specification of the affordance of the ICT tool that allows the m-activity to take place; the description of the educational functionality accomplished; and the extraction of the teaching approach, which constitutes the Instructional Design Pattern of the scenario. For each m-activity the knowledge base of the eSIT4SIP decision-support system provides (1) alternative technology with the same or similar affordances and (2) alternative micro-activities with similar educational functionality. These may lead to learning-equivalent scenario variations feasible with the existing school infrastructure. The Instructional Design Patterns act as guides for the acceptability of the variations.
+			</p></i><br>
+		</div>
+
+		<div class="col-sm-12">
+			<p style="border-bottom: thin solid rgb(89, 89, 89)"></p>
+			<b>Only for the Rich? Accessible school infrastructure for the maker movement.</b>
+			<a class="btn btn-xs btn-orange pull-right" href="papers/2018-IDC_workshop_eSIT4SIP_CR.pdf" role="button">Download</a>
+			<br><br>
+			<span>T. Hadzilacos, N. Yiannoutsou, W. Müller, S. Rebholz, N. Otero</span><br>
+			<span>To be published: In Proc. Interaction Design and Children Conference (IDC) , Trondheim, Norway, 2018.</span><br><br>
+			<i><p>
+				For the maker movement to find its way in the large- scale education, school infrastructure (un)availability is a critical factor. In this paper we present the eSIT4SIP approach; using ontology and knowledge engineering tools and concepts of “elementary activity”, “ICT educational functionality” and “instructional design patterns”, eSIT4SIP provides teachers with tools to adapt and adopt ICT-enhanced activities to their school’s existing infrastructure. We investigate the specific challenges of “craft-and-make” educational scenaria and we explore lines of further work to support teachers not only to adapt these activities to the available equipment but also to preserve the spirit and the pedagogical principles of the maker movement. 
+			</p></i><br>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<!-- FOOTER -->
+<footer id="footer" class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-12">
+			<a class="white footer-links" data-toggle="modal" data-target=".impressum-modal">IMPRESSUM</a>
+			<a class="white footer-links" data-toggle="modal" data-target=".data-protection-modal">PRIVACY POLICY</a>
+			<!--<a href="#contact" class="white footer-links">CONTACT</a>-->
+			<div class="modal fade impressum-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<b>Impressum<br></b>
+						Empowering the School IT infrastructures for the implementation of Sustainable Instructional Patterns is an EU Erasmus+.<br><br>
+						It is coordinated by the Weingarten University of Education.<br><br>
+						<b>Address:</b> <br>
+						PH Weingarten<br>
+						Kirchplatz 2<br>
+						88250 Weingarten<br><br>
+						<b>Editors:</b> <br>
+						Paul Libbrecht (Informatik)<br>
+						Wolfgang Müller (Mediendidaktik)<br>
+						Jennifer Reder (Design)<br>
+						Stefanie Eichwald (Technical implementation)<br>
+						Alexander Gantikow (Technical implementation)<br>
+						<b>Contact:</b> <br>
+						contact@esit4sip.eu<br><br>
+						© Copyright Pictures: Fotolia & esit4sip<br>
+						© Copyright Icons: Flaticon<br>
+						<div>
+							Icons made by 
+							<a href="http://www.flaticon.com/authors/graphberry" title="GraphBerry">GraphBerry</a> from 
+							<a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by 
+							<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+						</div>
+						<div>
+							Icons made by 
+							<a href="http://www.freepik.com" title="Freepik">Freepik</a> 
+							from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by 
+							<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade data-protection-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content text-left" style="padding: 40px">
+<h1>Privacy Policy</h1>
+
+Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.
+
+Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.
+
+The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.
+
+Our privacy policy is structured as follows:
+I. Information about us as controllers of your data
+II. The rights of users and data subjects
+III. Information about the data processing
+
+<h1>I. Information about us as controllers of your data</h1>
+
+The party responsible for this website (the "controller") for purposes of data protection law is: <br>
+Pädagogische Hochschule Weingarten (University of Education)<br>
+Media Education<br>
+Kirchplatz 2<br>
+88250 Weingarten<br>
+Germany<br>
+Telephone: +49 751 501-0<br>
+Email: muellerw@ph-weingarten.de<br><br>
+
+The controller's data protection officer is:<br>
+Wolfgang Müller <br>
+Telephone: +49 751 501-8545<br>
+Fax: +49 751 501-58545<br>
+Email: muellerw@ph-weingarten.de<br><br>
+
+<h1>II. The rights of users and data subjects</h1>
+
+With regard to the data processing to be described in more detail below, users and data subjects have the right<br>
+<ul>
+<li>to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);</li>
+<li>to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);</li>
+<li>to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;</li>
+<li>to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);</li>
+<li>to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).</li>
+</ul>
+
+In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.<br>
+
+<b>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible.</b>
+
+<h1>III. Information about the data processing</h1>
+
+Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.<br><br>
+
+Server data<br>
+
+For technical reasons, the following data sent by your internet browser to us or to our server provider will be collected, especially to ensure a secure and stable website: These server log files record the type and version of your browser, operating system, the website from which you came (referrer URL), the webpages on our site visited, the date and time of your visit, as well as the IP address from which you visited our site.
+The data thus collected will be temporarily stored, but not in association with any other of your data.
+
+The basis for this storage is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the improvement, stability, functionality, and security of our website.
+
+The data will be deleted within no more than seven days, unless continued storage is required for evidentiary purposes. In which case, all or part of the data will be excluded from deletion until the investigation of the relevant incident is finally resolved.
+
+<h2>Matomo (formerly: PIWIK)</h2>
+
+<p>Our website uses Matomo (formerly: PIWIK). This is open-source software with which we can analyze the use of our site. Data such as your IP address, the pages you visit, the website from which you came (referrer URL), the duration of your visit, and the frequency of your visits is processed. Matomo stores a cookie on your device via your browser in order to collect this data. This cookie is valid for one week. The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the analysis and optimization of our website. We use Matomo with the "Automatically Anonymize Visitor IPs" function. This anonymization function truncates your IP address by two bytes so that it is impossible to assign it to you or to the internet connection you are using.</p>
+
+<p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above. In addition, you have the option of terminating the analysis of your usage behavior by opting out. By confirming the following link a cookie is stored on your device via your browser to prevent any further analysis. Please note, however, that you must click the above link again if you delete the cookies stored on your end device.</p>
+
+<iframe style="border: 0; height: 200px; width: 600px;" src="http://piwik.esit4sip.eu/index.php?module=CoreAdminHome&action=optOut&language=de"></iframe>
+
+<p>
+	<a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Model Data Protection Statement</a> from 
+	<a href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß & Partner</a>
+</p>
+
+
+					</div>
+				</div>
+			</div>			
+			<p class="line"></p>
+			<img src="images/footer_grafik.png">
+		</div>
+	</div>
+</footer>
+
+<a class="btn btn-totop" href="#home" role="button"><span class="glyphicon glyphicon-menu-up"></span></a>
+
+<!-- Template -->
+<script id="article-template" type="text/html">
+	<div class="col-sm-6 col-md-4">
+		<div id="<%= id %>" class="article-thumbnail" data-lang="<%= language %>">
+			<div class="article-title"><h4><%= title %></h4></div>
+			<div class="article-description"><%= summary %></div>
+		</div>
+	</div>
+</script>
+
+</body>
+</html>
