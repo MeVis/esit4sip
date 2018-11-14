@@ -49,7 +49,6 @@ WHERE {
 }
 
 - All devices running a tool that offers a given affordance (here: infrastructure-instances:TakePictures)
-- TODO: letzte Aussage (device?) läuft bei mir nicht
 
 SELECT ?device ?affordance ?tool
 WHERE {
@@ -93,7 +92,6 @@ WHERE {
  }
  
 - All device instances that run tools with a given affordance.
-- TODO: There are no device instances yet
 
 SELECT ?inst ?device ?affordance ?tool
 WHERE {
@@ -112,7 +110,6 @@ WHERE {
 ---
  
 - All instances of all subclasses of Device
-- TODO: There are no device instances yet 
 
 SELECT ?s
 WHERE {
@@ -128,7 +125,6 @@ WHERE {
 }
 
 - Select all affordances of a given scenario and all device instances that run a tool offering that affordance
-- TODO: There are no device instances yet 
 
 SELECT ?affordance ?inst ?tool
 WHERE {

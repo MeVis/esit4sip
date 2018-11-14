@@ -16,8 +16,3 @@ You may explore the knowledge base and ontology with an interactive visualizatio
 - Created all classes required for the data from the scenarios scraped from the web
 - Example query for finding devices offering the same affordance as a given device
 - Basic datatype properties for scenario defined (based on scraped data)
-
-TODO:
-- Check object properties in learning ontology
-- Define use case(s) to be realized in web frontend using the ontology
-- Develop example queries for retrieving instances from learning ontology based on use cases
