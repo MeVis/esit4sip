@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:learning="http://esit4sip.eu/learning#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://esit4sip.eu/learning">
+  <owl:Ontology rdf:about="">
+    <dc:creator>The eSIT4SIP team</dc:creator>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <dc:description>This ontology describes ICT-based learning scenarios collected and analyzed by the eSIT4SIP project</dc:description>
+    <dc:title>eSIT4SIP Ontology</dc:title>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://esit4sip.eu/infrastructure"/>
+    <dc:language>en</dc:language>
+    <dc:rights>EUPL v1.2</dc:rights>
+  </owl:Ontology>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+  <owl:Class rdf:ID="transdisciplinary">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SubjectSpecifity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>transdisciplinary</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Explaining">
+    <rdfs:label>Explaining</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Understanding"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="interdisciplinary">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SubjectSpecifity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>interdisciplinary</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EducationalRelevantActivity">
+    <rdfs:comment xml:lang="en-US">Educational meaningful activity serving learning goals within a learning context</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="serves"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="LearningObjective"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isATypeOf"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#EducationalRelevantActivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Educational function</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ClinicalMedicine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MedicalAndHealthSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Clinical medicine</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Creating">
+    <rdfs:label>Creating</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CognitiveProcess"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MediaCommunications">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Media and communications</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SocialdEconomicGeography">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Social and economic geography</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Organizing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Analyzing"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Organizing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgriculturalSciences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Domain"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Agricultural sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EducationalSciences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Educational sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherHumanities">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Humanities"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Other humanities</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Executing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Applying"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Executing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="MaterialsEngineering">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="EngineeringAndTechnology"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Materials engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="subjectUnspecific">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SubjectSpecifity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>subject unspecific</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="NumberOriented">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Number oriented</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="BasicMedicine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MedicalAndHealthSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Basic medicine</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Checking">
+    <rdfs:label>Checking</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Evaluating"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Analyzing">
+    <rdfs:label>Analyzing</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CognitiveProcess"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Comparing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Understanding"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Comparing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="BusinessAndEconomics">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Business and economics</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Interpretation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Understanding"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Interpretation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Psychology">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Psychology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="MechanicalEngineering">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EngineeringAndTechnology"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Mechanical engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Arts">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Humanities"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Arts</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="mobile">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Location"/>
+    </rdfs:subClassOf>
+    <rdfs:label>mobile</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherNaturalSciences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NaturalSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Other natural sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ComputerInformationScience">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NaturalSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Computer information science</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Domain">
+    <rdfs:comment xml:lang="en-US">A subject in school that covers a certain area of knowledge.</rdfs:comment>
+    <rdfs:label>Domain</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Applying">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CognitiveProcess"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Applying</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematics">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NaturalSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Mathematics</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EarthEnvironmentalSciences">
+    <rdfs:label>Earth environmental sciences</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NaturalSciences"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherMedicalSciences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MedicalAndHealthSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Other medical sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Production">
+    <rdfs:subClassOf rdf:resource="#Creating"/>
+    <rdfs:label>Production</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="stationary">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+    <rdfs:label>stationary</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EnvironmentalBiotechnology">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EngineeringAndTechnology"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Environmental biotechnology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EconomiesBusiness">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SocialSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Economies and Business</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#CognitiveProcess">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DidacticDimension"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Cognitive process</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="virtual">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+    <rdfs:label>virtual</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Humanities">
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+    <rdfs:label>Humanities</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Attributing">
+    <rdfs:subClassOf rdf:resource="#Analyzing"/>
+    <rdfs:label>Attributing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#SocialSciences">
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+    <rdfs:label>Social sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Microactivity">
+    <rdfs:comment>An elementary activity that forms part of a more complex learning activity. A micro-activity is considered to be educationally neutral. However, in the context of the embracing learning activity it serves a given learning goal and fulfills a certain educational functionality (Educational affordance) in this context.</rdfs:comment>
+    <rdfs:label>Microactivity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#EducationalRelevantActivity"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="realizes"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://esit4sip.eu/infrastructure#ICTAffordance"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="requires"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DesignPattern">
+    <rdfs:comment xml:lang="en-US">Description of a typical solution to a recurring problem in the context of learning. The description of a design pattern follows a given structure and provides the basis for developing concrete learning designs.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label>Design pattern</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EEIEngineering">
+    <rdfs:label>Electrical electronic information engineering</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EngineeringAndTechnology"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Classifying">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Understanding"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Classifying</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EnvironmentalEngineering">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#EngineeringAndTechnology"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Environmental engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Sociology">
+    <rdfs:subClassOf rdf:resource="#SocialSciences"/>
+    <rdfs:label>Sociology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherSocialSciences">
+    <rdfs:subClassOf rdf:resource="#SocialSciences"/>
+    <rdfs:label>Other social sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#EngineeringAndTechnology">
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+    <rdfs:label>Engineering and technology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="LanguagesLiterature">
+    <rdfs:subClassOf rdf:resource="#Humanities"/>
+    <rdfs:label>Languages and literature</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Location">
+    <rdfs:comment>see spatial setting from scenario</rdfs:comment>
+    <rdfs:label>Location</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DidacticDimension"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="contentRelated">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SubjectSpecifity"/>
+    </rdfs:subClassOf>
+    <rdfs:label>content related</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#SubjectSpecifity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DidacticDimension"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Subject specifity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SmallGroupBased">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Small group based</rdfs:label>
+    <rdfs:comment>3-7 students</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MedicalAndHealthSciences">
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+    <rdfs:label>Medical and Health sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="subjectSpecific">
+    <rdfs:subClassOf rdf:resource="#SubjectSpecifity"/>
+    <rdfs:label>subject specific</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Domain"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="relatesTo"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Planning">
+    <rdfs:subClassOf rdf:resource="#Creating"/>
+    <rdfs:label>Planning</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ChemicalSciences">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NaturalSciences"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Chemical sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgricultureForestryFishery">
+    <rdfs:subClassOf rdf:resource="#AgriculturalSciences"/>
+    <rdfs:label>Agriculture, Forestry and Fisheries</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ambulant">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+    <rdfs:label>ambulant</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#NaturalSciences">
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+    <rdfs:label>Natural sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Remembering">
+    <rdfs:subClassOf rdf:resource="#CognitiveProcess"/>
+    <rdfs:label>Remembering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ChemicalEngineering">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Chemical engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Recognizing">
+    <rdfs:label>Recognizing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Remembering"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GroupBased">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Group based</rdfs:label>
+    <rdfs:comment>8-30 students</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherAgriculturalSciences">
+    <rdfs:subClassOf rdf:resource="#AgriculturalSciences"/>
+    <rdfs:label>Other agricultural sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Law">
+    <rdfs:subClassOf rdf:resource="#SocialSciences"/>
+    <rdfs:label>Law</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PhilosophyEthicsReligion">
+    <rdfs:subClassOf rdf:resource="#Humanities"/>
+    <rdfs:label>Philosophy, Ethics and Religion</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Scenario">
+    <rdfs:comment>Description of a lesson.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Microactivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#EducationalRelevantActivity"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="educationalAffordance"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#DidacticDimension"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDidacticDimension"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#DesignPattern"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="implements"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://esit4sip.eu/infrastructure#ICTAffordance"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#requires"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Scenario</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="HealthSciences">
+    <rdfs:subClassOf rdf:resource="#MedicalAndHealthSciences"/>
+    <rdfs:label>Health sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Evaluating">
+    <rdfs:label>Evaluating</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CognitiveProcess"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Implementing">
+    <rdfs:subClassOf rdf:resource="#Applying"/>
+    <rdfs:label>Implementing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PoliticalScience">
+    <rdfs:subClassOf rdf:resource="#SocialSciences"/>
+    <rdfs:label>Political science</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Differentiating">
+    <rdfs:label>Differentiating</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Analyzing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Understanding">
+    <rdfs:subClassOf rdf:resource="#CognitiveProcess"/>
+    <rdfs:label>Understanding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Interdisciplinary">
+    <rdfs:label>Interdisciplinary</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Domain"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MedicalEngineering">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Medical engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IndustrialBiotechnology">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Industrial biotechnology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CivilEngineering">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Civil engineering</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="localized">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+    <rdfs:label>localized</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgriculturalBiotechnology">
+    <rdfs:subClassOf rdf:resource="#AgriculturalSciences"/>
+    <rdfs:label>Agricultural biotechnology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IndividualWork">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Individual work</rdfs:label>
+    <rdfs:comment>1 student</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="multidisciplinary">
+    <rdfs:subClassOf rdf:resource="#SubjectSpecifity"/>
+    <rdfs:label>multidisciplinary</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalDairyScience">
+    <rdfs:subClassOf rdf:resource="#AgriculturalSciences"/>
+    <rdfs:label>Animal and Dairy science</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PairWork">
+    <rdfs:label>Pair work</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>2 students</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DidacticDimension">
+    <rdfs:comment xml:lang="en-US">Describes aspects of the educational context</rdfs:comment>
+    <rdfs:label>Didactic dimension</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Exemplifying">
+    <rdfs:subClassOf rdf:resource="#Understanding"/>
+    <rdfs:label>Exemplifying</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="MedicalBiotechnology">
+    <rdfs:label>Medical biotechnology</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#MedicalAndHealthSciences"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Recalling">
+    <rdfs:subClassOf rdf:resource="#Remembering"/>
+    <rdfs:label>Recalling</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="NanoTechnology">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Nano technology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="HistoryArchaeology">
+    <rdfs:subClassOf rdf:resource="#Humanities"/>
+    <rdfs:label>History and archaeology</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="indirectlyExperienceOriented">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+    <rdfs:label>indirectly experience oriented</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OtherEngineeringTechnologies">
+    <rdfs:subClassOf rdf:resource="#EngineeringAndTechnology"/>
+    <rdfs:label>Other engineering and technologies</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Inferring">
+    <rdfs:subClassOf rdf:resource="#Understanding"/>
+    <rdfs:label>Inferring</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="LargeGroupBased">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ClassOrganisation"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Large group based</rdfs:label>
+    <rdfs:comment>&gt; 30 students</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BiologicalSciences">
+    <rdfs:subClassOf rdf:resource="#NaturalSciences"/>
+    <rdfs:label>Biological sciences</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="VeterinaryScience">
+    <rdfs:label>Veterinary science</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#AgriculturalSciences"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Summarizing">
+    <rdfs:subClassOf rdf:resource="#Understanding"/>
+    <rdfs:label>Summarizing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Critiquing">
+    <rdfs:subClassOf rdf:resource="#Evaluating"/>
+    <rdfs:label>Critiquing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#LearningObjective">
+    <rdfs:comment xml:lang="en-US">Learning objectives according to Bloom's revised taxonomy.</rdfs:comment>
+    <rdfs:label>Learning objective</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ClassOrganisation">
+    <rdfs:label>Class organisation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#DidacticDimension"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Generating">
+    <rdfs:subClassOf rdf:resource="#Creating"/>
+    <rdfs:label>Generating</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysicalScience">
+    <rdfs:subClassOf rdf:resource="#NaturalSciences"/>
+    <rdfs:label>Physical science</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#requires">
+    <rdfs:label>requires</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#realizes">
+    <rdfs:label>realizes</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDidacticDimension">
+    <rdfs:label>has didactic dimension</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#contains">
+    <rdfs:label>contains</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#serves">
+    <rdfs:label>serves</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#implements">
+    <rdfs:label>implements</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#educationalAffordance">
+    <rdfs:label>educational function</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#relatesTo">
+    <rdfs:label>relates to</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isATypeOf">
+    <rdfs:label>is AType of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDomain">
+    <rdfs:range rdf:resource="#Domain"/>
+    <rdfs:domain rdf:resource="#Scenario"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="dateModified">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>date modified</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="author">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>author</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="title">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="contentTag">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>content tag</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="summary">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>summary</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unitPlan">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>unit plan</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="url">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>url</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="date">
+    <rdfs:domain rdf:resource="#Scenario"/>
+    <rdfs:label>date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <learning:DesignPattern rdf:ID="TechnologyOnDemand">
+    <rdfs:label>Technology on demand</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </learning:DesignPattern>
+  <learning:DesignPattern rdf:ID="FlippedClassroom">
+    <rdfs:label>Flipped classroom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </learning:DesignPattern>
+  <rdf:Description rdf:about="http://esit4sip.eu/infrastructure#Collaborate_And_Share">
+    <rdfs:label>Collaborate and share</rdfs:label>
+  </rdf:Description>
+  <learning:DesignPattern rdf:ID="RepresentationOnDemand">
+    <rdfs:label>Representation on demand</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </learning:DesignPattern>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
