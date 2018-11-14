@@ -1,0 +1,160 @@
+Example queries for complete ontology including example instances (infrastructure-instance.rdf):
+
+------
+
+- Select all instances offering the same affordance as a given instance (here: AndroidTablet):
+
+SELECT ?a ?s
+WHERE {
+  infrastructure-instances:AndroidTablet infrastructure:offers ?a.
+  ?s infrastructure:offers ?a.
+}
+
+------
+SCENARIOS BY DOMAIN
+
+- Select all scenarios that are suitable for a certain domain (or any subclass of it):
+- Here: Select all sceanrios belonging to the domain "NaturalSciences".
+
+SELECT ?s ?d
+WHERE {
+	?d rdfs:subClassOf* learning:NaturalSciences .
+	?s learning:hasDomain ?d .
+}
+
+
+
+---
+
+- All (tool) classes offering an affordance
+
+SELECT ?who ?res ?affordance
+WHERE {
+	?who rdfs:subClassOf* ?res .
+	?res a owl:Restriction .
+	?res owl:onProperty infrastructure:offers .
+	?res owl:hasValue ?affordance . 
+}
+
+- All (tool) classes offering a given affordance
+- Here: Which tool can 'TakePictures' ( infrastructure-instances:TakePictures) ? Result: Camera
+
+SELECT ?who ?affordance
+WHERE {
+	?who rdfs:subClassOf ?res .
+	?res a owl:Restriction .
+	?res owl:onProperty infrastructure:offers .
+	?res owl:hasValue infrastructure-instances:Take_Pictures .
+	?res owl:hasValue ?affordance. 
+}
+
+- All devices running a tool that offers a given affordance (here: infrastructure-instances:TakePictures)
+- TODO: letzte Aussage (device?) läuft bei mir nicht
+
+SELECT ?device ?affordance ?tool
+WHERE {
+	?tool rdfs:subClassOf ?res .
+	?res a owl:Restriction .
+	?res owl:onProperty infrastructure:offers .
+	?res owl:hasValue infrastructure:TakePictures .
+	?res owl:hasValue ?affordance. 
+	?device infrastructure:runs ?tool .
+}
+
+- All device classes running a tool that offers a given affordance (here: infrastructure-instances:Write) 
+ 
+SELECT ?device ?affordance ?tool
+WHERE {
+	?tool rdfs:subClassOf ?resoffers .
+	?resoffers a owl:Restriction .
+	?resoffers owl:onProperty infrastructure:offers .
+	?resoffers owl:hasValue infrastructure-instances:Write .
+	?resoffers owl:hasValue ?affordance. 
+	?device rdfs:subClassOf+ ?resruns .
+	?resruns a owl:Restriction .
+	?resruns owl:onProperty infrastructure:runs .
+	?resruns owl:hasValue ?tool. 
+}
+ 
+- All devices running a tool with a given affordance and all available tool instances:
+ 
+SELECT ?tool_instance ?device ?affordance ?tool ?tool_instance
+WHERE {
+	?tool rdfs:subClassOf ?resoffers .
+	?resoffers a owl:Restriction .
+	?resoffers owl:onProperty infrastructure:offers .
+	?resoffers owl:hasValue infrastructure:Write .
+	?resoffers owl:hasValue ?affordance. 
+	?device rdfs:subClassOf ?resruns .
+	?resruns a owl:Restriction .
+	?resruns owl:onProperty infrastructure:runs .
+	?resruns owl:hasValue ?tool . 
+	?tool_instance a ?tool . 
+ }
+ 
+- All device instances that run tools with a given affordance.
+- TODO: There are no device instances yet
+
+SELECT ?inst ?device ?affordance ?tool
+WHERE {
+	?tool rdfs:subClassOf ?resoffers .
+	?resoffers a owl:Restriction .
+	?resoffers owl:onProperty infrastructure:offers .
+	?resoffers owl:hasValue infrastructure:TakePictures .
+	?resoffers owl:hasValue ?affordance. 
+	?device rdfs:subClassOf+ ?resruns .
+	?resruns a owl:Restriction .
+	?resruns owl:onProperty infrastructure:runs .
+	?resruns owl:hasValue ?tool.
+	?inst a ?device . 
+}
+ 
+---
+ 
+- All instances of all subclasses of Device
+- TODO: There are no device instances yet 
+
+SELECT ?s
+WHERE {
+?s rdf:type/rdfs:subClassOf* infrastructure:Device . 
+ } 
+---
+
+- Select all affordances of a given scenario
+
+SELECT ?affordance ?inst ?tool
+WHERE {
+	learning:replace_by_scenario_ressource learning:requires ?affordance .
+}
+
+- Select all affordances of a given scenario and all device instances that run a tool offering that affordance
+- TODO: There are no device instances yet 
+
+SELECT ?affordance ?inst ?tool
+WHERE {
+	learning:TestSzenario learning:requires ?affordance .
+	?tool rdfs:subClassOf ?resoffers .
+	?resoffers a owl:Restriction .
+	?resoffers owl:onProperty infrastructure:offers .
+	?resoffers owl:hasValue ?affordance. 
+	?device rdfs:subClassOf+ ?resruns .
+	?resruns a owl:Restriction .
+	?resruns owl:onProperty infrastructure:runs .
+	?resruns owl:hasValue ?tool.
+	?inst a ?device . 
+}
+
+- Select all affordances of a given scenario and all device classes that run a tool offering that affordance
+
+SELECT ?affordance ?device ?tool
+WHERE {
+	learning-instances:Test2Szenario learning:requires ?affordance .
+	?tool rdfs:subClassOf ?resoffers .
+	?resoffers a owl:Restriction .
+	?resoffers owl:onProperty infrastructure:offers .
+	?resoffers owl:hasValue ?affordance. 
+	?device rdfs:subClassOf+ ?resruns .
+	?resruns a owl:Restriction .
+	?resruns owl:onProperty infrastructure:runs .
+	?resruns owl:hasValue ?tool.
+}

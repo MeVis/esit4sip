@@ -1,0 +1,2329 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/miltos/ontologies/2017/5/kb_ontology_mapped"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/miltos/ontologies/2017/5/kb_ontology_mapped">
+    <Prefix name="" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/kb_ontology_mapped#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="functions" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/function_onto_2#"/>
+    <Prefix name="time_onto" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/time#"/>
+    <Prefix name="infra_conf" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/infrastructure_configuration_onto_1#"/>
+    <Prefix name="kb_ontology" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/kb_ontology_mapped#"/>
+    <Prefix name="edu_practice" IRI="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#"/>
+    <Import>http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto</Import>
+    <Import>http://www.semanticweb.org/miltos/ontologies/2017/5/time</Import>
+    <Import>http://www.semanticweb.org/miltos/ontologies/2017/5/infrastructure_configuration_onto_1</Import>
+    <Import>http://www.semanticweb.org/miltos/ontologies/2017/5/function_onto_2</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP Integrated (reference) Knowledge Base Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP Integrated Knowledge Base ontology models both the available ICT infrastructure and physical space of a school environment employed by educators to implement different activities such as learning scenarios. Furthermore, the ontology integrates (imports) the following ontologies: a. Educational Practice, b. Function and c. Time ontologies.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:developer"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP development team</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Problem_based_learning"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fullName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityIntervalStartEnd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Group_work"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityDuration"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#minute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex7"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#School"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1b"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSessionDuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftwareDirect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSatisfiedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#schoolName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScenarioMetadata"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#metadataInfo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex4"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#intervalStarts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#inXSDDateTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Collaborative_learning"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:developer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Scenario_ex1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex9"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDigitalDeviceMetadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReportIntervalStartEnd"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titleName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex6"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReportDuration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex12"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#authorName"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex1"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gDay"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#month"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex10"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAppBasicFunction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEmployedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Drill_and_Practice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="infra_conf:screenSize"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="infra_conf:hasHardware"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityMetadata"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Author_Example_1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Title_Example_1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReportTemporalEntityInstant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex13"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#intervalFinishes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#hasDurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex3"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#unitType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByComputerDirect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex9"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#schoolName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#day"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#hour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:independent_work"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByDeviceDirect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2006/time#inDateTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComputerEntityMetadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1a"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#authorName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#titleName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#School_Example_1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metadata_Example_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex5"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gMonth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex15"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSessionIntervalStartEnd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSessionTemporalEntityInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="functions:Function_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="functions:Function"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="edu_practice:work_in_pairs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInstant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComputerBasicFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Title"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex14"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex5"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComputerProgramMetadata"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasActivityEnvironment"/>
+            <Class abbreviatedIRI="infra_conf:Activity_Environment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isEmployedBy"/>
+            <Class abbreviatedIRI="infra_conf:ICT_Configuration_View"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasReportDuration"/>
+            <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasReportIntervalStartEnd"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+            <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+            <Class abbreviatedIRI="functions:Basic_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+            <Class abbreviatedIRI="functions:Instructional_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+            <Class abbreviatedIRI="functions:Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="edu_practice:hasRestriction"/>
+            <Class abbreviatedIRI="edu_practice:Restriction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasActivityMetadata"/>
+            <Class IRI="#Metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasActivityDuration"/>
+            <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasActivityIntervalStartEnd"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasActivityTemporalEntityInstant"/>
+            <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+            <Class abbreviatedIRI="functions:Basic_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+            <Class abbreviatedIRI="functions:Instructional_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+            <Class abbreviatedIRI="functions:Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="functions:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+            <Class abbreviatedIRI="infra_conf:Application"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="functions:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isRealizedByComputer"/>
+            <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="functions:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isRealizedByDevice"/>
+            <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAppBasicFunction"/>
+            <Class abbreviatedIRI="functions:Basic_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+            <Class abbreviatedIRI="functions:Instructional_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComputerEntityMetadata"/>
+            <Class IRI="#Metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasComputerBasicFunction"/>
+            <Class abbreviatedIRI="functions:Basic_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+            <Class abbreviatedIRI="functions:Instructional_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Computer_Program"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComputerProgramMetadata"/>
+            <Class IRI="#Metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDigitalDeviceMetadata"/>
+            <Class IRI="#Metadata"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+            <Class abbreviatedIRI="functions:Basic_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+            <Class abbreviatedIRI="functions:Instructional_Function"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#authorName"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#School"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#School"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#schoolName"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Title"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Title"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#titleName"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="edu_practice:Educational_Subject"/>
+        <Class abbreviatedIRI="edu_practice:Instructor"/>
+        <Class abbreviatedIRI="edu_practice:Seating_Order"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Didactical_Method"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Collaborative_learning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Didactical_Method"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Drill_and_Practice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Group_work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Scenario_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Didactical_Method"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Problem_based_learning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:independent_work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:work_in_pairs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="functions:Learning_Based_Function"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="functions:Learning_Based_Function"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Activity_Environment"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Activity_Environment"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Computing_Entity_Hardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Computing_Entity_Hardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Computing_Entity_Hardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Computing_Entity_Hardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Computing_Entity_Hardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Camera_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Digital_Camera"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Digital_camera_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop_Screen"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Laptop_Screen"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Mobile_Device"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Mobile_Device"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Mobile_Device"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Mobile_Device"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Mobile_Device"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Mobile_phone_ex5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop_Monitor"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop_Monitor"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Desktop_Monitor"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Wired_Network"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Wired_Network"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Wireless_Network"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="infra_conf:Wireless_Network"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Author_Example_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metadata"/>
+        <NamedIndividual IRI="#Metadata_Example_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#School"/>
+        <NamedIndividual IRI="#School_Example_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Title"/>
+        <NamedIndividual IRI="#Title_Example_1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasInstructionalRequirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1a"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:independent_work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasInstructionalRequirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1a"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:work_in_pairs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasInstructionalRequirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1b"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:independent_work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasInstructionalRequirement"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1b"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:work_in_pairs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasLearningActivity"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Scenario_ex1"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="edu_practice:hasLearningActivity"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Scenario_ex1"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:Learning_Activity_ex1b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:independent_work"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="edu_practice:work_in_pairs"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasWiredNetworks"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasWirelessNetworks"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Activity_Environment_Example1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wired_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasNetwork"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Wireless_Net_Example1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasOutputDevices"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex1"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex10"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex10"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex11"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex12"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex13"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex14"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex15"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex2"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex3"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex4"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex4"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex5"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex5"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex6"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex6"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex7"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex7"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex8"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex8"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex9"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_ex9"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex1"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex2"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex3"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex4"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex4"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex5"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Desktop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Desktop_screen_ex5"/>
+        <NamedIndividual abbreviatedIRI="functions:Group_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex1"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex1"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex10"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex10"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex11"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex12"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex13"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex14"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex15"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex2"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex2"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex3"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex3"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex4"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex4"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex5"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex5"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex6"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex6"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex7"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex7"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex8"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex8"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex9"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:CEH_Laptop_exa1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_ex9"/>
+        <NamedIndividual abbreviatedIRI="functions:Individual_Work"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="infra_conf:screenSize"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="infra_conf:screenSize"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Laptop_screen_ex2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="infra_conf:screenSize"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="infra_conf:screenSize"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="infra_conf:screenSize"/>
+        <NamedIndividual abbreviatedIRI="infra_conf:Monitor_ex3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">14</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActivityDuration"/>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActivityIntervalStartEnd"/>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActivityMetadata"/>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInstant"/>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAppBasicFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComputerBasicFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComputerEntityMetadata"/>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComputerProgramMetadata"/>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDigitalDeviceMetadata"/>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReportDuration"/>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReportIntervalStartEnd"/>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReportTemporalEntityInstant"/>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasScenarioMetadata"/>
+        <ObjectProperty IRI="#hasMetadata"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSessionDuration"/>
+        <ObjectProperty IRI="#hasSessionTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSessionIntervalStartEnd"/>
+        <ObjectProperty IRI="#hasSessionTemporalEntityInterval"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSessionTemporalEntityInterval"/>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftwareDirect"/>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByComputerDirect"/>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRealizedByDeviceDirect"/>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+        <ObjectProperty IRI="#isSatisfiedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+        <ObjectProperty IRI="#isSatisfiedBy"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAppBasicFunction"/>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasComputerBasicFunction"/>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+        <ObjectProperty IRI="#isRealizedBy"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasTemporalEntity"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityDuration"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityEnvironment"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityIntervalStartEnd"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityMetadata"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInstant"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAppBasicFunction"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComputerBasicFunction"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComputerEntityMetadata"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComputerProgramMetadata"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Program"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDigitalDeviceMetadata"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReportDuration"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReportIntervalStartEnd"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReportTemporalEntityInstant"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <Class abbreviatedIRI="edu_practice:Experience_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedBy"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftwareDirect"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByComputerDirect"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByDeviceDirect"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+        <Class abbreviatedIRI="edu_practice:Learning_Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+        <Class abbreviatedIRI="edu_practice:Instructional_Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSatisfiedBySoftwareFunction"/>
+        <Class abbreviatedIRI="edu_practice:Restriction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityDuration"/>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityEnvironment"/>
+        <Class abbreviatedIRI="infra_conf:Activity_Environment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityIntervalStartEnd"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInstant"/>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasActivityTemporalEntityInterval"/>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAppBasicFunction"/>
+        <Class abbreviatedIRI="functions:Basic_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAppInstructionalFunction"/>
+        <Class abbreviatedIRI="functions:Instructional_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComputerBasicFunction"/>
+        <Class abbreviatedIRI="functions:Basic_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComputerEntityMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComputerInstructionalFunction"/>
+        <Class abbreviatedIRI="functions:Instructional_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComputerProgramMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeviceBasicFunction"/>
+        <Class abbreviatedIRI="functions:Basic_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeviceInstructionalFunction"/>
+        <Class abbreviatedIRI="functions:Instructional_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDigitalDeviceMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReportDuration"/>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReportIntervalStartEnd"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReportTemporalEntityInstant"/>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReportTemporalEntityInterval"/>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScenarioMetadata"/>
+        <Class IRI="#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSessionDuration"/>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSessionIntervalStartEnd"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSessionTemporalEntityInterval"/>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSupportedFunctions"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEmployedBy"/>
+        <Class abbreviatedIRI="infra_conf:ICT_Configuration_View"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedBy"/>
+        <Class abbreviatedIRI="infra_conf:ICT_Configuration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftware"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByApplicationSoftwareDirect"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByComputer"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByComputerDirect"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByDevice"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByDeviceDirect"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+        <Class abbreviatedIRI="infra_conf:Application"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+        <Class abbreviatedIRI="infra_conf:Computer_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRealizedByDirectly"/>
+        <Class abbreviatedIRI="infra_conf:Digital_Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSatisfiedBy"/>
+        <Class abbreviatedIRI="functions:Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSatisfiedByBasicFunction"/>
+        <Class abbreviatedIRI="functions:Basic_Function"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSatisfiedByInstructionalFunction"/>
+        <Class abbreviatedIRI="functions:Instructional_Function"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#authorName"/>
+        <DataProperty IRI="#metadataInfo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#schoolName"/>
+        <DataProperty IRI="#metadataInfo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#titleName"/>
+        <DataProperty IRI="#metadataInfo"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#authorName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#fullName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#schoolName"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#metadataInfo"/>
+        <Class IRI="#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#fullName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="infra_conf:hasHardware"/>
+        <AbbreviatedIRI>infra_conf:Laptop_ex3</AbbreviatedIRI>
+        <AbbreviatedIRI>infra_conf:CEH_Laptop_ex1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Author</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#authorName"/>
+        <IRI>#Author_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thanasis Hadzilacos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Author_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Author Example 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Metadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines a set of metadata descriptive entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Metadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#authorName"/>
+        <IRI>#Metadata_Example_1</IRI>
+        <IRI>#Author_Example_1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#schoolName"/>
+        <IRI>#Metadata_Example_1</IRI>
+        <IRI>#School_Example_1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#titleName"/>
+        <IRI>#Metadata_Example_1</IRI>
+        <IRI>#Title_Example_1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Metadata_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Metadata Example 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#School</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">School</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#schoolName"/>
+        <IRI>#School_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OUC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#schoolName"/>
+        <IRI>#School_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">School_name_ex1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#School_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">School Example 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Title</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#titleName"/>
+        <IRI>#Title_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Professor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Title_Example_1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Title Example 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fullName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fullName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityDuration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityEnvironment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityEnvironment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityIntervalStartEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityIntervalStartEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityTemporalEntityInstant</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityTemporalEntityInstant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasActivityTemporalEntityInterval</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasActivityTemporalEntityInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAppBasicFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasAppBasicFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAppInstructionalFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasAppInstructionalFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComputerBasicFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasComputerBasicFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComputerEntityMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasComputerEntityMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComputerInstructionalFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasComputerInstructionalFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComputerProgramMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasComputerProgramMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDeviceBasicFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDeviceBasicFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDeviceInstructionalFunction</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDeviceInstructionalFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDigitalDeviceMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDigitalDeviceMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasReportDuration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasReportDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasReportIntervalStartEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasReportIntervalStartEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasReportTemporalEntityInstant</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasReportTemporalEntityInstant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasReportTemporalEntityInterval</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasReportTemporalEntityInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasScenarioMetadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasScenarioMetadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSessionDuration</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSessionIntervalStartEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasIntervalStartEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSessionTemporalEntityInterval</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSessionTemporalEntityInterval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSupportedFunctions</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSupportedFunctions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTemporalEntity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasTemporalEntity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEmployedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isEmployedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isRealizedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isRealizedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isRealizedByApplicationSoftware</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isRealizedByApplicationSoftware</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isRealizedByComputer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isRealizedByComputer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isRealizedByDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isRealizedByDevice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSatisfiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isSatisfiedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSatisfiedByBasicFunction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isSatisfiedByBasicFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSatisfiedByInstructionalFunction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isSatisfiedByInstructionalFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSatisfiedBySoftwareFunction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isSatisfiedBySoftwareFunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#metadataInfo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">metadataInfo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:genid492"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Choose a better word</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#authorName"/>
+        <AnonymousIndividual nodeID="_:genid493"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <AnonymousIndividual nodeID="_:genid494"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#authorName"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#schoolName"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#titleName"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#authorName"/>
+        <IRI>#Author</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#schoolName"/>
+        <IRI>#School</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="#titleName"/>
+        <IRI>#Title</IRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

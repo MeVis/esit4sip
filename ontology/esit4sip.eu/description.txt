@@ -1,0 +1,25 @@
+Description of files:
+=====================
+
+- learning.rdf: 
+	Ontology containing classes related to learning (Scenarios, Baumgartner, etc.)
+- learning-instances.rdf: 
+	Example instances for learning ontology
+- infrastructure.rdf: 
+	Some classes related to infrastructure (should be replaced by latest version of Miltos' work)
+- infrastructure-instances.rdf:
+	Example instances for infrastructure ontology.
+	Imports all other ontologies => complete ontology with examples for testing queries
+	
+	
+Current state of development:
+
+27.7.2018:
+- Created all classes required for the data from the scenarios scraped from the web
+- Example query for finding devices offering the same affordance as a given device
+- Basic datatype properties for scenario defined (based on scraped data)
+
+TODO:
+- Check object properties in learning ontology
+- Define use case(s) to be realized in web frontend using the ontology
+- Develop example queries for retrieving instances from learning ontology based on use cases

@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/miltos/ontologies/2017/5/time#"
+     xml:base="http://www.semanticweb.org/miltos/ontologies/2017/5/time"
+     xmlns:tzont="http://www.w3.org/2006/timezone#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/time">
+        <rdfs:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP Integrated Knowledge Base Ontology</rdfs:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.6</owl:versionInfo>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP Integrated Knowledge Base ontology models both the available ICT infrastructure and physical space of a school environment employed by educators to implement different activities such as learning scenarios. Furthermore, the ontology integrates Educational Practice, Functions and Time ontologies.</rdfs:comment>
+        <rdfs:developer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP development team</rdfs:developer>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#developer -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#developer"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#day -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#day"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDurationDescription -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hour -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hour"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inDateTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inDateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#intervalFinishes"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStarts -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#intervalStarts"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minute -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#minute"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#minutes"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#month -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#month"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#unitType"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#year -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#year"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time# -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A set of entities that describes temporal concepts</rdfs:comment>
+        <rdfs:label xml:lang="en">time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeInterval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalUnit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/timezone#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/timezone#TimeZone">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">ActivityInstant 1</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">07</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">ActivityInstant 3</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">00</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">ActivityInstant 4</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">ActivityInstant 5</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityInstant_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityInstant_6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">ActivityInstant 6</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</time:minute>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">ActivityTimeInstant 1</rdfs:label>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityInstant_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityTimeInstant_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityInstant_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityInstant_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">ActivityTimeInstant 5</rdfs:label>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityTimeInstant_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ActivityTimeInstant_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#ActivityTimeInstant_6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">ActivityTimeInstant 6</rdfs:label>
+        <time:inDateTime rdf:resource="http://www.w3.org/2006/time#ActivityTimeInstant_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Activity_Duration_Example1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Activity_Duration_Example1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:label xml:lang="en">Activity Duration Example1</rdfs:label>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</time:minutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Activity_Duration_Example2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Activity_Duration_Example2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:label xml:lang="en">Activity Duration Example2</rdfs:label>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</time:minutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Activity_Duration_Example3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Activity_Duration_Example3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:label xml:lang="en">Activity Duration Example3</rdfs:label>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</time:minutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example10</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">00</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example11">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example11</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example12">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example12</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example13">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example13</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example6</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">07</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example7</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">00</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example8</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescrActivity_Example9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescrActivity_Example9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescrActivity Example9</rdfs:label>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">08</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</time:minute>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescr_Example1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescr_Example1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescr Example1</rdfs:label>
+        <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">10</time:day>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">07</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</time:minute>
+        <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">06</time:month>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescr_Example2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescr_Example2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescr Example2</rdfs:label>
+        <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">10</time:day>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">00</time:minute>
+        <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">06</time:month>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescr_Example3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescr_Example3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescr Example3</rdfs:label>
+        <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">10</time:day>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</time:minute>
+        <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">06</time:month>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescr_Example4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescr_Example4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescr Example4</rdfs:label>
+        <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">10</time:day>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</time:minute>
+        <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">06</time:month>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeDescr_Example5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeDescr_Example5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:label xml:lang="en">DateTimeDescr Example5</rdfs:label>
+        <time:day rdf:datatype="http://www.w3.org/2001/XMLSchema#gDay">10</time:day>
+        <time:hour rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">09</time:hour>
+        <time:minute rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">39</time:minute>
+        <time:month rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonth">06</time:month>
+        <time:unitType rdf:resource="http://www.w3.org/2006/time#unitMinute"/>
+        <time:year rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2016</time:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstantActivity_Example3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstantActivity_Example3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstantActivity Example3</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T008:00:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstantActivity_Example4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstantActivity_Example4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstantActivity Example4</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T008:15:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstantActivity_Example5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstantActivity_Example5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstantActivity Example5</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T008:25:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstantActivity_Example6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstantActivity_Example6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstantActivity Example6</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T009:15:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstantActivity_Example7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstantActivity_Example7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstantActivity Example7</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T009:30:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstant_Example1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstant_Example1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstant_Example1</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T07:45:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInstant_Example2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInstant_Example2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">DateTimeInstant_Example2</rdfs:label>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-10T09:15:00</time:inXSDDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example7"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeIntervalActivity Example4</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example8"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example5">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeIntervalActivity Example5</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example9"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example6">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeIntervalActivity Example6</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example10"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example7">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeIntervalActivity Example7</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example12"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeIntervalActivity_Example8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeIntervalActivity_Example8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeIntervalActivity Example8</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example13"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescrActivity_Example12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval_Example1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInterval_Example1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeInterval Example1</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescr_Example3"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescr_Example1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval_Example2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#DateTimeInterval_Example2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <rdfs:label xml:lang="en">DateTimeInterval Example2</rdfs:label>
+        <time:intervalFinishes rdf:resource="http://www.w3.org/2006/time#DateTimeDescr_Example4"/>
+        <time:intervalStarts rdf:resource="http://www.w3.org/2006/time#DateTimeDescr_Example5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration_Example_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Duration_Example_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:label xml:lang="en">Duration Example 1</rdfs:label>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">115</time:minutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration_Example_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Duration_Example_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+        <rdfs:label xml:lang="en">Duration Example 2</rdfs:label>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</time:minutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Friday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Friday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Monday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Monday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Saturday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Saturday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Sunday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Sunday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Thursday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Thursday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Tuesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Tuesday"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Wednesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Wednesday"/>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Choose a better word</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Friday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Monday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Saturday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Sunday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Thursday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Tuesday"/>
+            <rdf:Description rdf:about="http://www.w3.org/2006/time#Wednesday"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

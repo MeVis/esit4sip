@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://esit4sip.eu/learning-instances#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:learning="http://esit4sip.eu/learning#"
+    xmlns:spin="http://spinrdf.org/spin#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://esit4sip.eu/learning-instances">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://esit4sip.eu/infrastructure"/>
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://esit4sip.eu/learning"/>
+    <spin:imports rdf:resource="http://topbraid.org/spin/owlrl-all"/>
+  </owl:Ontology>
+  <learning:Microactivity rdf:ID="TakeInterviews">
+    <learning:realizes>
+      <learning:EducationalRelevantActivity rdf:ID="CreateContent">
+        <rdfs:label>Create content</rdfs:label>
+      </learning:EducationalRelevantActivity>
+    </learning:realizes>
+    <rdfs:label>Take interviews</rdfs:label>
+  </learning:Microactivity>
+  <learning:Scenario rdf:ID="Test2Szenario">
+    <learning:hasDomain rdf:resource="http://esit4sip.eu/learning#NaturalSciences"/>
+    <learning:author>Sandra Rebholz</learning:author>
+  </learning:Scenario>
+  <learning:Microactivity rdf:ID="TakePictures">
+    <rdfs:label>Take pictures</rdfs:label>
+  </learning:Microactivity>
+  <learning:Microactivity rdf:ID="ScanImage">
+    <rdfs:label>Scan image</rdfs:label>
+  </learning:Microactivity>
+  <learning:Microactivity rdf:ID="WriteAText">
+    <learning:realizes>
+      <learning:EducationalRelevantActivity rdf:ID="CreativeWriting">
+        <rdfs:label>Creative writing</rdfs:label>
+      </learning:EducationalRelevantActivity>
+    </learning:realizes>
+    <learning:realizes>
+      <learning:EducationalRelevantActivity rdf:ID="CopyAText">
+        <rdfs:label>Copy AText</rdfs:label>
+      </learning:EducationalRelevantActivity>
+    </learning:realizes>
+    <rdfs:label>Write AText</rdfs:label>
+  </learning:Microactivity>
+  <learning:Microactivity rdf:ID="DrawPicture">
+    <rdfs:label>Draw picture</rdfs:label>
+    <learning:realizes>
+      <learning:EducationalRelevantActivity rdf:ID="ProduceDigitalImage">
+        <learning:isATypeOf rdf:resource="#CreateContent"/>
+        <rdfs:label>Produce digital image</rdfs:label>
+      </learning:EducationalRelevantActivity>
+    </learning:realizes>
+  </learning:Microactivity>
+  <learning:Scenario rdf:ID="TestSzenario">
+    <learning:hasDomain rdf:resource="http://esit4sip.eu/learning#BiologicalSciences"/>
+    <learning:author>Sandra Rebholz</learning:author>
+    <learning:hasDidacticDimension rdf:resource="http://esit4sip.eu/learning#GroupBased"/>
+  </learning:Scenario>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

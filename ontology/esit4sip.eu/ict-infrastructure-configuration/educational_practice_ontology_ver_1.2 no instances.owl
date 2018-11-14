@@ -1,0 +1,1357 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#"
+     xml:base="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:edu_practice="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto">
+        <rdfs:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP Educational practice ontology</rdfs:title>
+        <rdfs:developer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eSIT4SIP development team</rdfs:developer>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructor"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#seatingOrder -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#seatingOrder">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Seating_Order"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#developer -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#developer"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#day -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#day"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDurationDescription -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasDurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hour -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hour"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inDateTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inDateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#intervalFinishes"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStarts -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#intervalStarts"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minute -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#minute"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#minutes"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#month -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#month"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#unitType"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#year -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#year"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:label>experienceReportData</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">hasAResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasASubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasASubject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_Subject"/>
+        <rdfs:label xml:lang="en">hasASubject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">hasActivityDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityGeneralizationDependency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityGeneralizationDependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency"/>
+        <rdfs:label xml:lang="en">hasActivityGeneralizationDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityPreparationDependency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityPreparationDependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency"/>
+        <rdfs:label xml:lang="en">hasActivityPreparationDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivitySetDependency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivitySetDependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency"/>
+        <rdfs:label xml:lang="en">hasActivitySetDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityTranslationDependency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityTranslationDependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityDependency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency"/>
+        <rdfs:label xml:lang="en">hasActivityTranslationDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAggregationOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAggregationOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator"/>
+        <rdfs:label xml:lang="en">hasAggregationOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasBackOfficeOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasBackOfficeOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator"/>
+        <rdfs:label xml:lang="en">hasBackOfficeOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">hasDataOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyAggregationOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyAggregationOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator"/>
+        <rdfs:label xml:lang="en">hasDependencyAggregationOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyBackOfficeOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyBackOfficeOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator"/>
+        <rdfs:label xml:lang="en">hasDependencyBackOfficeOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDataOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDataOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">hasDependencyDataOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDistributionOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDistributionOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator"/>
+        <rdfs:label xml:lang="en">hasDependencyDistributionOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencySocialOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencySocialOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+        <rdfs:label xml:lang="en">hasDependencySocialOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDistributionOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDistributionOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator"/>
+        <rdfs:label xml:lang="en">hasDistributionOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInputResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInputResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAResult"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Input_to_Activity"/>
+        <rdfs:label xml:lang="en">hasInputResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructionalRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructionalRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Requirement"/>
+        <rdfs:label xml:lang="en">hasInstructionalRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:label xml:lang="en">hasLearningActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations">
+        <rdfs:label xml:lang="en">hasLearningActivityRelations</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasOutputResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasOutputResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAResult"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Output_from_Activity"/>
+        <rdfs:label xml:lang="en">hasOutputResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:label xml:lang="en">hasRelationship</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasRestriction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Restriction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDataOperator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+        <rdfs:label xml:lang="en">hasSocialOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialPlane -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialPlane">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Social_Plane"/>
+        <rdfs:label xml:lang="en">hasSocialPlane</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo">
+        <rdfs:label xml:lang="en">isAppliedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Pattern -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Pattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactical_Method"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Pattern"/>
+        <rdfs:label xml:lang="en">isAppliedTo_Pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Scenario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Scenario">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Pattern"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+        <rdfs:label xml:lang="en">isAppliedTo_Scenario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isInstantiatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isInstantiatedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:label xml:lang="en">isInstantiatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isRelatedToDependencyFactorRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isRelatedToDependencyFactorRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivityRelations"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">isRelatedToDependencyFactorRelation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#seatingOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#seatingOrder">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classGrade">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">classNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#dependencyLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#dependencyLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">dependencyLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportFeedback -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportFeedback">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>experienceReportFeedback</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportId">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">experienceReportId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData">
+        <rdfs:label xml:lang="en">exprerienceReportData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object"/>
+        <rdfs:label xml:lang="en">inputObjectData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">inputObjectName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">inputObjectNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">inputObjectType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#instructorId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#instructorId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">instructorId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#noiseLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#noiseLevel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Noise Level in dBA</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#numberOfStudents -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#numberOfStudents">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#exprerienceReportData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">numberOfStudents</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product"/>
+        <rdfs:label xml:lang="en">outputProductData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">outputProductName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">outputProductNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">outputProductType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#scenarioDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#scenarioDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">scenarioDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#specialization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#specialization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">specialization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInputResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Input_to_Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasOutputResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Output_from_Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Indicates a set of various data operator entities that correlate with Learning Activity class individuals</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity Data Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyAggregationOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyBackOfficeOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDataOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencyDistributionOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDependencySocialOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:comment>A class that specifies different dependencies between Learning Activity class instances</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity Dependency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Social_Plane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Social_Plane">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:comment>Denotes the social plane of a Learning Activity individual</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity Social Plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Aggregation Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Back-Office Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Cognitive_Black_Box_Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Cognitive_Black_Box_Skill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency"/>
+        <rdfs:label xml:lang="en">Cognitive Black Box Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactic_Black_Box_Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactic_Black_Box_Skill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency"/>
+        <rdfs:label xml:lang="en">Didactic Black Box Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactical_Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactical_Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Pattern"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Pattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class represents a list of Didactical Method class instances that could applied to Instructional Pattern class instances</rdfs:comment>
+        <rdfs:label xml:lang="en">Didactical Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Distribution Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_Subject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:comment>Represents a list of possible Educational Subject class individuals</rdfs:comment>
+        <rdfs:label xml:lang="en">Educational Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The base class that contains entities which describe the educational practices aspect of a school environment</rdfs:comment>
+        <rdfs:label xml:lang="en">Educational Practice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#seatingOrder"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Seating_Order"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classGrade"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#classNumber"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportFeedback"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#experienceReportId"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#numberOfStudents"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class holds the required information of the implementation of a learning scenario in the form of an experience report</rdfs:comment>
+        <rdfs:label xml:lang="en">Experience Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">Generalization Dependency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#High-Order_Thinking_Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#High-Order_Thinking_Skill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency"/>
+        <rdfs:label xml:lang="en">High-Order Thinking Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectName"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#inputObjectNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Input Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Pattern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Pattern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isAppliedTo_Scenario"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A set of instructional patterns that could applied to one or more Learning Scenario class individuals</rdfs:comment>
+        <rdfs:label xml:lang="en">Instructional Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Requirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:comment>A class containing a set of instructional requirements that are related to Learning Activity class instances and are satisfied by different types of computional functions</rdfs:comment>
+        <rdfs:label xml:lang="en">Instructional Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#specialization"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#instructorId"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Describes information about instructors of particular Experience Report class individuals</rdfs:comment>
+        <rdfs:label xml:lang="en">Instructor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasRelationship"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasAggregationOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasBackOfficeOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasDistributionOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructionalRequirement"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Instructional_Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialOperator"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isRelatedToDependencyFactorRelation"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityGeneralizationDependency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityPreparationDependency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivitySetDependency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasActivityTranslationDependency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasSocialPlane"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Social_Plane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Contains the building blocks (learning activities) of different learning scenarios</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:label xml:lang="en">Learning Competency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Scenario">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_practice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasASubject"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Educational_Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasLearningActivity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#isInstantiatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#scenarioDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class includes entities that describe learning scenarios</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning Scenario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Input_to_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Input_to_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Operator Input to Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Output_from_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Output_from_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Operator Output from Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductName"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#outputProductNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Output Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">Preparation Dependency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Restriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Restriction">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Seating_Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Seating_Order">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Experience_Report"/>
+        <rdfs:comment xml:lang="en">This class denotes the students seating order in an Experience Report class instance</rdfs:comment>
+        <rdfs:label xml:lang="en">Seating Order</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">Set Dependency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Data_Operator"/>
+        <rdfs:label xml:lang="en">Social Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Activity_Dependency"/>
+        <rdfs:label xml:lang="en">Translation Dependency</rdfs:label>
+    </owl:Class>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">Choose a better word</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#hasInstructor">
+        <rdfs:label>hasInstructor</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Aggregation_Operator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Back-Office_Operator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Distribution_Operator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Input_to_Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Operator_Output_from_Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Social_Operator"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Cognitive_Black_Box_Skill"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Didactic_Black_Box_Skill"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#High-Order_Thinking_Skill"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Generalization_Dependency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Preparation_Dependency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Set_Dependency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Translation_Dependency"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Input_Object"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Learning_Competency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/miltos/ontologies/2017/5/educational_practice_onto#Output_Product"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

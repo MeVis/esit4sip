@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://esit4sip.eu/infrastructure-instances#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:infrastructure="http://esit4sip.eu/infrastructure#"
+    xmlns:j.0="http://kb.esit4sip.eu/learning#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:learning="http://esit4sip.eu/learning#"
+    xmlns:spin="http://spinrdf.org/spin#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://esit4sip.eu/infrastructure-instances">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://esit4sip.eu/infrastructure"/>
+    <spin:imports rdf:resource="http://topbraid.org/spin/owlrl-all"/>
+    <owl:imports rdf:resource="http://esit4sip.eu/learning-instances"/>
+    <owl:imports rdf:resource="http://esit4sip.eu/learning"/>
+  </owl:Ontology>
+  <infrastructure:WordProcessor rdf:ID="GoogleDocs"/>
+  <infrastructure:Tablets rdf:ID="AndroidTablet">
+    <rdfs:label>Android tablet</rdfs:label>
+  </infrastructure:Tablets>
+  <infrastructure:Tablets rdf:ID="WindowsTablet">
+    <rdfs:label>Windows tablet</rdfs:label>
+  </infrastructure:Tablets>
+  <infrastructure:Smartphone rdf:ID="ownMobiles">
+    <rdfs:label>own mobiles</rdfs:label>
+  </infrastructure:Smartphone>
+  <infrastructure:Tablets rdf:ID="iPad">
+    <rdfs:label>i pad</rdfs:label>
+  </infrastructure:Tablets>
+  <infrastructure:SearchEngine rdf:ID="Google">
+    <rdfs:label>Firefo</rdfs:label>
+  </infrastructure:SearchEngine>
+  <infrastructure:WordProcessor rdf:ID="MSWord">
+    <rdfs:label>MSWord</rdfs:label>
+  </infrastructure:WordProcessor>
+  <infrastructure:PresentationSoftware rdf:ID="PowerPoint"/>
+  <rdf:Description rdf:about="http://kb.esit4sip.eu/learning-instances#TestSzenario">
+    <j.0:requires rdf:resource="http://esit4sip.eu/infrastructure#Take_Pictures"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kb.esit4sip.eu/learning-instances#Test2Szenario">
+    <j.0:requires rdf:resource="http://esit4sip.eu/infrastructure#Writing"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
