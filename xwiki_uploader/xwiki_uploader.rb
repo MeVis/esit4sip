@@ -833,12 +833,13 @@ filenames.each do |filename|
 		# Note: in xWiki, tags are global for a scenario. So each translations has the same tags
 		tags = content_by_key(scenario, "bs_tags")
 		if tags.nil? == false && tags.empty? == false
-			mainpage_exists = check_for_existing_page(USERNAME, PASSWORD, title, mainpage_url, "")
-			if mainpage_exists
+			mainpage_exists = check_for_existing_page(USERNAME, PASSWORD, title, mainpage_url, "Tags (maybe)")
+			overwrite_tags = ask_to_overwrite() if mainpage_exists
+			if mainpage_exists && overwrite_tags == true
 				upload_tags(USERNAME, PASSWORD, tags, mainpage_url)
 			else
 				# This will seldom happen, if mainpage failed to upload
-				$log.error("Could not upload tags. Mainpage doesn't exist.")
+				$log.error("Could not upload tags. Mainpage doesn't exist or user aborted.")
 			end
 		end # tags
 	end # scenarios
