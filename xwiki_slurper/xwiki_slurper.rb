@@ -505,7 +505,7 @@ def translation_to_file(translation_gui_url, scraper, attachments, id, language)
 
 end
 
-def collect_article(rest_url, scenario, space, attachments, scraper, navigation_tags, id, handwritten)
+def collect_article(rest_url, scenario, space, attachments, scraper, navigation_tags, scenario_tags, id, handwritten)
 	# This function collects all relevant info of a scenario page (article)
 	# Param rest_url: string, url used to get the scenario page per API. Used to get the tags here
 	# Param scenario: hash, representing the scenario (json) page
@@ -513,6 +513,7 @@ def collect_article(rest_url, scenario, space, attachments, scraper, navigation_
 	# Param attachments: hash in the format: filename:url
 	# Param scraper: mechanize object
 	# Param navigation_tags: hash in the format {"groupname": "Language", "tags": {"bs_Language_English": "english"} See read_navigation_tags()
+	# Param scenario_tags: array of tags found in a scenario
 	# Param id: string, the ID of the scenario
 	# Param handwritten: boolean, if the page was handwritten by authors or uploaded by xwiki_uploader
 	# Return: scenario/article as hash
@@ -538,7 +539,6 @@ def collect_article(rest_url, scenario, space, attachments, scraper, navigation_
 		end
 	end	
 
-
 	# ---- Description ----
 	# We get the description from the field 'content'
 	# Description is the json content text minus the 'ugly_title'
@@ -556,9 +556,10 @@ def collect_article(rest_url, scenario, space, attachments, scraper, navigation_
 	end
 
 	# ---- Tags of scenario ----
-	tags_url = rest_url + "/tags"
-	tags_page = get_page_by_url(USERNAME, PASSWORD, tags_url, "json", "tags page")
-	scenario_tags = read_scenario_tags(tags_page) # Array of tags
+	# DEPRECATED bec. tags are incoming a parameter
+	#tags_url = rest_url + "/tags"
+	#tags_page = get_page_by_url(USERNAME, PASSWORD, tags_url, "json", "tags page")
+	#scenario_tags = read_scenario_tags(tags_page) # Array of tags
 
 	# Build hash
 	article = {"id": id, "xwiki_id": xwiki_id, "title": ugly_title, "date": date_created, "summary": description, "version": scenario_version, "translations": [], "handwritten": handwritten}
@@ -596,7 +597,7 @@ def collect_article(rest_url, scenario, space, attachments, scraper, navigation_
 		scenario_tags.each do |scenario_tag|
 			if scenario_tag.downcase.include? bs_style.downcase
 				hits << scenario_tag.sub(bs_style, "")
-				puts "#{more_tag} found: #{scenario_tag.sub(bs_style, "")}"
+				#puts "#{more_tag} found: #{scenario_tag.sub(bs_style, "")}"
 			end
 		end
 		article[groupname] = hits
@@ -755,6 +756,19 @@ SPACES.each do |space|
 		# Http get scenario-json by restful url returned as hash.
 		scenario = get_page_by_url(USERNAME, PASSWORD, rest_url, "json", "scenario '#{title}'")
 
+		# ---- Tags of scenario ----
+		# Important: We have to check the tags at this early step and check wheter the
+		# tag "NO_ICT" is present. It says that a scneario does not use any media.
+		# If the tg is present, we can skip the next steps.
+		tags_url = rest_url + "/tags"
+		tags_page = get_page_by_url(USERNAME, PASSWORD, tags_url, "json", "tags page")
+		scenario_tags = read_scenario_tags(tags_page) # Array of tags
+		
+		if scenario_tags.include?("NO_ICT")
+			$log.warn("ABORTING. The scenario does not use any media bec. NO_ICT tag is present.")
+			next
+		end
+
 		# ---- Read attachments ----
 		# Only read what attachments are available. No file-fetching yet!
 		# Fetching is done, when changes occured in default scenario or translation.
@@ -789,7 +803,7 @@ SPACES.each do |space|
 
 		# ---- Collect article ----
 		# Here we get the data about a scenario from the hash and append it to the array for articles.json
-		articles << collect_article(rest_url, scenario, space, attachments, scraper, navigation_tags, id, handwritten)
+		articles << collect_article(rest_url, scenario, space, attachments, scraper, navigation_tags, scenario_tags, id, handwritten)
 
 		# ---- ID / Version ----
 		scenario_id = scenario['id']
