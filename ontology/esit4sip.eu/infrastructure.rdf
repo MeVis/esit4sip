@@ -670,6 +670,10 @@
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="SmsService">
+    <rdfs:label>Sms service</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:ID="Dictionary">
     <rdfs:subClassOf>
       <owl:Restriction>
