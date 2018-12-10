@@ -79,6 +79,12 @@
       <owl:Class rdf:about="#ICTAffordance"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="Website">
+    <rdfs:label>Website</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="Blog">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -1758,6 +1764,10 @@
     <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WebQuest">
+    <rdfs:label>Web quest</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
   </owl:Class>
   <owl:Class rdf:ID="Storyboarding">
     <rdfs:label>Storyboarding</rdfs:label>
