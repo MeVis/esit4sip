@@ -219,6 +219,12 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="MotionDetector">
+    <rdfs:label>Motion detector</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="StorytellingTool">
     <rdfs:label>Storytelling tool</rdfs:label>
     <rdfs:subClassOf>
