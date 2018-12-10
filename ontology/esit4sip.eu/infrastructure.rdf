@@ -2300,6 +2300,10 @@
     </rdfs:subClassOf>
     <rdfs:label>Laptop</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:ID="AstronomySoftware">
+    <rdfs:label>Astronomy software</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:about="http://kb.esit4sip.eu/infrastructure#2dPrintingService">
     <rdfs:label>2d printing service</rdfs:label>
     <rdfs:subClassOf>
