@@ -273,6 +273,12 @@
       <owl:Class rdf:ID="Printer"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:about="#3dPrinter">
+    <rdfs:label>d printer</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="Animate">
     <rdfs:label>Animate</rdfs:label>
     <rdfs:subClassOf>
@@ -367,6 +373,12 @@
         </rdfs:subClassOf>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
       </owl:NamedIndividual>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#2dPrinter">
+    <rdfs:label>d printer</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="PenPaper">
