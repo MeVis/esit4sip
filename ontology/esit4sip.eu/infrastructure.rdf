@@ -1813,6 +1813,10 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Database">
+    <rdfs:label>Database</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:about="#SocialNetwork">
     <rdfs:subClassOf>
       <owl:Restriction>
