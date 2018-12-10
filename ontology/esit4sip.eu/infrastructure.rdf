@@ -2414,6 +2414,10 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Book">
+    <rdfs:label>Book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:ID="Fill_Out">
     <rdfs:label>Fill out</rdfs:label>
     <rdfs:subClassOf>
