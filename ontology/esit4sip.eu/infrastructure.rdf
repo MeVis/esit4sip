@@ -321,6 +321,12 @@
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="Search_Database">
+    <rdfs:label>Search Database</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICTAffordance"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="Robot">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2551,6 +2557,12 @@
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Scan_QR_Code">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICTAffordance"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Scan QR Code</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="#QuizSoftware">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2743,10 +2755,10 @@
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
   </owl:Class>
   <owl:Class rdf:about="#Play_Game">
-    <rdfs:label>Play Game</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#Play"/>
     </rdfs:subClassOf>
+    <rdfs:label>Play Game</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://kb.esit4sip.eu/infrastructure#3dPrinter">
     <rdfs:label>3D printer</rdfs:label>
@@ -3331,6 +3343,10 @@
   <owl:Class rdf:ID="SeriousGame">
     <rdfs:label>Serious game</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Game"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Measure">
+    <rdfs:label>Measure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
   </owl:Class>
   <owl:Class rdf:about="#Scan">
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
