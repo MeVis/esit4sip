@@ -173,6 +173,56 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="AudioPlatform">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue>
+          <owl:NamedIndividual rdf:ID="Play_Audio">
+            <rdfs:label>Play audio</rdfs:label>
+            <rdfs:subClassOf>
+              <owl:Class rdf:ID="Play"/>
+            </rdfs:subClassOf>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Upload"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Broadcast"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Audio hosting service</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Download"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="TextEditor">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -520,15 +570,7 @@
     <rdfs:label>Audio Player</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:hasValue>
-          <owl:NamedIndividual rdf:ID="Play_Audio">
-            <rdfs:label>Play audio</rdfs:label>
-            <rdfs:subClassOf>
-              <owl:Class rdf:ID="Play"/>
-            </rdfs:subClassOf>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-          </owl:NamedIndividual>
-        </owl:hasValue>
+        <owl:hasValue rdf:resource="#Play_Audio"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
@@ -717,7 +759,7 @@
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
         <owl:hasValue>
-          <owl:Class rdf:ID="Download"/>
+          <owl:Class rdf:about="#Download"/>
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1553,7 +1595,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
-          <owl:Class rdf:ID="Broadcast"/>
+          <owl:Class rdf:about="#Broadcast"/>
         </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
@@ -3143,42 +3185,6 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="AudioHostingService">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:resource="#Download"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Tool"/>
-    <rdfs:label>Audio hosting service</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Broadcast"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:resource="#Upload"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Play_Audio"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
   <owl:Class rdf:about="#SurveyTool">
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Survey tool</rdfs:label>
@@ -4281,9 +4287,9 @@
     <rdfs:label>SMplayer</rdfs:label>
     <rdf:type rdf:resource="#VideoPlayer"/>
   </owl:NamedIndividual>
-  <AudioHostingService rdf:ID="loudblog.com">
+  <AudioPlatform rdf:ID="loudblog.com">
     <rdfs:label>loudblog.com</rdfs:label>
-  </AudioHostingService>
+  </AudioPlatform>
   <owl:NamedIndividual rdf:ID="Chrome">
     <rdfs:label>Chrome</rdfs:label>
     <rdf:type rdf:resource="#Browser"/>
@@ -4325,9 +4331,9 @@
     <rdfs:label>Apache OpenOffice Calc</rdfs:label>
     <rdf:type rdf:resource="#SpreadsheetEditor"/>
   </owl:NamedIndividual>
-  <AudioHostingService rdf:ID="soundcloud.com">
+  <AudioPlatform rdf:ID="soundcloud.com">
     <rdfs:label>soundcloud.com</rdfs:label>
-  </AudioHostingService>
+  </AudioPlatform>
   <WebsiteBuilder rdf:ID="webnode.com">
     <rdfs:label>webnode.com</rdfs:label>
     <rdf:type>
@@ -4500,9 +4506,9 @@
   <DiagrammingSoftware rdf:ID="Calligra_Flow">
     <rdfs:label>Calligra Flow</rdfs:label>
   </DiagrammingSoftware>
-  <AudioHostingService rdf:ID="podhost.de">
+  <AudioPlatform rdf:ID="podhost.de">
     <rdfs:label>podhost.de</rdfs:label>
-  </AudioHostingService>
+  </AudioPlatform>
   <owl:NamedIndividual rdf:ID="PostgreSQL">
     <rdfs:label>Postgre SQL</rdfs:label>
     <rdf:type rdf:resource="#RDBMS"/>
