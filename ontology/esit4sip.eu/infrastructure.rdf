@@ -1962,6 +1962,28 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="VideoPlatform">
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#Broadcast"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Video Hosting Service</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Upload"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="Laptop">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2490,28 +2512,6 @@
   <owl:Class rdf:ID="SandboxGame">
     <rdfs:label>Sandbox game</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Game"/>
-  </owl:Class>
-  <owl:Class rdf:ID="VideoHostingService">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:resource="#Upload"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:label>Video Hosting Service</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue>
-          <owl:Class rdf:about="#Broadcast"/>
-        </owl:hasValue>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="#Tool"/>
   </owl:Class>
   <owl:Class rdf:about="#InteractiveGeometrySoftware">
     <rdfs:subClassOf>
@@ -3956,10 +3956,10 @@
     <rdfs:label>Dictionary.com</rdfs:label>
     <rdf:type rdf:resource="#Dictionary"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:ID="YouTube_EDU">
+  <VideoPlatform rdf:ID="YouTube_EDU">
     <rdfs:label>You tube EDU</rdfs:label>
-    <rdf:type rdf:resource="#VideoHostingService"/>
-  </owl:NamedIndividual>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlatform>
   <FtpClient rdf:ID="FileZilla">
     <rdfs:label>FileZilla</rdfs:label>
   </FtpClient>
@@ -4001,10 +4001,10 @@
     <rdfs:label>Bluefish</rdfs:label>
     <rdf:type rdf:resource="#TextEditor"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:ID="Vimeo">
+  <VideoPlatform rdf:ID="Vimeo">
     <rdfs:label>Vimeo</rdfs:label>
-    <rdf:type rdf:resource="#VideoHostingService"/>
-  </owl:NamedIndividual>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlatform>
   <owl:NamedIndividual rdf:ID="Adobe_InDesign">
     <rdfs:label>Adobe In design</rdfs:label>
     <rdf:type rdf:resource="#PublishingSoftware"/>
@@ -4021,10 +4021,10 @@
     <rdfs:label>o cam</rdfs:label>
     <rdf:type rdf:resource="#ScreenRecorder"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:ID="YouTube">
+  <VideoPlatform rdf:ID="YouTube">
     <rdfs:label>You tube</rdfs:label>
-    <rdf:type rdf:resource="#VideoHostingService"/>
-  </owl:NamedIndividual>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlatform>
   <owl:NamedIndividual rdf:ID="Google">
     <rdfs:label>Google</rdfs:label>
     <rdf:type rdf:resource="#SearchEngine"/>
@@ -4260,10 +4260,10 @@
     <rdfs:label>Mind meister</rdfs:label>
     <rdf:type rdf:resource="#MindmappingSoftware"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:ID="SchoolTube">
+  <VideoPlatform rdf:ID="SchoolTube">
     <rdfs:label>School tube</rdfs:label>
-    <rdf:type rdf:resource="#VideoHostingService"/>
-  </owl:NamedIndividual>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlatform>
   <owl:NamedIndividual rdf:ID="AbleWord">
     <rdfs:label>Able word</rdfs:label>
     <rdf:type rdf:resource="#WordProcessor"/>
@@ -4477,10 +4477,10 @@
     <rdfs:label>Canva</rdfs:label>
     <rdf:type rdf:resource="#PresentationSoftware"/>
   </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:ID="ScienceStage">
+  <VideoPlatform rdf:ID="ScienceStage">
     <rdfs:label>Science stage</rdfs:label>
-    <rdf:type rdf:resource="#VideoHostingService"/>
-  </owl:NamedIndividual>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlatform>
   <owl:NamedIndividual rdf:ID="Bing_Maps">
     <rdfs:label>Bing Maps</rdfs:label>
     <rdf:type rdf:resource="#InteractiveMap"/>
