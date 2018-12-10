@@ -336,6 +336,12 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Chat">
+    <rdfs:label>Chat</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:ID="Virtualize_Local_Network">
     <rdfs:label>Virtualize Local Network</rdfs:label>
     <rdfs:subClassOf>
