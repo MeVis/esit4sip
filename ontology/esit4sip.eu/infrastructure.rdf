@@ -281,6 +281,12 @@
       <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="Mail">
+    <rdfs:label>Mail</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:about="http://kb.esit4sip.eu/infrastructure#3dPrintingService">
     <rdfs:label>3D printing service</rdfs:label>
     <rdfs:subClassOf>
@@ -387,6 +393,12 @@
     <rdfs:label>Robot</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GraphSoftware">
+    <rdfs:label>Graph software</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="Process">
