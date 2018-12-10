@@ -3347,6 +3347,10 @@
     <rdfs:label>Input</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
   </owl:Class>
+  <owl:Class rdf:ID="SimulationApplet">
+    <rdfs:label>Simulation applet</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:ID="ProgramLanguage">
     <rdfs:label>Program language</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Tool"/>
