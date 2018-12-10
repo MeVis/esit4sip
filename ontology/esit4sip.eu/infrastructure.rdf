@@ -590,6 +590,10 @@
       <owl:Class rdf:about="#ICTAffordance"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="QrCodeScanner">
+    <rdfs:label>Qr code scanner</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
   <owl:Class rdf:ID="AudioPlayer">
     <rdfs:label>Audio Player</rdfs:label>
     <rdfs:subClassOf>
