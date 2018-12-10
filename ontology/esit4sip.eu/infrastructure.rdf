@@ -16,9 +16,15 @@
     <dc:title>eSIT4SIP Ontology</dc:title>
     <dc:creator>The eSIT4SIP team</dc:creator>
   </owl:Ontology>
-  <owl:Class rdf:ID="Translator">
+  <owl:Class rdf:ID="MotionDetection">
+    <rdfs:label>Motion detection</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="Tool"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Translator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
     <rdfs:label>Translator</rdfs:label>
     <rdfs:subClassOf>
