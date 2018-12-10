@@ -2505,6 +2505,10 @@
       <owl:Class rdf:about="#ICTAffordance"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="OwnMobiles">
+    <rdfs:label>Own mobiles</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
   <owl:Class rdf:about="#WordProcessor">
     <rdfs:subClassOf>
       <owl:Restriction>
