@@ -293,20 +293,6 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
-  <owl:Class rdf:ID="ImageScanner">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Device"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Image scanner</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue>
-          <owl:Class rdf:ID="ScanService"/>
-        </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
   <owl:Class rdf:ID="Chalkboard">
     <rdfs:label>Chalkboard</rdfs:label>
     <rdfs:subClassOf>
@@ -949,7 +935,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
-          <owl:Class rdf:about="#ScanService"/>
+          <owl:Class rdf:ID="ScanService"/>
         </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
