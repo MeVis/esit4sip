@@ -492,6 +492,12 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Scanner">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Scanner</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:ID="LearningSoftware">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2346,6 +2352,10 @@
     </rdfs:subClassOf>
     <rdfs:label>Integrated development environment</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PClab">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+    <rdfs:label>PClab</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#AudioRecordingService">
     <rdfs:subClassOf rdf:resource="#Tool"/>
