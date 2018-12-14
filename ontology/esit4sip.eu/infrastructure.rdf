@@ -3144,7 +3144,7 @@
   </owl:Class>
   <owl:Class rdf:ID="PClab">
     <rdfs:label>PClab</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#Device"/>
+    <rdfs:subClassOf rdf:resource="#DesktopComputer"/>
   </owl:Class>
   <owl:Class rdf:about="#IDE">
     <rdfs:subClassOf>
