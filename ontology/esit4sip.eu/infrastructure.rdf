@@ -3448,7 +3448,9 @@
     <rdfs:label>Simulate</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="OwnMobiles">
-    <rdfs:subClassOf rdf:resource="#Device"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MobileDevice"/>
+    </rdfs:subClassOf>
     <rdfs:label>Own mobiles</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#Scan_QR_Code">
@@ -3573,7 +3575,7 @@
   <owl:Class rdf:ID="Tablets">
     <rdfs:label>Tablets</rdfs:label>
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="MobileDevice"/>
+      <owl:Class rdf:about="#MobileDevice"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#PodcastPlatform">
