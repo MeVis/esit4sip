@@ -3762,20 +3762,6 @@
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
-        <owl:hasValue>
-          <owl:NamedIndividual rdf:ID="Collaborate_And_Share">
-            <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
-            <rdfs:label>Collaborate and share</rdfs:label>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-          </owl:NamedIndividual>
-        </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
         <owl:hasValue rdf:resource="#Post"/>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -3948,14 +3934,6 @@
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
-        <owl:hasValue rdf:resource="#Collaborate_And_Share"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
         <owl:hasValue rdf:resource="#Discuss"/>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -4031,14 +4009,6 @@
   <owl:Class rdf:about="#CollaborativeEditor">
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Collaborate_And_Share"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
     <rdfs:label>Collaborative Editor</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
