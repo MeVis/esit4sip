@@ -2001,16 +2001,6 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:about="#Collaborate_Communicate"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
                 <owl:hasValue rdf:resource="#Communicate"/>
               </owl:Restriction>
             </rdfs:subClassOf>
