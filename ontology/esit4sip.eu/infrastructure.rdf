@@ -1822,16 +1822,6 @@
                 </owl:onProperty>
               </owl:Restriction>
             </rdfs:subClassOf>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:ID="Collaborate_Communicate"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
           </owl:NamedIndividual>
         </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
@@ -3485,11 +3475,6 @@
     <rdfs:label>ICTAffordance</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </owl:Class>
-  <owl:Class rdf:about="#Collaborate_Communicate">
-    <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
-    <rdfs:label>Collaborate Communicate</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
   <owl:Class rdf:about="#Timing">
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
     <rdfs:label>Timing</rdfs:label>
@@ -3734,14 +3719,6 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:hasValue rdf:resource="#Collaborate_Communicate"/>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
@@ -3956,14 +3933,6 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:label>Collaboration Platform</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Collaborate_Communicate"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
