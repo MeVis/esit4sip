@@ -1727,14 +1727,6 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="MobileInstantMessenger"/>
-        </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue>
           <owl:NamedIndividual rdf:ID="PublishingSoftware">
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:subClassOf>
@@ -2380,7 +2372,7 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
-  <owl:Class rdf:about="#MobileInstantMessenger">
+  <owl:Class rdf:ID="MobileInstantMessenger">
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:subClassOf>
       <owl:Restriction>
