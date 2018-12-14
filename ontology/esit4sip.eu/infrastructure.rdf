@@ -1435,14 +1435,6 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="LCMSClient"/>
-        </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue>
           <owl:NamedIndividual rdf:ID="PublishingSoftware">
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:subClassOf>
@@ -2187,11 +2179,6 @@
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Database</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="#LCMSClient">
-    <rdfs:subClassOf rdf:resource="#Tool"/>
-    <rdfs:label>Learning Content Management System Client</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
   <owl:Class rdf:about="#Record">
     <rdfs:subClassOf>
       <owl:Class rdf:about="#ICTAffordance"/>
@@ -2659,12 +2646,6 @@
         <owl:hasValue>
           <owl:Class rdf:about="#VideoEditor"/>
         </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue rdf:resource="#LCMSClient"/>
-        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:label>Laptop</rdfs:label>
