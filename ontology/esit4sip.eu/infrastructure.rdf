@@ -571,6 +571,14 @@
     <rdfs:label>Network monitoring</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="Scanner">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="ScanService"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:label>Scanner</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
@@ -1270,7 +1278,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
-          <owl:Class rdf:ID="ScanService"/>
+          <owl:Class rdf:about="#ScanService"/>
         </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
