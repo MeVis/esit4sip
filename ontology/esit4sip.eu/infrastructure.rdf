@@ -842,6 +842,22 @@
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:NamedIndividual rdf:ID="StoryboardingTool">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue>
+                  <owl:NamedIndividual rdf:ID="Animate">
+                    <rdfs:subClassOf>
+                      <owl:Class rdf:about="#ICTAffordance"/>
+                    </rdfs:subClassOf>
+                    <rdfs:label>Animate</rdfs:label>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                  </owl:NamedIndividual>
+                </owl:hasValue>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:subClassOf>
               <owl:Restriction>
@@ -1588,15 +1604,7 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue>
-                  <owl:NamedIndividual rdf:ID="Animate">
-                    <rdfs:subClassOf>
-                      <owl:Class rdf:about="#ICTAffordance"/>
-                    </rdfs:subClassOf>
-                    <rdfs:label>Animate</rdfs:label>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                  </owl:NamedIndividual>
-                </owl:hasValue>
+                <owl:hasValue rdf:resource="#Animate"/>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:label>Animation Software</rdfs:label>
