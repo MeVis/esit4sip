@@ -1242,6 +1242,14 @@
           <owl:NamedIndividual rdf:ID="Blog">
             <rdfs:subClassOf>
               <owl:Restriction>
+                <owl:hasValue rdf:resource="#Provide"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
