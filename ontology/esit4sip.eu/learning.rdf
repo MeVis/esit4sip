@@ -706,9 +706,6 @@
     <rdfs:label>Flipped classroom</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </learning:DesignPattern>
-  <rdf:Description rdf:about="http://esit4sip.eu/infrastructure#Collaborate_And_Share">
-    <rdfs:label>Collaborate and share</rdfs:label>
-  </rdf:Description>
   <learning:DesignPattern rdf:ID="RepresentationOnDemand">
     <rdfs:label>Representation on demand</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
