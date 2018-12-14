@@ -258,6 +258,22 @@
   </owl:Class>
   <owl:Class rdf:ID="Chat">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:NamedIndividual rdf:ID="Communicate">
+            <rdfs:subClassOf>
+              <owl:Class rdf:about="#ICTAffordance"/>
+            </rdfs:subClassOf>
+            <rdfs:label>Communicate</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
     <rdfs:label>Chat</rdfs:label>
@@ -1055,15 +1071,7 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue>
-                  <owl:NamedIndividual rdf:ID="Communicate">
-                    <rdfs:subClassOf>
-                      <owl:Class rdf:about="#ICTAffordance"/>
-                    </rdfs:subClassOf>
-                    <rdfs:label>Communicate</rdfs:label>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                  </owl:NamedIndividual>
-                </owl:hasValue>
+                <owl:hasValue rdf:resource="#Communicate"/>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
