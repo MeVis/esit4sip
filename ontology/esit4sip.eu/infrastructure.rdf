@@ -2666,6 +2666,14 @@
     <rdfs:label>Astronomy software</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#IDE">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Robotics_Programming"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Integrated development environment</rdfs:label>
     <rdfs:subClassOf>
