@@ -684,6 +684,14 @@
   </owl:Class>
   <owl:Class rdf:ID="VideoCamera">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#AudioRecordingService"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
     <rdfs:label>Video Camera</rdfs:label>
