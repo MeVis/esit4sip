@@ -1048,18 +1048,7 @@
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:NamedIndividual rdf:ID="InstantMessenger">
-            <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:label>Instant Messenger</rdfs:label>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:ID="Collaborate_Communicate"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
             <rdfs:subClassOf>
               <owl:Restriction>
                 <owl:onProperty>
@@ -1074,6 +1063,15 @@
                     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
                   </owl:NamedIndividual>
                 </owl:hasValue>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf rdf:resource="#Tool"/>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue rdf:resource="#Download"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:subClassOf>
@@ -1093,6 +1091,26 @@
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue>
+                  <owl:Class rdf:about="#Upload"/>
+                </owl:hasValue>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+                <owl:hasValue>
+                  <owl:Class rdf:ID="Collaborate_Communicate"/>
+                </owl:hasValue>
+              </owl:Restriction>
+            </rdfs:subClassOf>
           </owl:NamedIndividual>
         </owl:hasValue>
       </owl:Restriction>
