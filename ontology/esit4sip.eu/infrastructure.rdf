@@ -1502,32 +1502,16 @@
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
                 <owl:hasValue>
-                  <owl:NamedIndividual rdf:ID="Look_Up">
-                    <rdfs:subClassOf>
-                      <owl:Class rdf:about="#ICTAffordance"/>
-                    </rdfs:subClassOf>
-                    <rdfs:label>Look up</rdfs:label>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                  </owl:NamedIndividual>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
                   <owl:Class rdf:about="#Upload"/>
                 </owl:hasValue>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:subClassOf>
               <owl:Restriction>
+                <owl:hasValue rdf:resource="#Download"/>
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue rdf:resource="#Post"/>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:subClassOf>
@@ -1556,25 +1540,7 @@
                 <owl:hasValue rdf:resource="#Receive"/>
               </owl:Restriction>
             </rdfs:subClassOf>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue rdf:resource="#Download"/>
-              </owl:Restriction>
-            </rdfs:subClassOf>
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:about="#Read"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
           </owl:NamedIndividual>
         </owl:hasValue>
       </owl:Restriction>
@@ -1773,7 +1739,15 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue rdf:resource="#Look_Up"/>
+                <owl:hasValue>
+                  <owl:NamedIndividual rdf:ID="Look_Up">
+                    <rdfs:subClassOf>
+                      <owl:Class rdf:about="#ICTAffordance"/>
+                    </rdfs:subClassOf>
+                    <rdfs:label>Look up</rdfs:label>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                  </owl:NamedIndividual>
+                </owl:hasValue>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -2701,6 +2675,24 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="Book">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Search_Information"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#Read"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Book</rdfs:label>
   </owl:Class>
