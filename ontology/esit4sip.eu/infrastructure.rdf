@@ -56,13 +56,29 @@
   </owl:Class>
   <owl:Class rdf:about="#Map">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:NamedIndividual rdf:ID="Interactive_Map">
+            <rdfs:subClassOf>
+              <owl:Class rdf:ID="ICTAffordance"/>
+            </rdfs:subClassOf>
+            <rdfs:label>Interactive map</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
     <rdfs:label>Map</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="Navigate">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="ICTAffordance"/>
+      <owl:Class rdf:about="#ICTAffordance"/>
     </rdfs:subClassOf>
     <rdfs:label>Navigate</rdfs:label>
   </owl:Class>
@@ -3195,16 +3211,10 @@
     <rdfs:subClassOf rdf:resource="#Map"/>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue rdf:resource="#Navigate"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
-        <owl:hasValue>
-          <owl:NamedIndividual rdf:ID="Interactive_Map">
-            <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
-            <rdfs:label>Interactive map</rdfs:label>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-          </owl:NamedIndividual>
-        </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:label>Interactive Map</rdfs:label>
