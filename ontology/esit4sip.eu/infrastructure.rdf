@@ -374,6 +374,16 @@
   </owl:Class>
   <owl:Class rdf:ID="GraphSoftware">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Diagram"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
     <rdfs:label>Graph software</rdfs:label>
@@ -2107,7 +2117,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
-          <owl:Class rdf:ID="Diagram"/>
+          <owl:Class rdf:about="#Diagram"/>
         </owl:hasValue>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
