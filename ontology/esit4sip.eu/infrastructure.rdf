@@ -1563,8 +1563,10 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="AstronomySoftware"/>
+        </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue rdf:resource="#Broadcast"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2825,7 +2827,7 @@
     </rdfs:subClassOf>
     <rdfs:label>Laptop</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:ID="AstronomySoftware">
+  <owl:Class rdf:about="#AstronomySoftware">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
