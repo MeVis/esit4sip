@@ -1413,6 +1413,14 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="VideoPlatform"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:Class rdf:about="#LCMS"/>
@@ -1559,6 +1567,14 @@
             </rdfs:subClassOf>
           </owl:NamedIndividual>
         </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="VideoEditor"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2239,6 +2255,14 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#VideoEditor"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue rdf:resource="#SearchEngine"/>
       </owl:Restriction>
@@ -2247,7 +2271,7 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="VideoEditor"/>
+          <owl:Class rdf:about="#VideoEditor"/>
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -2423,6 +2447,14 @@
         <owl:hasValue>
           <owl:Class rdf:about="#SocialNetwork"/>
         </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#VideoPlatform"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2773,7 +2805,7 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="VideoPlatform">
+  <owl:Class rdf:about="#VideoPlatform">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue rdf:resource="#Play_Video"/>
