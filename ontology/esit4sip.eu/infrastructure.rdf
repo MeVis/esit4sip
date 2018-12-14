@@ -16,22 +16,6 @@
     <dc:description>This ontology describes ICT-based learning scenarios collected and analyzed by the eSIT4SIP project</dc:description>
     <dc:rights>EUPL v1.2</dc:rights>
   </owl:Ontology>
-  <owl:Class rdf:ID="MotionDetection">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:hasValue>
-          <owl:Class rdf:ID="Measure"/>
-        </owl:hasValue>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:ID="offers"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Tool"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Motion detection</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:ID="Translator">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -39,14 +23,30 @@
           <owl:Class rdf:ID="Translate"/>
         </owl:hasValue>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
+          <owl:ObjectProperty rdf:ID="offers"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:label>Translator</rdfs:label>
     <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tool"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MotionDetection">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Measure"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Tool"/>
     </rdfs:subClassOf>
+    <rdfs:label>Motion detection</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="GpsReceiver">
     <rdfs:subClassOf>
@@ -345,6 +345,12 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
+  <owl:Class rdf:ID="Chalkboard">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Chalkboard</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:ID="MindmappingSoftware">
     <rdfs:subClassOf>
       <owl:Class rdf:about="#Tool"/>
@@ -383,12 +389,6 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Chalkboard">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Device"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Chalkboard</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="Calculator">
     <rdfs:subClassOf>
@@ -689,20 +689,6 @@
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Sms service</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:ID="Storytelling">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#ICTAffordance"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Storytelling</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Storytelling"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-  </owl:Class>
   <owl:Class rdf:ID="CloudService">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -756,6 +742,20 @@
     </rdfs:subClassOf>
     <rdfs:label>Cloud service</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Tool"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Storytelling">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICTAffordance"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Storytelling</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:resource="#Storytelling"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#Camera">
     <rdfs:subClassOf rdf:resource="#Tool"/>
@@ -1904,6 +1904,14 @@
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:NamedIndividual rdf:ID="PresentationSoftware">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue rdf:resource="#Animate"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:subClassOf>
               <owl:Restriction>
@@ -2114,10 +2122,6 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
-  <owl:Class rdf:ID="WebQuest">
-    <rdfs:subClassOf rdf:resource="#Tool"/>
-    <rdfs:label>Web quest</rdfs:label>
-  </owl:Class>
   <owl:Class rdf:about="#MobileInstantMessenger">
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:subClassOf>
@@ -2148,6 +2152,10 @@
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WebQuest">
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+    <rdfs:label>Web quest</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="Synthesize">
     <rdfs:subClassOf>
@@ -2706,6 +2714,17 @@
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Astronomy software</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:about="#Write">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ICTAffordance"/>
+    </rdfs:subClassOf>
+    <rdfs:label>Write</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PClab">
+    <rdfs:label>PClab</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
   <owl:Class rdf:about="#IDE">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2733,17 +2752,6 @@
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Write">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#ICTAffordance"/>
-    </rdfs:subClassOf>
-    <rdfs:label>Write</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
-  <owl:Class rdf:ID="PClab">
-    <rdfs:label>PClab</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#Device"/>
   </owl:Class>
   <owl:Class rdf:about="#AudioRecordingService">
     <rdfs:subClassOf>
@@ -3005,6 +3013,10 @@
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
     <rdfs:label>Archive</rdfs:label>
   </owl:Class>
+  <owl:Class rdf:ID="Augment_Reality">
+    <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
+    <rdfs:label>Augment Reality</rdfs:label>
+  </owl:Class>
   <owl:Class rdf:about="#ScanService">
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -3023,10 +3035,6 @@
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
     <rdfs:label>Upload</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Augment_Reality">
-    <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
-    <rdfs:label>Augment Reality</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#Play_Game">
     <rdfs:label>Play Game</rdfs:label>
@@ -3514,6 +3522,14 @@
     <rdfs:label>Simulation applet</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="ProgramLanguage">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Program"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Program language</rdfs:label>
   </owl:Class>
@@ -3919,10 +3935,6 @@
   <owl:ObjectProperty rdf:ID="isRealizedBy">
     <rdfs:label>is realized by</rdfs:label>
   </owl:ObjectProperty>
-  <PodcastPlatform rdf:ID="Castos">
-    <rdfs:label>Castos</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PodcastPlatform>
   <owl:NamedIndividual rdf:ID="Signal">
     <rdfs:label>Signal</rdfs:label>
     <rdf:type rdf:resource="#MobileInstantMessenger"/>
@@ -3931,14 +3943,369 @@
     <rdfs:label>Firebird</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </RDBMS>
-  <owl:NamedIndividual rdf:ID="Qlikview">
-    <rdfs:label>Qlikview</rdfs:label>
-    <rdf:type rdf:resource="#InteractiveVisualizationTool"/>
-  </owl:NamedIndividual>
   <RDBMS rdf:ID="Openbase">
     <rdfs:label>Openbase</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </RDBMS>
+  <SearchEngine rdf:ID="Bing">
+    <rdfs:label>Bing</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SearchEngine>
+  <MobileInstantMessenger rdf:ID="Threema">
+    <rdfs:label>Threema</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </MobileInstantMessenger>
+  <InstantMessenger rdf:ID="ICQ">
+    <rdfs:label>ICQ</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InstantMessenger>
+  <Dictionary rdf:ID="Merriam-Webster_Online">
+    <rdfs:label>Merriam-Webster Online</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Dictionary>
+  <QuizSoftware rdf:ID="ClassMarker.com">
+    <rdfs:label>Class marker.com</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </QuizSoftware>
+  <Dictionary rdf:ID="Wiktionary">
+    <rdfs:label>Wiktionary</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Dictionary>
+  <FtpSoftware rdf:ID="ForkLift">
+    <rdfs:label>ForkLift</rdfs:label>
+  </FtpSoftware>
+  <Wiki rdf:ID="wikipedia.org">
+    <rdfs:label>www.wikipedia.org</rdfs:label>
+  </Wiki>
+  <VideoRecordingSoftware rdf:ID="Filmora_Scrn">
+    <rdfs:label>Filmora Scrn</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoRecordingSoftware>
+  <AnimationSoftware rdf:ID="Blender">
+    <rdfs:label>Blender</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </AnimationSoftware>
+  <LearningPlatform rdf:ID="www.bingel.se">
+    <rdfs:label>www.bingel.se</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </LearningPlatform>
+  <VideoConferencing rdf:ID="Join.me">
+    <rdfs:label>Join.me</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoConferencing>
+  <SurveyTool rdf:ID="doodle.com">
+    <rdfs:label>doodle.com</rdfs:label>
+  </SurveyTool>
+  <RoboticsKit rdf:ID="Codey_Rocky">
+    <rdfs:label>Codey Rocky</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </RoboticsKit>
+  <Dictionary rdf:ID="Dictionary.com">
+    <rdfs:label>Dictionary.com</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Dictionary>
+  <VideoEditor rdf:ID="HitFilm_Pro">
+    <rdfs:label>Hit film Pro</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoEditor>
+  <TextEditor rdf:ID="Bluefish">
+    <rdfs:label>Bluefish</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </TextEditor>
+  <owl:NamedIndividual rdf:ID="Vimeo">
+    <rdfs:label>Vimeo</rdfs:label>
+    <rdf:type rdf:resource="#VideoPlatform"/>
+  </owl:NamedIndividual>
+  <PublishingSoftware rdf:ID="Adobe_InDesign">
+    <rdfs:label>Adobe In design</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PublishingSoftware>
+  <QuizSoftware rdf:ID="Quiz_Revolution">
+    <rdfs:label>Quiz Revolution</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </QuizSoftware>
+  <SandboxGame rdf:ID="PortalKnights">
+    <rdfs:label>Portal Knights</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SandboxGame>
+  <ScreenRecorder rdf:ID="oCam">
+    <rdfs:label>o cam</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </ScreenRecorder>
+  <owl:NamedIndividual rdf:ID="YouTube">
+    <rdfs:label>You tube</rdfs:label>
+    <rdf:type rdf:resource="#VideoPlatform"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="Boords">
+    <rdfs:label>Boords</rdfs:label>
+    <rdf:type rdf:resource="#StoryboardingTool"/>
+  </owl:NamedIndividual>
+  <WordProcessor rdf:ID="OpenOffice_Writer_">
+    <rdfs:label>Open office Writer </rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </WordProcessor>
+  <VideoConferencing rdf:ID="Citrix_GoToMeeting">
+    <rdfs:label>Citrix Go to meeting</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoConferencing>
+  <Browser rdf:ID="Firefox">
+    <rdfs:label>Firefox</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Browser>
+  <Browser rdf:ID="Opera">
+    <rdfs:label>Opera</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Browser>
+  <InteractiveVisualizationTool rdf:ID="Tableau">
+    <rdfs:label>Tableau</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveVisualizationTool>
+  <owl:NamedIndividual rdf:ID="Bee-Bot_Educational_Robot">
+    <rdfs:label>Bee-Bot Educational Robot</rdfs:label>
+    <rdf:type rdf:resource="#RoboticsKit"/>
+  </owl:NamedIndividual>
+  <WordProcessor rdf:ID="Kingsoft_Writer_">
+    <rdfs:label>Kingsoft Writer </rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </WordProcessor>
+  <InteractiveGeometrySoftware rdf:about="http://kb.esit4sip.eu/infrastructure#The_Geometer&apos;s_Sketchpad">
+    <rdfs:label>s Sketchpad</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveGeometrySoftware>
+  <Translator rdf:ID="Google_Translator">
+    <rdfs:label>Google Translator</rdfs:label>
+  </Translator>
+  <WebsiteBuilder rdf:ID="jimdo.com">
+    <rdfs:label>jimdo.com</rdfs:label>
+  </WebsiteBuilder>
+  <SpreadsheetEditor rdf:ID="EditGrid">
+    <rdfs:label>Edit grid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SpreadsheetEditor>
+  <VideoPlayer rdf:ID="Gom_Player">
+    <rdfs:label>Gom Player</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoPlayer>
+  <owl:NamedIndividual rdf:ID="OpenStreetMap">
+    <rdfs:label>Open street map</rdfs:label>
+    <rdf:type rdf:resource="#InteractiveMap"/>
+  </owl:NamedIndividual>
+  <AudioPlayer rdf:ID="Audacious">
+    <rdfs:label>Audacious</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </AudioPlayer>
+  <VideoRecordingSoftware rdf:ID="Loom">
+    <rdfs:label>Loom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoRecordingSoftware>
+  <MobileInstantMessenger rdf:ID="Viber">
+    <rdfs:label>Viber</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </MobileInstantMessenger>
+  <MindmappingSoftware rdf:ID="Mapul">
+    <rdfs:label>Mapul</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </MindmappingSoftware>
+  <owl:NamedIndividual rdf:ID="ChemDraw">
+    <rdfs:label>Chem draw</rdfs:label>
+    <rdf:type rdf:resource="#MolecularModeller"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="ProWritingAid">
+    <rdfs:label>Pro writing aid</rdfs:label>
+    <rdf:type rdf:resource="#SpellChecker"/>
+  </owl:NamedIndividual>
+  <PresentationSoftware rdf:ID="Keynote">
+    <rdfs:label>Keynote</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PresentationSoftware>
+  <VideoEditor rdf:ID="Shotcut">
+    <rdfs:label>Shotcut</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoEditor>
+  <InteractiveMap rdf:ID="WikiMapia">
+    <rdfs:label>Wiki mapia</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveMap>
+  <owl:NamedIndividual rdf:ID="RealPlayer">
+    <rdfs:label>Real player</rdfs:label>
+    <rdf:type rdf:resource="#VideoPlayer"/>
+  </owl:NamedIndividual>
+  <MobileInstantMessenger rdf:ID="Telegram">
+    <rdfs:label>Telegram</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </MobileInstantMessenger>
+  <VideoRecordingSoftware rdf:ID="CamStudio">
+    <rdfs:label>Cam studio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoRecordingSoftware>
+  <SpellChecker rdf:ID="Paper_Rater">
+    <rdfs:label>Paper Rater</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SpellChecker>
+  <SpreadsheetEditor rdf:ID="Google_Sheets">
+    <rdfs:label>Google Sheets</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SpreadsheetEditor>
+  <InstantMessenger rdf:ID="Pidgin">
+    <rdfs:label>Pidgin</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InstantMessenger>
+  <AudioPlayer rdf:ID="AIMP">
+    <rdfs:label>AIMP</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </AudioPlayer>
+  <VpnClient rdf:ID="OpenVPN">
+    <rdfs:label>Open VPN</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VpnClient>
+  <VideoConferencing rdf:ID="Adobe_Connect">
+    <rdfs:label>Adobe Connect</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </VideoConferencing>
+  <PacketTracerSoftware rdf:ID="Cisco_Packet_Tracer">
+    <rdfs:label>Cisco Packet Tracer </rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PacketTracerSoftware>
+  <PodcastPlatform rdf:ID="Buzzsprout">
+    <rdfs:label>Buzzsprout</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PodcastPlatform>
+  <PacketTracerSoftware rdf:ID="Dynamips">
+    <rdfs:label>Dynamips</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PacketTracerSoftware>
+  <PresentationSoftware rdf:ID="LibreOffice">
+    <rdfs:label>Libre office</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PresentationSoftware>
+  <WebsiteBuilder rdf:ID="wix.com">
+    <rdfs:label>wix.com</rdfs:label>
+  </WebsiteBuilder>
+  <QuizSoftware rdf:ID="Vocabtest">
+    <rdfs:label>Vocabtest</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </QuizSoftware>
+  <Browser rdf:ID="Chrome">
+    <rdfs:label>Chrome</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </Browser>
+  <InteractiveMap rdf:ID="Google_Maps">
+    <rdfs:label>Google Maps</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveMap>
+  <Wiki rdf:ID="zeitzeugen.prepedia.org">
+    <rdfs:label>zeitzeugen.prepedia.org</rdfs:label>
+  </Wiki>
+  <StoryboardingTool rdf:ID="Toon_Boom_Storyboard">
+    <rdfs:label>Toon Boom Storyboard</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </StoryboardingTool>
+  <SearchEngine rdf:ID="DuckDuckGo">
+    <rdfs:label>Duck duck go</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SearchEngine>
+  <SpreadsheetEditor rdf:ID="ApacheOpenOfficeCalc">
+    <rdfs:label>Apache OpenOffice Calc</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SpreadsheetEditor>
+  <AudioPlatform rdf:ID="soundcloud.com">
+    <rdfs:label>soundcloud.com</rdfs:label>
+  </AudioPlatform>
+  <TextEditor rdf:ID="Light_Table">
+    <rdfs:label>Light Table</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </TextEditor>
+  <owl:NamedIndividual rdf:ID="Adobe_Premiere_Pro">
+    <rdfs:label>Adobe Premiere Pro</rdfs:label>
+    <rdf:type rdf:resource="#VideoEditor"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="Calamus">
+    <rdfs:label>Calamus</rdfs:label>
+    <rdf:type rdf:resource="#PublishingSoftware"/>
+  </owl:NamedIndividual>
+  <LCMS rdf:ID="ILIAS">
+    <rdfs:label>ILIAS</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </LCMS>
+  <TextEditor rdf:ID="Atom">
+    <rdfs:label>Atom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </TextEditor>
+  <PresentationSoftware rdf:ID="iCloud_Keynote">
+    <rdfs:label>i cloud Keynote</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PresentationSoftware>
+  <SocialNetwork rdf:ID="Edmodo">
+    <rdfs:label>Edmodo</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </SocialNetwork>
+  <owl:NamedIndividual rdf:ID="Wisemapping">
+    <rdfs:label>Wisemapping</rdfs:label>
+    <rdf:type rdf:resource="#StorytellingTool"/>
+  </owl:NamedIndividual>
+  <LCMS rdf:ID="OpenOLAT">
+    <rdfs:label>Open OLAT</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </LCMS>
+  <AnimationSoftware rdf:about="http://kb.esit4sip.eu/infrastructure#3DCrafter">
+    <rdfs:label>3DCrafter</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </AnimationSoftware>
+  <MindmappingSoftware rdf:ID="WiseMapping">
+    <rdfs:label>Wise mapping</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </MindmappingSoftware>
+  <owl:NamedIndividual rdf:ID="ScienceStage">
+    <rdfs:label>Science stage</rdfs:label>
+    <rdf:type rdf:resource="#VideoPlatform"/>
+  </owl:NamedIndividual>
+  <StorytellingTool rdf:ID="StoryboardThat">
+    <rdfs:label>Storyboard that</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </StorytellingTool>
+  <TextEditor rdf:ID="Sublime_Text">
+    <rdfs:label>Sublime Text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </TextEditor>
+  <RoboticsKit rdf:ID="Thymio">
+    <rdfs:label>Thymio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </RoboticsKit>
+  <InteractiveVisualizationTool rdf:ID="Datawrapper">
+    <rdfs:label>Datawrapper</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveVisualizationTool>
+  <RoboticsKit rdf:about="http://kb.esit4sip.eu/infrastructure#6WD_Mantis_mobile_robot_">
+    <rdfs:label> mobile robot </rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </RoboticsKit>
+  <PacketTracerSoftware rdf:ID="GNS3">
+    <rdfs:label>GNS3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PacketTracerSoftware>
+  <InteractiveGeometrySoftware rdf:ID="GeoGebra">
+    <rdfs:label>Geo gebra</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveGeometrySoftware>
+  <AudioPlatform rdf:ID="podhost.de">
+    <rdfs:label>podhost.de</rdfs:label>
+  </AudioPlatform>
+  <RDBMS rdf:ID="PostgreSQL">
+    <rdfs:label>Postgre SQL</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </RDBMS>
+  <InteractiveVisualizationTool rdf:ID="Plotly">
+    <rdfs:label>Plotly</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </InteractiveVisualizationTool>
+  <PodcastPlatform rdf:ID="Castos">
+    <rdfs:label>Castos</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </PodcastPlatform>
+  <owl:NamedIndividual rdf:ID="Qlikview">
+    <rdfs:label>Qlikview</rdfs:label>
+    <rdf:type rdf:resource="#InteractiveVisualizationTool"/>
+  </owl:NamedIndividual>
   <VpnClient rdf:ID="Betternet">
     <rdfs:label>Betternet</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -3947,18 +4314,10 @@
     <rdfs:label>Lightworks</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VideoEditor>
-  <SearchEngine rdf:ID="Bing">
-    <rdfs:label>Bing</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SearchEngine>
   <SocialNetwork rdf:ID="Twiducate">
     <rdfs:label>Twiducate</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SocialNetwork>
-  <MobileInstantMessenger rdf:ID="Threema">
-    <rdfs:label>Threema</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </MobileInstantMessenger>
   <LCMS rdf:ID="ATutor">
     <rdfs:label>ATutor</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -3989,44 +4348,18 @@
     <rdfs:label>Ginger software</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SpellChecker>
-  <InstantMessenger rdf:ID="ICQ">
-    <rdfs:label>ICQ</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InstantMessenger>
   <PublishingSoftware rdf:ID="Fatpaint">
     <rdfs:label>Fatpaint</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </PublishingSoftware>
-  <Dictionary rdf:ID="Merriam-Webster_Online">
-    <rdfs:label>Merriam-Webster Online</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Dictionary>
-  <QuizSoftware rdf:ID="ClassMarker.com">
-    <rdfs:label>Class marker.com</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </QuizSoftware>
-  <Dictionary rdf:ID="Wiktionary">
-    <rdfs:label>Wiktionary</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Dictionary>
-  <FtpSoftware rdf:ID="ForkLift">
-    <rdfs:label>ForkLift</rdfs:label>
-  </FtpSoftware>
   <owl:NamedIndividual rdf:ID="ezTalks">
     <rdfs:label>ez talks</rdfs:label>
     <rdf:type rdf:resource="#InstantMessenger"/>
   </owl:NamedIndividual>
-  <Wiki rdf:ID="wikipedia.org">
-    <rdfs:label>www.wikipedia.org</rdfs:label>
-  </Wiki>
   <AudioPlayer rdf:ID="Rhythmbox">
     <rdfs:label>Rhythmbox</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </AudioPlayer>
-  <VideoRecordingSoftware rdf:ID="Filmora_Scrn">
-    <rdfs:label>Filmora Scrn</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoRecordingSoftware>
   <RasterGraphicsEditor rdf:ID="Photoscape_X">
     <rdfs:label>Photoscape X</rdfs:label>
   </RasterGraphicsEditor>
@@ -4038,22 +4371,10 @@
     <rdfs:label>www.matteportal.se</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </LearningPlatform>
-  <AnimationSoftware rdf:ID="Blender">
-    <rdfs:label>Blender</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </AnimationSoftware>
   <LearningPlatform rdf:ID="www.elevspel.se">
     <rdfs:label>www.elevspel.se</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </LearningPlatform>
-  <LearningPlatform rdf:ID="www.bingel.se">
-    <rdfs:label>www.bingel.se</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </LearningPlatform>
-  <VideoConferencing rdf:ID="Join.me">
-    <rdfs:label>Join.me</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoConferencing>
   <Timer rdf:ID="Online_Timer">
     <rdfs:label>Online Timer</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4069,21 +4390,10 @@
   <WebsiteBuilder rdf:ID="websitex5.com">
     <rdfs:label>websitex5.com</rdfs:label>
   </WebsiteBuilder>
-  <SurveyTool rdf:ID="doodle.com">
-    <rdfs:label>doodle.com</rdfs:label>
-  </SurveyTool>
   <SpreadsheetEditor rdf:ID="Smartsheet">
     <rdfs:label>Smartsheet</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SpreadsheetEditor>
-  <RoboticsKit rdf:ID="Codey_Rocky">
-    <rdfs:label>Codey Rocky</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </RoboticsKit>
-  <Dictionary rdf:ID="Dictionary.com">
-    <rdfs:label>Dictionary.com</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Dictionary>
   <owl:NamedIndividual rdf:ID="YouTube_EDU">
     <rdfs:label>You tube EDU</rdfs:label>
     <rdf:type rdf:resource="#VideoPlatform"/>
@@ -4095,10 +4405,6 @@
     <rdfs:label>Keeeb collections</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </StorytellingTool>
-  <VideoEditor rdf:ID="HitFilm_Pro">
-    <rdfs:label>Hit film Pro</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoEditor>
   <StoryboardingTool rdf:ID="StudioBinder">
     <rdfs:label>Studio binder</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4125,70 +4431,18 @@
   <RasterGraphicsEditor rdf:ID="Krita">
     <rdfs:label>Krita</rdfs:label>
   </RasterGraphicsEditor>
-  <TextEditor rdf:ID="Bluefish">
-    <rdfs:label>Bluefish</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </TextEditor>
-  <owl:NamedIndividual rdf:ID="Vimeo">
-    <rdfs:label>Vimeo</rdfs:label>
-    <rdf:type rdf:resource="#VideoPlatform"/>
-  </owl:NamedIndividual>
-  <PublishingSoftware rdf:ID="Adobe_InDesign">
-    <rdfs:label>Adobe In design</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PublishingSoftware>
-  <QuizSoftware rdf:ID="Quiz_Revolution">
-    <rdfs:label>Quiz Revolution</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </QuizSoftware>
-  <SandboxGame rdf:ID="PortalKnights">
-    <rdfs:label>Portal Knights</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SandboxGame>
-  <ScreenRecorder rdf:ID="oCam">
-    <rdfs:label>o cam</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </ScreenRecorder>
-  <owl:NamedIndividual rdf:ID="YouTube">
-    <rdfs:label>You tube</rdfs:label>
-    <rdf:type rdf:resource="#VideoPlatform"/>
-  </owl:NamedIndividual>
   <SearchEngine rdf:ID="Google">
     <rdfs:label>Google</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SearchEngine>
-  <owl:NamedIndividual rdf:ID="Boords">
-    <rdfs:label>Boords</rdfs:label>
-    <rdf:type rdf:resource="#StoryboardingTool"/>
-  </owl:NamedIndividual>
-  <WordProcessor rdf:ID="OpenOffice_Writer_">
-    <rdfs:label>Open office Writer </rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </WordProcessor>
-  <VideoConferencing rdf:ID="Citrix_GoToMeeting">
-    <rdfs:label>Citrix Go to meeting</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoConferencing>
-  <Browser rdf:ID="Firefox">
-    <rdfs:label>Firefox</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Browser>
   <WordProcessor rdf:ID="MS_Word">
     <rdfs:label>MS Word</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </WordProcessor>
-  <Browser rdf:ID="Opera">
-    <rdfs:label>Opera</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Browser>
   <Dictionary rdf:ID="Cambridge_Dictionary_Online">
     <rdfs:label>Cambridge Dictionary Online</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </Dictionary>
-  <InteractiveVisualizationTool rdf:ID="Tableau">
-    <rdfs:label>Tableau</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveVisualizationTool>
   <VideoPlayer rdf:ID="VLC_Media_Player.">
     <rdfs:label>VLC Media Player.</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4197,18 +4451,6 @@
     <rdfs:label>www.edmodo.com</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </LearningPlatform>
-  <owl:NamedIndividual rdf:ID="Bee-Bot_Educational_Robot">
-    <rdfs:label>Bee-Bot Educational Robot</rdfs:label>
-    <rdf:type rdf:resource="#RoboticsKit"/>
-  </owl:NamedIndividual>
-  <WordProcessor rdf:ID="Kingsoft_Writer_">
-    <rdfs:label>Kingsoft Writer </rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </WordProcessor>
-  <InteractiveGeometrySoftware rdf:about="http://kb.esit4sip.eu/infrastructure#The_Geometer&apos;s_Sketchpad">
-    <rdfs:label>s Sketchpad</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveGeometrySoftware>
   <LCMS rdf:ID="Moodle">
     <rdfs:label>Moodle</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4225,32 +4467,10 @@
     <rdfs:label>Winamp</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </AudioPlayer>
-  <Translator rdf:ID="Google_Translator">
-    <rdfs:label>Google Translator</rdfs:label>
-  </Translator>
-  <WebsiteBuilder rdf:ID="jimdo.com">
-    <rdfs:label>jimdo.com</rdfs:label>
-  </WebsiteBuilder>
-  <SpreadsheetEditor rdf:ID="EditGrid">
-    <rdfs:label>Edit grid</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SpreadsheetEditor>
-  <VideoPlayer rdf:ID="Gom_Player">
-    <rdfs:label>Gom Player</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoPlayer>
   <DigitalAudioWorkstation rdf:ID="MusE">
     <rdfs:label>Mus e</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </DigitalAudioWorkstation>
-  <owl:NamedIndividual rdf:ID="OpenStreetMap">
-    <rdfs:label>Open street map</rdfs:label>
-    <rdf:type rdf:resource="#InteractiveMap"/>
-  </owl:NamedIndividual>
-  <AudioPlayer rdf:ID="Audacious">
-    <rdfs:label>Audacious</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </AudioPlayer>
   <PublishingSoftware rdf:ID="Scribus">
     <rdfs:label>Scribus</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4259,14 +4479,6 @@
     <rdfs:label>White smoke</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SpellChecker>
-  <VideoRecordingSoftware rdf:ID="Loom">
-    <rdfs:label>Loom</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoRecordingSoftware>
-  <MobileInstantMessenger rdf:ID="Viber">
-    <rdfs:label>Viber</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </MobileInstantMessenger>
   <SandboxGame rdf:ID="StarForge">
     <rdfs:label>Star forge</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4279,18 +4491,10 @@
     <rdfs:label>Tween tribune</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SocialNetwork>
-  <MindmappingSoftware rdf:ID="Mapul">
-    <rdfs:label>Mapul</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </MindmappingSoftware>
   <PublishingSoftware rdf:ID="Microsoft_Publisher">
     <rdfs:label>Microsoft Publisher</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </PublishingSoftware>
-  <owl:NamedIndividual rdf:ID="ChemDraw">
-    <rdfs:label>Chem draw</rdfs:label>
-    <rdf:type rdf:resource="#MolecularModeller"/>
-  </owl:NamedIndividual>
   <RoboticsKit rdf:ID="Cozmo_Educational_Robot_">
     <rdfs:label>Cozmo Educational Robot </rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4299,43 +4503,19 @@
     <rdfs:label>s Quiz Maker</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </QuizSoftware>
-  <owl:NamedIndividual rdf:ID="ProWritingAid">
-    <rdfs:label>Pro writing aid</rdfs:label>
-    <rdf:type rdf:resource="#SpellChecker"/>
-  </owl:NamedIndividual>
   <DiagrammingSoftware rdf:ID="MscGen">
     <rdfs:label>Msc gen</rdfs:label>
   </DiagrammingSoftware>
-  <PresentationSoftware rdf:ID="Keynote">
-    <rdfs:label>Keynote</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PresentationSoftware>
   <DiagrammingSoftware rdf:ID="Graphviz">
     <rdfs:label>Graphviz</rdfs:label>
   </DiagrammingSoftware>
   <FtpSoftware rdf:ID="Cyberduck">
     <rdfs:label>Cyberduck</rdfs:label>
   </FtpSoftware>
-  <VideoEditor rdf:ID="Shotcut">
-    <rdfs:label>Shotcut</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoEditor>
   <StoryboardingTool rdf:ID="Storyboard_That">
     <rdfs:label>Storyboard That</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </StoryboardingTool>
-  <InteractiveMap rdf:ID="WikiMapia">
-    <rdfs:label>Wiki mapia</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveMap>
-  <owl:NamedIndividual rdf:ID="RealPlayer">
-    <rdfs:label>Real player</rdfs:label>
-    <rdf:type rdf:resource="#VideoPlayer"/>
-  </owl:NamedIndividual>
-  <MobileInstantMessenger rdf:ID="Telegram">
-    <rdfs:label>Telegram</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </MobileInstantMessenger>
   <InstantMessenger rdf:ID="Trillian">
     <rdfs:label>Trillian</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4344,46 +4524,14 @@
     <rdfs:label>Quick time</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VideoRecordingSoftware>
-  <VideoRecordingSoftware rdf:ID="CamStudio">
-    <rdfs:label>Cam studio</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoRecordingSoftware>
   <owl:NamedIndividual rdf:ID="Podbean">
     <rdfs:label>Podbean</rdfs:label>
     <rdf:type rdf:resource="#PodcastPlatform"/>
   </owl:NamedIndividual>
-  <SpellChecker rdf:ID="Paper_Rater">
-    <rdfs:label>Paper Rater</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SpellChecker>
   <CollaborativeEditor rdf:ID="OnlyOffice">
     <rdfs:label>Only office</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </CollaborativeEditor>
-  <SpreadsheetEditor rdf:ID="Google_Sheets">
-    <rdfs:label>Google Sheets</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SpreadsheetEditor>
-  <InstantMessenger rdf:ID="Pidgin">
-    <rdfs:label>Pidgin</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InstantMessenger>
-  <AudioPlayer rdf:ID="AIMP">
-    <rdfs:label>AIMP</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </AudioPlayer>
-  <VpnClient rdf:ID="OpenVPN">
-    <rdfs:label>Open VPN</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VpnClient>
-  <VideoConferencing rdf:ID="Adobe_Connect">
-    <rdfs:label>Adobe Connect</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </VideoConferencing>
-  <PacketTracerSoftware rdf:ID="Cisco_Packet_Tracer">
-    <rdfs:label>Cisco Packet Tracer </rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PacketTracerSoftware>
   <MindmappingSoftware rdf:ID="MindMeister">
     <rdfs:label>Mind meister</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4400,18 +4548,10 @@
     <rdfs:label>Cinderella</rdfs:label>
     <rdf:type rdf:resource="#InteractiveGeometrySoftware"/>
   </owl:NamedIndividual>
-  <PodcastPlatform rdf:ID="Buzzsprout">
-    <rdfs:label>Buzzsprout</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PodcastPlatform>
   <RDBMS rdf:ID="SQLite">
     <rdfs:label>SQLite</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </RDBMS>
-  <PacketTracerSoftware rdf:ID="Dynamips">
-    <rdfs:label>Dynamips</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PacketTracerSoftware>
   <ScreenRecorder rdf:ID="CamtasiaStudio">
     <rdfs:label>Camtasia studio</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4432,13 +4572,6 @@
     <rdfs:label>Hot Potatoes</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </QuizSoftware>
-  <PresentationSoftware rdf:ID="LibreOffice">
-    <rdfs:label>Libre office</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PresentationSoftware>
-  <WebsiteBuilder rdf:ID="wix.com">
-    <rdfs:label>wix.com</rdfs:label>
-  </WebsiteBuilder>
   <InteractiveVisualizationTool rdf:ID="FusionCharts">
     <rdfs:label>Fusion charts</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4447,10 +4580,6 @@
     <rdfs:label>Windscribe</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VpnClient>
-  <QuizSoftware rdf:ID="Vocabtest">
-    <rdfs:label>Vocabtest</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </QuizSoftware>
   <StorytellingTool rdf:ID="StorylineCreator">
     <rdfs:label>Storyline Creator</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4466,14 +4595,6 @@
   <AudioPlatform rdf:ID="loudblog.com">
     <rdfs:label>loudblog.com</rdfs:label>
   </AudioPlatform>
-  <Browser rdf:ID="Chrome">
-    <rdfs:label>Chrome</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </Browser>
-  <InteractiveMap rdf:ID="Google_Maps">
-    <rdfs:label>Google Maps</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveMap>
   <SpellChecker rdf:ID="Grammarly">
     <rdfs:label>Grammarly</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4485,31 +4606,13 @@
     <rdfs:label>Whats app</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </MobileInstantMessenger>
-  <Wiki rdf:ID="zeitzeugen.prepedia.org">
-    <rdfs:label>zeitzeugen.prepedia.org</rdfs:label>
-  </Wiki>
   <TextEditor rdf:about="#Notepad++">
     <rdfs:label>Notepad++</rdfs:label>
   </TextEditor>
-  <StoryboardingTool rdf:ID="Toon_Boom_Storyboard">
-    <rdfs:label>Toon Boom Storyboard</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </StoryboardingTool>
   <SpreadsheetEditor rdf:ID="ThinkFree_Online">
     <rdfs:label>Think free Online</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </SpreadsheetEditor>
-  <SearchEngine rdf:ID="DuckDuckGo">
-    <rdfs:label>Duck duck go</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SearchEngine>
-  <SpreadsheetEditor rdf:ID="ApacheOpenOfficeCalc">
-    <rdfs:label>Apache OpenOffice Calc</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SpreadsheetEditor>
-  <AudioPlatform rdf:ID="soundcloud.com">
-    <rdfs:label>soundcloud.com</rdfs:label>
-  </AudioPlatform>
   <rdf:Description rdf:ID="webnode.com">
     <rdf:type>
       <owl:Restriction>
@@ -4520,14 +4623,6 @@
     <rdfs:label>webnode.com</rdfs:label>
     <rdf:type rdf:resource="#WebsiteBuilder"/>
   </rdf:Description>
-  <TextEditor rdf:ID="Light_Table">
-    <rdfs:label>Light Table</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </TextEditor>
-  <owl:NamedIndividual rdf:ID="Adobe_Premiere_Pro">
-    <rdfs:label>Adobe Premiere Pro</rdfs:label>
-    <rdf:type rdf:resource="#VideoEditor"/>
-  </owl:NamedIndividual>
   <owl:NamedIndividual rdf:ID="MS_PowerPoint">
     <rdfs:label>MS Power point</rdfs:label>
     <rdf:type rdf:resource="#PresentationSoftware"/>
@@ -4535,22 +4630,10 @@
   <RasterGraphicsEditor rdf:ID="Paint.net">
     <rdfs:label>Paint.net</rdfs:label>
   </RasterGraphicsEditor>
-  <owl:NamedIndividual rdf:ID="Calamus">
-    <rdfs:label>Calamus</rdfs:label>
-    <rdf:type rdf:resource="#PublishingSoftware"/>
-  </owl:NamedIndividual>
   <VirtualLab rdf:ID="www.vlab.co.in">
     <rdfs:label>www.vlab.co.in</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VirtualLab>
-  <LCMS rdf:ID="ILIAS">
-    <rdfs:label>ILIAS</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </LCMS>
-  <TextEditor rdf:ID="Atom">
-    <rdfs:label>Atom</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </TextEditor>
   <SearchEngine rdf:ID="Wolframalpha">
     <rdfs:label>Wolframalpha</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4563,10 +4646,6 @@
     <rdfs:label>The Free Dictionary</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </Dictionary>
-  <PresentationSoftware rdf:ID="iCloud_Keynote">
-    <rdfs:label>i cloud Keynote</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PresentationSoftware>
   <DiagrammingSoftware rdf:ID="Inkscape">
     <rdfs:label>Inkscape</rdfs:label>
   </DiagrammingSoftware>
@@ -4574,70 +4653,26 @@
     <rdfs:label>Da vinci Resolve</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VideoEditor>
-  <SocialNetwork rdf:ID="Edmodo">
-    <rdfs:label>Edmodo</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </SocialNetwork>
-  <owl:NamedIndividual rdf:ID="Wisemapping">
-    <rdfs:label>Wisemapping</rdfs:label>
-    <rdf:type rdf:resource="#StorytellingTool"/>
-  </owl:NamedIndividual>
-  <LCMS rdf:ID="OpenOLAT">
-    <rdfs:label>Open OLAT</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </LCMS>
   <VirtualLab rdf:ID="www.golabz.eu">
     <rdfs:label>www.golabz.eu</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </VirtualLab>
-  <AnimationSoftware rdf:about="http://kb.esit4sip.eu/infrastructure#3DCrafter">
-    <rdfs:label>3DCrafter</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </AnimationSoftware>
   <RDBMS rdf:ID="Microsoft_Access">
     <rdfs:label>Microsoft Access</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </RDBMS>
-  <MindmappingSoftware rdf:ID="WiseMapping">
-    <rdfs:label>Wise mapping</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </MindmappingSoftware>
   <PresentationSoftware rdf:ID="Canva">
     <rdfs:label>Canva</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </PresentationSoftware>
-  <owl:NamedIndividual rdf:ID="ScienceStage">
-    <rdfs:label>Science stage</rdfs:label>
-    <rdf:type rdf:resource="#VideoPlatform"/>
-  </owl:NamedIndividual>
   <InteractiveMap rdf:ID="Bing_Maps">
     <rdfs:label>Bing Maps</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </InteractiveMap>
-  <StorytellingTool rdf:ID="StoryboardThat">
-    <rdfs:label>Storyboard that</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </StorytellingTool>
   <InteractiveMap rdf:ID="MapHub">
     <rdfs:label>Map hub</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </InteractiveMap>
-  <TextEditor rdf:ID="Sublime_Text">
-    <rdfs:label>Sublime Text</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </TextEditor>
-  <RoboticsKit rdf:ID="Thymio">
-    <rdfs:label>Thymio</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </RoboticsKit>
-  <InteractiveVisualizationTool rdf:ID="Datawrapper">
-    <rdfs:label>Datawrapper</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveVisualizationTool>
-  <RoboticsKit rdf:about="http://kb.esit4sip.eu/infrastructure#6WD_Mantis_mobile_robot_">
-    <rdfs:label> mobile robot </rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </RoboticsKit>
   <ScreenRecorder rdf:ID="OBS_Studio">
     <rdfs:label>OBS Studio</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4657,10 +4692,6 @@
     <rdfs:label>Eliademy</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </LCMS>
-  <PacketTracerSoftware rdf:ID="GNS3">
-    <rdfs:label>GNS3</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </PacketTracerSoftware>
   <SurveyTool rdf:ID="umfrageonline.com">
     <rdfs:label>Umfrageonline.com</rdfs:label>
   </SurveyTool>
@@ -4672,10 +4703,6 @@
     <rdfs:label>Storyboarder</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </StoryboardingTool>
-  <InteractiveGeometrySoftware rdf:ID="GeoGebra">
-    <rdfs:label>Geo gebra</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveGeometrySoftware>
   <SearchEngine rdf:ID="Yahoo">
     <rdfs:label>Yahoo</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4683,17 +4710,6 @@
   <DiagrammingSoftware rdf:ID="Calligra_Flow">
     <rdfs:label>Calligra Flow</rdfs:label>
   </DiagrammingSoftware>
-  <AudioPlatform rdf:ID="podhost.de">
-    <rdfs:label>podhost.de</rdfs:label>
-  </AudioPlatform>
-  <RDBMS rdf:ID="PostgreSQL">
-    <rdfs:label>Postgre SQL</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </RDBMS>
-  <InteractiveVisualizationTool rdf:ID="Plotly">
-    <rdfs:label>Plotly</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </InteractiveVisualizationTool>
   <Wiki rdf:ID="medien-wiki.de">
     <rdfs:label>www.medien-wiki.de</rdfs:label>
   </Wiki>
