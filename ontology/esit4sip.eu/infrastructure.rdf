@@ -182,6 +182,12 @@
   </owl:Class>
   <owl:Class rdf:ID="MotionDetector">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#MotionDetection"/>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
     <rdfs:label>Motion detector</rdfs:label>
@@ -4396,12 +4402,6 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue rdf:resource="#VpnClient"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue rdf:resource="#WordProcessor"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
