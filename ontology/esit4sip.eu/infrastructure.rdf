@@ -3554,6 +3554,14 @@
     <rdfs:label>Input</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="SimulationApplet">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Simulate"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Simulation applet</rdfs:label>
   </owl:Class>
