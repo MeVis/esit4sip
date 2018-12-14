@@ -2828,6 +2828,16 @@
     <rdfs:label>Fill out</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#SimulationSoftware">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#Simulate"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Simulation software</rdfs:label>
     <rdfs:subClassOf>
