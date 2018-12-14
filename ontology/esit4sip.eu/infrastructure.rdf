@@ -2912,6 +2912,16 @@
   <owl:Class rdf:about="#RasterGraphicsEditor">
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Draw"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:hasValue rdf:resource="#Image_Editing"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
@@ -2959,7 +2969,7 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="Draw">
+  <owl:Class rdf:about="#Draw">
     <rdfs:label>Draw</rdfs:label>
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
   </owl:Class>
