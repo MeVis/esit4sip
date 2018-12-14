@@ -922,6 +922,70 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
+          <owl:NamedIndividual rdf:ID="WordProcessor">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue>
+                  <owl:NamedIndividual rdf:ID="Design_And_Layout">
+                    <rdfs:subClassOf>
+                      <owl:Class rdf:about="#ICTAffordance"/>
+                    </rdfs:subClassOf>
+                    <rdfs:label>Design and Layout</rdfs:label>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                  </owl:NamedIndividual>
+                </owl:hasValue>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf rdf:resource="#Tool"/>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+                <owl:hasValue>
+                  <owl:Class rdf:about="#Write"/>
+                </owl:hasValue>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:label>Word processor</rdfs:label>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+                <owl:hasValue>
+                  <owl:NamedIndividual rdf:ID="Storyboarding">
+                    <rdfs:subClassOf>
+                      <owl:Class rdf:about="#ICTAffordance"/>
+                    </rdfs:subClassOf>
+                    <rdfs:label>Storyboarding</rdfs:label>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                  </owl:NamedIndividual>
+                </owl:hasValue>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+                <owl:hasValue>
+                  <owl:Class rdf:about="#Read"/>
+                </owl:hasValue>
+              </owl:Restriction>
+            </rdfs:subClassOf>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
           <owl:NamedIndividual rdf:ID="Dictionary">
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:label>Dictionary</rdfs:label>
@@ -982,15 +1046,7 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue>
-                  <owl:NamedIndividual rdf:ID="Storyboarding">
-                    <rdfs:subClassOf>
-                      <owl:Class rdf:about="#ICTAffordance"/>
-                    </rdfs:subClassOf>
-                    <rdfs:label>Storyboarding</rdfs:label>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                  </owl:NamedIndividual>
-                </owl:hasValue>
+                <owl:hasValue rdf:resource="#Storyboarding"/>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:label>Storyboarding tool</rdfs:label>
@@ -1197,6 +1253,14 @@
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
           </owl:NamedIndividual>
         </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="VideoPlayer"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -1421,10 +1485,16 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:about="#LCMS"/>
+          <owl:Class rdf:ID="Wiki"/>
         </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Website"/>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -1445,15 +1515,7 @@
                 <owl:onProperty>
                   <owl:ObjectProperty rdf:about="#offers"/>
                 </owl:onProperty>
-                <owl:hasValue>
-                  <owl:NamedIndividual rdf:ID="Design_And_Layout">
-                    <rdfs:subClassOf>
-                      <owl:Class rdf:about="#ICTAffordance"/>
-                    </rdfs:subClassOf>
-                    <rdfs:label>Design and Layout</rdfs:label>
-                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-                  </owl:NamedIndividual>
-                </owl:hasValue>
+                <owl:hasValue rdf:resource="#Design_And_Layout"/>
               </owl:Restriction>
             </rdfs:subClassOf>
             <rdfs:subClassOf>
@@ -1727,6 +1789,22 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="VpnClient"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="WebQuest"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:hasValue rdf:resource="#CloudService"/>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
@@ -1831,7 +1909,7 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="VpnClient"/>
+          <owl:Class rdf:about="#VpnClient"/>
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -1981,6 +2059,12 @@
             <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
           </owl:NamedIndividual>
         </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Website"/>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2179,13 +2263,29 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="VideoPlayer"/>
+          <owl:Class rdf:about="#VideoPlayer"/>
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#WebsiteBuilder"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:hasValue rdf:resource="#InteractiveVisualizationTool"/>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#VideoPlayer"/>
+        </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -2265,6 +2365,12 @@
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue rdf:resource="#SearchEngine"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#WordProcessor"/>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2381,6 +2487,12 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue rdf:resource="#Website"/>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:Class rdf:about="#Modeller"/>
@@ -2443,6 +2555,14 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:about="#Wiki"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:Class rdf:about="#SocialNetwork"/>
@@ -2460,49 +2580,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue>
-          <owl:NamedIndividual rdf:ID="WordProcessor">
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:hasValue rdf:resource="#Design_And_Layout"/>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdfs:subClassOf rdf:resource="#Tool"/>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:about="#Write"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdfs:label>Word processor</rdfs:label>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue rdf:resource="#Storyboarding"/>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdfs:subClassOf>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="#offers"/>
-                </owl:onProperty>
-                <owl:hasValue>
-                  <owl:Class rdf:about="#Read"/>
-                </owl:hasValue>
-              </owl:Restriction>
-            </rdfs:subClassOf>
-            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-          </owl:NamedIndividual>
-        </owl:hasValue>
+        <owl:hasValue rdf:resource="#WordProcessor"/>
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
@@ -2609,7 +2687,7 @@
     </rdfs:subClassOf>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
-  <owl:Class rdf:ID="WebQuest">
+  <owl:Class rdf:about="#WebQuest">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue rdf:resource="#Search_Information"/>
@@ -2763,7 +2841,7 @@
     <rdfs:label>Interactive Visualization</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
-  <owl:Class rdf:ID="Wiki">
+  <owl:Class rdf:about="#Wiki">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue rdf:resource="#Post"/>
