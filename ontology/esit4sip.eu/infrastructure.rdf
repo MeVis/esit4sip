@@ -2979,6 +2979,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </owl:Class>
   <owl:Class rdf:about="#RDBMS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#Search_Database"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:subClassOf>
       <owl:Restriction>
