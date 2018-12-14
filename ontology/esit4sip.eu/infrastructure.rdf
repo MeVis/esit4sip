@@ -500,6 +500,14 @@
   </owl:Class>
   <owl:Class rdf:ID="DigitalCamera">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="AudioRecordingService"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:about="#Device"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -1340,7 +1348,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:hasValue>
-          <owl:Class rdf:ID="AudioRecordingService"/>
+          <owl:Class rdf:about="#AudioRecordingService"/>
         </owl:hasValue>
         <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
