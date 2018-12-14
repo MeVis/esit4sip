@@ -3322,16 +3322,16 @@
     <rdfs:label>Local Area Network</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="#AugmentedReality">
-    <rdfs:subClassOf rdf:resource="#Tool"/>
-    <rdfs:label>Augmented Reality</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue rdf:resource="#Augment_Reality"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
-        <owl:hasValue rdf:resource="#AugmentedReality"/>
       </owl:Restriction>
     </rdfs:subClassOf>
+    <rdfs:label>Augmented Reality</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Tool"/>
   </owl:Class>
   <owl:Class rdf:about="#CollaborativeEditor">
     <rdfs:subClassOf rdf:resource="#Tool"/>
