@@ -1654,6 +1654,14 @@
         <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
           <owl:NamedIndividual rdf:ID="QuizSoftware">
+            <rdfs:subClassOf>
+              <owl:Restriction>
+                <owl:hasValue rdf:resource="#Group_Quizzing"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="#offers"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </rdfs:subClassOf>
             <rdfs:subClassOf rdf:resource="#Tool"/>
             <rdfs:label>Quiz Software</rdfs:label>
             <rdfs:subClassOf>
