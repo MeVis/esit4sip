@@ -591,6 +591,16 @@
     <rdfs:label>Model</rdfs:label>
   </owl:Class>
   <owl:Class rdf:ID="QrCodeScanner">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Scan_QR_Code"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="#Tool"/>
     <rdfs:label>Qr code scanner</rdfs:label>
   </owl:Class>
@@ -2862,7 +2872,7 @@
     <rdfs:subClassOf rdf:resource="#Device"/>
     <rdfs:label>Own mobiles</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:ID="Scan_QR_Code">
+  <owl:Class rdf:about="#Scan_QR_Code">
     <rdfs:label>Scan QR Code</rdfs:label>
     <rdfs:subClassOf>
       <owl:Class rdf:about="#ICTAffordance"/>
