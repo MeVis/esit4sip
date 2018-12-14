@@ -18,6 +18,16 @@
   </owl:Ontology>
   <owl:Class rdf:ID="MotionDetection">
     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <owl:Class rdf:ID="Measure"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="offers"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
       <owl:Class rdf:ID="Tool"/>
     </rdfs:subClassOf>
     <rdfs:label>Motion detection</rdfs:label>
@@ -29,7 +39,7 @@
           <owl:Class rdf:ID="Translate"/>
         </owl:hasValue>
         <owl:onProperty>
-          <owl:ObjectProperty rdf:ID="offers"/>
+          <owl:ObjectProperty rdf:about="#offers"/>
         </owl:onProperty>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -3546,7 +3556,7 @@
     <rdfs:subClassOf rdf:resource="#Game"/>
     <rdfs:label>Serious game</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:ID="Measure">
+  <owl:Class rdf:about="#Measure">
     <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
     <rdfs:label>Measure</rdfs:label>
   </owl:Class>
