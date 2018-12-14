@@ -1795,10 +1795,10 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:ID="FtpClient"/>
+          <owl:Class rdf:ID="FtpSoftware"/>
         </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2493,10 +2493,10 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="#runs"/>
         <owl:hasValue>
-          <owl:Class rdf:about="#FtpClient"/>
+          <owl:Class rdf:about="#FtpSoftware"/>
         </owl:hasValue>
+        <owl:onProperty rdf:resource="#runs"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -2844,6 +2844,36 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:about="#FtpSoftware">
+    <rdfs:subClassOf rdf:resource="#Tool"/>
+    <rdfs:label>Ftp client</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue>
+          <owl:Class rdf:about="#Upload"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:resource="#Download"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#offers"/>
+        </owl:onProperty>
+        <owl:hasValue rdf:resource="#Provide"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
   <owl:Class rdf:about="#Record_Video">
     <rdfs:label>Record Video</rdfs:label>
     <rdfs:subClassOf rdf:resource="#Record"/>
@@ -3097,34 +3127,6 @@
     </rdfs:subClassOf>
     <rdfs:label>Video Player</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </owl:Class>
-  <owl:Class rdf:about="#FtpClient">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Provide"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Download"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue rdf:resource="#Upload"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:label>Ftp client</rdfs:label>
-    <rdfs:subClassOf rdf:resource="#Tool"/>
   </owl:Class>
   <owl:Class rdf:ID="AudioRecorder">
     <rdfs:subClassOf>
@@ -3576,8 +3578,8 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
+        <owl:hasValue rdf:resource="#FtpSoftware"/>
         <owl:onProperty rdf:resource="#runs"/>
-        <owl:hasValue rdf:resource="#FtpClient"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
@@ -3942,9 +3944,9 @@
     <rdfs:label>Wiktionary</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </Dictionary>
-  <FtpClient rdf:ID="ForkLift">
+  <FtpSoftware rdf:ID="ForkLift">
     <rdfs:label>ForkLift</rdfs:label>
-  </FtpClient>
+  </FtpSoftware>
   <owl:NamedIndividual rdf:ID="ezTalks">
     <rdfs:label>ez talks</rdfs:label>
     <rdf:type rdf:resource="#InstantMessenger"/>
@@ -4021,9 +4023,9 @@
     <rdfs:label>You tube EDU</rdfs:label>
     <rdf:type rdf:resource="#VideoPlatform"/>
   </owl:NamedIndividual>
-  <FtpClient rdf:ID="FileZilla">
+  <FtpSoftware rdf:ID="FileZilla">
     <rdfs:label>FileZilla</rdfs:label>
-  </FtpClient>
+  </FtpSoftware>
   <StorytellingTool rdf:ID="KeeebCollections">
     <rdfs:label>Keeeb collections</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -4246,9 +4248,9 @@
   <DiagrammingSoftware rdf:ID="Graphviz">
     <rdfs:label>Graphviz</rdfs:label>
   </DiagrammingSoftware>
-  <FtpClient rdf:ID="Cyberduck">
+  <FtpSoftware rdf:ID="Cyberduck">
     <rdfs:label>Cyberduck</rdfs:label>
-  </FtpClient>
+  </FtpSoftware>
   <VideoEditor rdf:ID="Shotcut">
     <rdfs:label>Shotcut</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
