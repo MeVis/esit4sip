@@ -2120,16 +2120,6 @@
         </owl:hasValue>
       </owl:Restriction>
     </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="#offers"/>
-        </owl:onProperty>
-        <owl:hasValue>
-          <owl:Class rdf:about="#Collaborate_Communicate"/>
-        </owl:hasValue>
-      </owl:Restriction>
-    </rdfs:subClassOf>
     <rdfs:label>Mobile instant messenger</rdfs:label>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -2932,6 +2922,10 @@
         <owl:hasValue rdf:resource="#Provide"/>
       </owl:Restriction>
     </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Draw">
+    <rdfs:label>Draw</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ICTAffordance"/>
   </owl:Class>
   <owl:Class rdf:about="#Record_Video">
     <rdfs:label>Record Video</rdfs:label>
